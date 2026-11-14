@@ -11,55 +11,64 @@ const { notFound, errorHandler } = require('./middleware/errorHandler');
 
 const productRoutes = require('./routes/productRoutes');
 
-// Connect to MongoDB before setting up the app
-connectDB();
+// Connect to MongoDB and start server
+const startServer = async () => {
+  try {
+    try {
+      await connectDB();
+    } catch (dbError) {
+      console.error("Failed to connect to database, but starting server anyway:", dbError);
+    }
+    
+    const app = express();
+    const PORT = process.env.PORT || 8080;
 
-const app = express();
-const PORT = process.env.PORT || 8080;
+    // Middleware
+    app.use(helmet({ crossOriginResourcePolicy: false }));
+    app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5173' }));
+    app.use(express.json());
+    app.use(morgan('dev'));
 
-// Middleware
-app.use(helmet({ crossOriginResourcePolicy: false }));
-app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5173' }));
-app.use(express.json());
-app.use(morgan('dev'));
+    const limiter = rateLimit({
+      windowMs: 15 * 60 * 1000,
+      max: 100,
+    });
+    app.use('/api', limiter);
 
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 100,
-});
-app.use('/api', limiter);
+    // Routes
+    app.get('/api/health', (req, res) => {
+      res.json({
+        success: true,
+        message: "SmartChoice API is running"
+      });
+    });
 
-// Routes
-app.get('/api/health', (req, res) => {
-  res.json({
-    success: true,
-    message: "SmartChoice API is running"
-  });
-});
+    app.use('/api/products', productRoutes);
 
-app.use('/api/products', productRoutes);
+    app.get('/api/search/semantic', require('./controllers/productController').semanticSearch);
+    app.post('/api/compare', require('./controllers/productController').compareProducts);
+    app.post('/api/scores', require('./controllers/productController').getScores);
 
-app.get('/api/search/semantic', require('./controllers/productController').semanticSearch);
+    // Phase 5: Recommendation endpoints
+    app.get('/api/preferences/default', require('./controllers/productController').getDefaultPreferences);
+    app.post('/api/recommendations', require('./controllers/productController').getRecommendations);
+    app.post('/api/recommendations/rank', require('./controllers/productController').getRecommendations);
 
-// Spec says POST /api/compare
-app.post('/api/compare', require('./controllers/productController').compareProducts);
+    // Phase 7: RAG endpoints
+    app.get('/api/rag/context', require('./controllers/ragController').getRagContext);
+    app.post('/api/rag/query', require('./controllers/ragController').postRagQuery);
 
-// Spec says POST /api/scores
-app.post('/api/scores', require('./controllers/productController').getScores);
+    // Error Handling Middleware
+    app.use(notFound);
+    app.use(errorHandler);
 
-// Phase 5: Recommendation endpoints
-app.get('/api/preferences/default', require('./controllers/productController').getDefaultPreferences);
-app.post('/api/recommendations', require('./controllers/productController').getRecommendations);
-app.post('/api/recommendations/rank', require('./controllers/productController').getRecommendations);
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
+    });
+  } catch (error) {
+    console.error("Failed to start server:", error);
+    process.exit(1);
+  }
+};
 
-// Phase 7: RAG endpoints
-app.get('/api/rag/context', require('./controllers/ragController').getRagContext);
-app.post('/api/rag/query', require('./controllers/ragController').postRagQuery);
-
-// Error Handling Middleware
-app.use(notFound);
-app.use(errorHandler);
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+startServer();

@@ -21,12 +21,19 @@ const searchProducts = async (req, res, next) => {
     const searchTerm = query.trim();
 
     // 1. Check MongoDB first
-    const localProducts = await Product.find({
-      $or: [
-        { 'identity.name': { $regex: searchTerm, $options: 'i' } },
-        { 'identity.brand': { $regex: searchTerm, $options: 'i' } }
-      ]
-    }).limit(10);
+    let localProducts = [];
+    try {
+      if (require('mongoose').connection.readyState === 1) {
+        localProducts = await Product.find({
+          $or: [
+            { 'identity.name': { $regex: searchTerm, $options: 'i' } },
+            { 'identity.brand': { $regex: searchTerm, $options: 'i' } }
+          ]
+        }).limit(10);
+      }
+    } catch (err) {
+      console.warn("Database query failed, bypassing local search:", err.message);
+    }
 
     if (localProducts.length >= 5) {
       return res.json({
@@ -58,15 +65,21 @@ const searchProducts = async (req, res, next) => {
     const savedProducts = [];
     for (const prod of offProducts) {
       try {
-        const existing = await Product.findOne({ 'identity.barcode': prod.identity.barcode });
-        if (existing) {
-          savedProducts.push(existing);
+        if (require('mongoose').connection.readyState === 1) {
+          const existing = await Product.findOne({ 'identity.barcode': prod.identity.barcode });
+          if (existing) {
+            savedProducts.push(existing);
+          } else {
+            const newProduct = await Product.create(prod);
+            savedProducts.push(newProduct);
+          }
         } else {
-          const newProduct = await Product.create(prod);
-          savedProducts.push(newProduct);
+          // just push it as a transient product if DB is down
+          savedProducts.push(prod);
         }
       } catch (err) {
         console.error(`Failed to save product ${prod.identity.barcode}:`, err.message);
+        savedProducts.push(prod); // still return it
       }
     }
 
