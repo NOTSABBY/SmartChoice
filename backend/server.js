@@ -10,6 +10,7 @@ const connectDB = require('./config/database');
 const { notFound, errorHandler } = require('./middleware/errorHandler');
 
 const productRoutes = require('./routes/productRoutes');
+const catalogRoutes = require('./routes/catalogRoutes');
 
 // Connect to MongoDB and start server
 const startServer = async () => {
@@ -44,6 +45,7 @@ const startServer = async () => {
     });
 
     app.use('/api/products', productRoutes);
+    app.use('/api/catalog', catalogRoutes);
 
     app.get('/api/search/semantic', require('./controllers/productController').semanticSearch);
     app.post('/api/compare', require('./controllers/productController').compareProducts);
