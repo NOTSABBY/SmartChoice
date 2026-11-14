@@ -1,4 +1,4 @@
-const express = require('express');
+﻿const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
@@ -11,6 +11,7 @@ const { notFound, errorHandler } = require('./middleware/errorHandler');
 
 const productRoutes = require('./routes/productRoutes');
 const catalogRoutes = require('./routes/catalogRoutes');
+const analysisRoutes = require('./routes/analysisRoutes');
 
 // Connect to MongoDB and start server
 const startServer = async () => {
@@ -46,6 +47,7 @@ const startServer = async () => {
 
     app.use('/api/products', productRoutes);
     app.use('/api/catalog', catalogRoutes);
+    app.use('/api/analysis', analysisRoutes);
 
     app.get('/api/search/semantic', require('./controllers/productController').semanticSearch);
     app.post('/api/compare', require('./controllers/productController').compareProducts);

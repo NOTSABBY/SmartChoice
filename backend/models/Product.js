@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+﻿const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema({
   // Original / Catalog-500 specific fields
@@ -122,6 +122,192 @@ const productSchema = new mongoose.Schema({
     completeness: { type: Number, default: 0 },
     missingNutritionFields: { type: [String], default: [] },
     dataQualityScore: { type: Number, default: 0 }
+  },
+
+  // Phase 3: Comprehensive Product Analysis Engine Results
+  analysis: {
+    analyzedAt: { type: Date, default: null },
+    engineVersion: { type: String, default: '3.0.0-fssai' },
+    completeness: {
+      overallPercentage: { type: Number, default: 0, min: 0, max: 100 },
+      nutritionCompleteness: { type: Number, default: 0, min: 0, max: 100 },
+      ingredientCompleteness: { type: Number, default: 0, min: 0, max: 100 },
+      processingCompleteness: { type: Number, default: 0, min: 0, max: 100 },
+      availabilityIndicators: {
+        nutritionAvailable: { type: Boolean, default: false },
+        ingredientsAvailable: { type: Boolean, default: false },
+        additivesAvailable: { type: Boolean, default: false },
+        allergensAvailable: { type: Boolean, default: false },
+        processingAvailable: { type: Boolean, default: false }
+      },
+      missingEssentialFields: [{ type: String }]
+    },
+    confidence: {
+      overallConfidence: { type: Number, default: 0, min: 0, max: 1 },
+      nutritionConfidence: { type: Number, default: 0, min: 0, max: 1 },
+      ingredientConfidence: { type: Number, default: 0, min: 0, max: 1 },
+      processingConfidence: { type: Number, default: 0, min: 0, max: 1 },
+      confidenceBand: { 
+        type: String, 
+        enum: ['HIGH', 'MODERATE', 'LOW', 'INSUFFICIENT'], 
+        default: 'INSUFFICIENT' 
+      }
+    },
+    nutritionAnalysis: {
+      basis: { 
+        type: String, 
+        enum: ['PER_100G', 'PER_100ML', 'PER_SERVING', 'UNAVAILABLE', 'UNKNOWN'], 
+        default: 'UNKNOWN' 
+      },
+      categoryFormat: { 
+        type: String, 
+        enum: ['SOLID_FOOD', 'BEVERAGE_GENERAL', 'BEVERAGE_DAIRY', 'COOKING_OIL', 'UNCLASSIFIED'], 
+        default: 'UNCLASSIFIED' 
+      },
+      nutrients: {
+        sugars: {
+          valuePer100: { type: Number, default: null },
+          declaredUnit: { type: String, default: 'g' },
+          trafficLight: { type: String, enum: ['LOW', 'MODERATE', 'HIGH', 'UNCLASSIFIED'], default: 'UNCLASSIFIED' },
+          thresholdSource: { type: String, default: null }
+        },
+        fat: {
+          valuePer100: { type: Number, default: null },
+          declaredUnit: { type: String, default: 'g' },
+          trafficLight: { type: String, enum: ['LOW', 'MODERATE', 'HIGH', 'UNCLASSIFIED'], default: 'UNCLASSIFIED' },
+          thresholdSource: { type: String, default: null }
+        },
+        saturatedFat: {
+          valuePer100: { type: Number, default: null },
+          declaredUnit: { type: String, default: 'g' },
+          trafficLight: { type: String, enum: ['LOW', 'MODERATE', 'HIGH', 'UNCLASSIFIED'], default: 'UNCLASSIFIED' },
+          thresholdSource: { type: String, default: null }
+        },
+        sodium: {
+          valuePer100: { type: Number, default: null },
+          declaredUnit: { type: String, default: 'mg' },
+          trafficLight: { type: String, enum: ['LOW', 'MODERATE', 'HIGH', 'UNCLASSIFIED'], default: 'UNCLASSIFIED' },
+          thresholdSource: { type: String, default: null }
+        },
+        saltEquivalent: {
+          valuePer100: { type: Number, default: null },
+          declaredUnit: { type: String, default: 'g' },
+          trafficLight: { type: String, enum: ['LOW', 'MODERATE', 'HIGH', 'UNCLASSIFIED'], default: 'UNCLASSIFIED' },
+          thresholdSource: { type: String, default: null }
+        }
+      },
+      positiveNutrients: {
+        fssaiClaims: {
+          protein: {
+            status: { 
+              type: String, 
+              enum: ['HIGH_PROTEIN_ELIGIBLE', 'SOURCE_OF_PROTEIN_ELIGIBLE', 'NOT_ELIGIBLE', 'DATA_UNAVAILABLE', 'STATUTORY_REFERENCE_UNSPECIFIED'], 
+              default: 'DATA_UNAVAILABLE' 
+            },
+            qualifyingBasis: { type: String, default: null },
+            regulatoryReference: { type: String, default: 'FSSAI (Advertising & Claims) Reg 2019' }
+          },
+          fibre: {
+            status: { 
+              type: String, 
+              enum: ['HIGH_FIBRE_ELIGIBLE', 'SOURCE_OF_FIBRE_ELIGIBLE', 'NOT_ELIGIBLE', 'DATA_UNAVAILABLE'], 
+              default: 'DATA_UNAVAILABLE' 
+            },
+            qualifyingBasis: { type: String, default: null },
+            regulatoryReference: { type: String, default: 'FSSAI (Advertising & Claims) Reg 2019' }
+          }
+        },
+        internalRating: {
+          type: { type: String, default: 'SMARTCHOICE_INTERNAL_RATING' },
+          proteinRating: { type: String, default: 'UNCLASSIFIED' },
+          fibreRating: { type: String, default: 'UNCLASSIFIED' },
+          categoryContext: { type: String, default: '' }
+        }
+      },
+      transFatCompliance: {
+        statutoryCompliance: {
+          status: { 
+            type: String, 
+            enum: [
+              'REGULATORY_COMPLIANCE_UNVERIFIABLE', 
+              'POTENTIAL_STATUTORY_EXCEEDANCE_DETECTED', 
+              'CERTIFIED_ANALYTICAL_EVIDENCE_REQUIRED'
+            ], 
+            default: 'REGULATORY_COMPLIANCE_UNVERIFIABLE' 
+          },
+          iTfaLimitPercent: { type: Number, default: 2.0 },
+          totalTransFatPercentOfFat: { type: Number, default: null },
+          analyticalEvidencePresent: { type: Boolean, default: false },
+          reason: { type: String, default: 'Nutrition-label trans-fat data represents total trans fatty acids.' }
+        },
+        fssaiNutritionalClaim: {
+          claimTag: { 
+            type: String, 
+            default: 'UNVERIFIABLE' 
+          },
+          isEligible: { type: Boolean, default: false },
+          thresholdG: { type: Number, default: null },
+          basisEvaluated: { type: String, default: 'UNAVAILABLE' },
+          normalizedValuePer100: { type: Number, default: null },
+          reason: { type: String, default: '' }
+        },
+        markers: {
+          phvoDetected: { type: Boolean, default: false },
+          ruminantFatSourceDetected: { type: Boolean, default: false }
+        }
+      }
+    },
+    processingAnalysis: {
+      novaGroup: { type: Number, enum: [1, 2, 3, 4, null], default: null },
+      sourceCertainty: { 
+        type: String, 
+        enum: ['SOURCE_REPORTED', 'INTERNALLY_ESTIMATED', 'INSUFFICIENT_DATA'], 
+        default: 'INSUFFICIENT_DATA' 
+      },
+      externalProvenance: {
+        sourceName: { type: String, default: null },
+        disclaimer: { type: String, default: null }
+      },
+      evidence: {
+        cosmeticAdditivesDetected: [{ type: String }],
+        industrialIngredientsDetected: [{ type: String }],
+        processingTechniques: [{ type: String }],
+        categoryPriorContext: { type: String, default: null },
+        corroborationScore: { type: Number, default: 0 }
+      },
+      rationale: { type: String, default: 'No processing analysis conducted.' }
+    },
+    ingredientAnalysis: {
+      parseStatus: { 
+        type: String, 
+        enum: ['PARSED_SUCCESSFULLY', 'UNPARSED_TEXT_ONLY', 'EMPTY_INGREDIENTS'], 
+        default: 'EMPTY_INGREDIENTS' 
+      },
+      totalIngredientCount: { type: Number, default: 0 },
+      additives: {
+        detectionStatus: { 
+          type: String, 
+          enum: ['NO_ADDITIVES_DETECTED', 'ADDITIVES_IDENTIFIED', 'UNPARSED_INGREDIENTS'], 
+          default: 'UNPARSED_INGREDIENTS' 
+        },
+        totalDetected: { type: Number, default: 0 },
+        cosmeticCount: { type: Number, default: 0 },
+        identifiedList: [{
+          insNumber: { type: String },
+          primaryName: { type: String },
+          functionalClass: [{ type: String }],
+          verificationStatus: { type: String, default: 'IDENTIFIED_ONLY' }
+        }]
+      },
+      allergens: {
+        detectionStatus: { 
+          type: String, 
+          enum: ['NO_ALLERGENS_DETECTED', 'ALLERGENS_IDENTIFIED', 'UNKNOWN'], 
+          default: 'UNKNOWN' 
+        },
+        declaredAllergenClasses: [{ type: String }]
+      }
+    }
   },
 
   // Vector embeddings for Atlas Vector Search
