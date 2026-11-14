@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import {
@@ -9,6 +9,7 @@ import {
 import { ComparisonProvider } from './context/ComparisonContext';
 import { PreferenceProvider } from './context/PreferenceContext';
 import PreferencesPage from './pages/PreferencesPage';
+import RecommendationsPage from './pages/RecommendationsPage';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
             <Route path="compare" element={<Compare />} />
             <Route path="scanner" element={<Scanner />} />
             <Route path="ocr" element={<OCR />} />
-            <Route path="recommendations" element={<Recommendations />} />
+            <Route path="recommendations" element={<RecommendationsPage />} />
             <Route path="preferences" element={<PreferencesPage />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="history" element={<History />} />

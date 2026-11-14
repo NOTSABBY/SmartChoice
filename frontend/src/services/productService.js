@@ -1,6 +1,6 @@
-import axios from 'axios';
+﻿import axios from 'axios';
 
-const API_URL = 'http://localhost:8080/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
 
 export const searchProducts = async (query) => {
   const response = await axios.get(`${API_URL}/products/search?q=${encodeURIComponent(query)}`);
@@ -16,6 +16,11 @@ export const getProductScore = async (id, prefs = {}) => {
   const queryParams = new URLSearchParams(prefs).toString();
   const url = `${API_URL}/products/${id}/score${queryParams ? `?${queryParams}` : ''}`;
   const response = await axios.get(url);
+  return response.data;
+};
+
+export const getProductAnalysis = async (id) => {
+  const response = await axios.get(`${API_URL}/analysis/${id}`);
   return response.data;
 };
 

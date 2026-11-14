@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+﻿import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Send, Bot, User, ImageIcon, ShieldCheck, AlertTriangle, AlertCircle, Sparkles, Activity } from 'lucide-react';
 import { queryRag } from '../services/ragService';
@@ -102,14 +102,14 @@ export const RagAssistantPage = () => {
           >
             <div className="w-24 h-24 bg-gray-50 flex items-center justify-center p-2 relative shrink-0 border-r border-gray-100">
               {product.media?.imageUrl ? (
-                <img src={product.media.imageUrl} alt={product.identity?.name} className="max-h-full object-contain group-hover:scale-105 transition-transform" />
+                <img src={product.media.imageUrl} alt={product.catalog?.productName || product.identity?.name || 'Product'} className="max-h-full object-contain group-hover:scale-105 transition-transform" />
               ) : (
                 <ImageIcon className="w-8 h-8 text-gray-300" />
               )}
             </div>
             <div className="p-3 flex-grow flex flex-col justify-center">
               <h3 className="font-bold text-sm text-gray-900 leading-tight mb-1 line-clamp-2 group-hover:text-green-600 transition-colors">
-                {product.identity?.name || 'Unknown'}
+                {product.catalog?.productName || product.identity?.name || 'SmartChoice Product'}
               </h3>
               <p className="text-gray-500 text-xs mb-2 truncate uppercase tracking-wider font-semibold">{product.identity?.brand || 'Unknown Brand'}</p>
               

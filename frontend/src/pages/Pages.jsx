@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import { Search as SearchIcon, Image as ImageIcon, Plus, Trash2, GitCompare, ChevronRight, Activity, CheckCircle, AlertCircle, Info, Settings, Bot, ScanLine, Loader2 } from 'lucide-react';
-import { searchProducts, getProductById, getProductScore, getRecommendations } from '../services/productService';
+import { searchProducts, getProductById, getProductScore, getRecommendations, getProductAnalysis } from '../services/productService';
 import { getSimilarProducts, compareProducts } from '../services/comparisonService';
 import { useComparison } from '../context/ComparisonContext';
 import { usePreferences } from '../context/PreferenceContext';
@@ -242,12 +242,12 @@ export const Search = () => {
                 )}
               </div>
               <div className="p-5 flex-grow flex flex-col bg-white">
-                <p className="text-gray-500 text-xs font-semibold uppercase tracking-wider mb-1 truncate">{product.identity?.brand || 'Unknown Brand'}</p>
+                <p className="text-gray-500 text-xs font-semibold uppercase tracking-wider mb-1 truncate">{product.catalog?.brand || product.identity?.brand || 'Packaged Brand'}</p>
                 <h3 
                   className="font-bold text-gray-900 text-lg leading-tight mb-2 cursor-pointer group-hover:text-green-600 transition-colors line-clamp-2"
                   onClick={() => navigate(`/product/${product._id}`)}
                 >
-                  {product.identity?.name || 'Unknown'}
+                  {product.catalog?.productName || product.identity?.name || 'SmartChoice Product'}
                 </h3>
                 
                 <div className="mt-auto pt-4 flex justify-between items-center border-t border-gray-50">
@@ -280,6 +280,7 @@ export const ProductDetail = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [similar, setSimilar] = useState([]);
+  const [analysisData, setAnalysisData] = useState(null);
   const [scoreData, setScoreData] = useState(null);
   const [recommendation, setRecommendation] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -300,7 +301,8 @@ export const ProductDetail = () => {
           Promise.allSettled([
             getSimilarProducts(id),
             getProductScore(id),
-            getRecommendations([id], preferences)
+            getRecommendations([id], preferences),
+            getProductAnalysis(id)
           ]).then((results) => {
             const simRes = results[0];
             const scRes = results[1];
@@ -314,6 +316,10 @@ export const ProductDetail = () => {
             }
             if (recRes.status === 'fulfilled' && recRes.value.success && recRes.value.data.length > 0) {
               setRecommendation(recRes.value.data[0]);
+            }
+            const anRes = results[3];
+            if (anRes && anRes.status === 'fulfilled' && anRes.value.success) {
+              setAnalysisData(anRes.value.analysis);
             }
           });
         } else {
@@ -389,8 +395,8 @@ export const ProductDetail = () => {
           <div className="md:w-[60%] p-8 lg:p-12 flex flex-col bg-white">
             <div className="flex justify-between items-start mb-6">
               <div>
-                <p className="text-sm font-bold tracking-widest text-green-600 uppercase mb-2">{product.identity?.brand || 'Unknown Brand'}</p>
-                <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4 leading-tight">{product.identity?.name || 'Unknown Product'}</h1>
+                <p className="text-sm font-bold tracking-widest text-green-600 uppercase mb-2">{product.catalog?.brand || product.identity?.brand || 'Packaged Brand'}</p>
+                <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4 leading-tight">{product.catalog?.productName || product.identity?.name || 'SmartChoice Product'}</h1>
                 <div className="flex gap-2 flex-wrap">
                   {product.identity?.categories?.slice(0, 3).map((cat, i) => (
                     <span key={i} className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-semibold">{cat}</span>
@@ -461,6 +467,110 @@ export const ProductDetail = () => {
           </div>
         </div>
         
+        {/* Phase 3 Product Analysis Engine Results */}
+        {analysisData && (
+          <div className="border-t border-gray-100 bg-white p-8 lg:p-12">
+            <div className="flex items-center justify-between mb-8 pb-4 border-b border-gray-100">
+              <div>
+                <span className="px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-bold rounded-full uppercase tracking-wider">
+                  FSSAI Regulatory & Scientific Audit
+                </span>
+                <h3 className="text-2xl font-black text-gray-900 mt-2 tracking-tight">Phase 3 Deep Analysis</h3>
+              </div>
+              <div className="text-right">
+                <span className="text-xs text-gray-400 font-bold block uppercase tracking-wider">Data Completeness</span>
+                <span className="text-lg font-black text-gray-800">{analysisData.completeness?.overallPercentage || 0}%</span>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* 1. Trans-Fat Card */}
+              <div className="bg-gray-50/70 p-5 rounded-2xl border border-gray-100 flex flex-col justify-between">
+                <div>
+                  <span className="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-1">Trans-Fat Status</span>
+                  <p className="font-extrabold text-sm text-gray-900 mb-2">
+                    {analysisData.nutritionAnalysis?.transFatCompliance?.fssaiNutritionalClaim?.claimTag === 'TRANS_FAT_FREE_ELIGIBLE'
+                      ? 'Trans-Fat Free Claim: ELIGIBLE'
+                      : 'Trans-Fat Free Claim: NOT ELIGIBLE'}
+                  </p>
+                  <p className="text-xs text-gray-500 leading-relaxed">
+                    {analysisData.nutritionAnalysis?.transFatCompliance?.fssaiNutritionalClaim?.reason || 'Standard evaluation'}
+                  </p>
+                </div>
+                <div className="mt-4 pt-3 border-t border-gray-200/60 text-[11px] text-gray-400 font-medium">
+                  Basis: {analysisData.nutritionAnalysis?.transFatCompliance?.fssaiNutritionalClaim?.basisEvaluated || '100g/ml'}
+                </div>
+              </div>
+
+              {/* 2. Protein & Fibre Claims Card */}
+              <div className="bg-gray-50/70 p-5 rounded-2xl border border-gray-100 flex flex-col justify-between">
+                <div>
+                  <span className="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-1">Protein & Fibre (FSSAI)</span>
+                  <div className="space-y-1.5 mt-2">
+                    <span className="inline-block px-2.5 py-1 rounded-md text-xs font-bold bg-white text-gray-800 border border-gray-200 shadow-2xs">
+                      Protein: {analysisData.nutritionAnalysis?.positiveNutrients?.fssaiClaims?.protein?.status?.replace(/_/g, ' ') || 'DATA UNAVAILABLE'}
+                    </span>
+                    <span className="inline-block px-2.5 py-1 rounded-md text-xs font-bold bg-white text-gray-800 border border-gray-200 shadow-2xs">
+                      Fibre: {analysisData.nutritionAnalysis?.positiveNutrients?.fssaiClaims?.fibre?.status?.replace(/_/g, ' ') || 'DATA UNAVAILABLE'}
+                    </span>
+                  </div>
+                </div>
+                <div className="mt-4 pt-3 border-t border-gray-200/60 text-[11px] text-gray-400 font-medium">
+                  {analysisData.nutritionAnalysis?.positiveNutrients?.internalRating?.categoryContext || 'Internal density rating'}
+                </div>
+              </div>
+
+              {/* 3. Additives & Cosmetic Markers Card */}
+              <div className="bg-gray-50/70 p-5 rounded-2xl border border-gray-100 flex flex-col justify-between">
+                <div>
+                  <span className="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-1">Additives & INS Markers</span>
+                  <p className="font-extrabold text-sm text-gray-900 mb-2">
+                    {analysisData.ingredientAnalysis?.additives?.totalDetected || 0} Additives Identified
+                  </p>
+                  <div className="flex flex-wrap gap-1 mt-2">
+                    {analysisData.ingredientAnalysis?.additives?.identifiedList?.slice(0, 4).map((add, i) => (
+                      <span key={i} className="px-2 py-0.5 bg-white text-gray-700 border border-gray-200 rounded text-[11px] font-semibold">
+                        {add.insNumber}
+                      </span>
+                    ))}
+                    {(analysisData.ingredientAnalysis?.additives?.totalDetected || 0) === 0 && (
+                      <span className="text-xs text-emerald-700 font-medium">No additives detected in label text</span>
+                    )}
+                  </div>
+                </div>
+                <div className="mt-4 pt-3 border-t border-gray-200/60 text-[11px] text-gray-400 font-medium">
+                  Cosmetic Ultra-Processing Markers: {analysisData.ingredientAnalysis?.additives?.cosmeticCount || 0}
+                </div>
+              </div>
+
+              {/* 4. FSSAI 8 Mandatory Allergen Classes Card */}
+              <div className="bg-gray-50/70 p-5 rounded-2xl border border-gray-100 flex flex-col justify-between">
+                <div>
+                  <span className="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-1">FSSAI 8 Allergen Classes</span>
+                  <p className="font-extrabold text-sm text-gray-900 mb-2">
+                    {analysisData.ingredientAnalysis?.allergens?.declaredAllergenClasses?.length > 0
+                      ? `${analysisData.ingredientAnalysis.allergens.declaredAllergenClasses.length} Declared`
+                      : 'None Declared'}
+                  </p>
+                  <div className="flex flex-wrap gap-1 mt-2">
+                    {analysisData.ingredientAnalysis?.allergens?.declaredAllergenClasses?.map((allClass, i) => (
+                      <span key={i} className="px-2 py-0.5 bg-red-50 text-red-700 border border-red-200 rounded text-[10px] font-bold">
+                        {allClass.replace(/_/g, ' ')}
+                      </span>
+                    ))}
+                    {(!analysisData.ingredientAnalysis?.allergens?.declaredAllergenClasses || analysisData.ingredientAnalysis.allergens.declaredAllergenClasses.length === 0) && (
+                      <span className="text-xs text-gray-500 font-medium">No allergen markers detected</span>
+                    )}
+                  </div>
+                </div>
+                <div className="mt-4 pt-3 border-t border-gray-200/60 text-[11px] text-gray-400 font-medium">
+                  Status: {analysisData.ingredientAnalysis?.allergens?.detectionStatus || 'UNKNOWN'}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Deep Dive Data */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-gray-100 bg-gray-50/50">
           <div className="p-8 lg:p-12 md:border-r border-gray-100">
@@ -503,7 +613,11 @@ export const ProductDetail = () => {
                 </div>
                 <div className="flex-1 border-l pl-4">
                   <span className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-2">NOVA Processing</span>
-                  <p className="font-semibold text-gray-900">{product.processing?.level || 'N/A'}</p>
+                  <p className="font-bold text-gray-900">
+                    {analysisData?.processingAnalysis?.novaGroup 
+                      ? `NOVA ${analysisData.processingAnalysis.novaGroup} (${analysisData.processingAnalysis.sourceCertainty === 'SOURCE_REPORTED' ? 'Reported' : 'Estimated'})`
+                      : (product.processing?.novaGroup ? `NOVA ${product.processing.novaGroup}` : 'Unclassified')}
+                  </p>
                 </div>
               </div>
             </div>
