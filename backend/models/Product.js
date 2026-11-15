@@ -1,4 +1,4 @@
-﻿const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema({
   // Original / Catalog-500 specific fields
@@ -22,6 +22,39 @@ const productSchema = new mongoose.Schema({
     dietaryType: { type: String, enum: ['VEG', 'NON_VEG', 'UNKNOWN'], default: 'UNKNOWN' }
   },
 
+  // Authoritative Dietary & Lifestyle Classification (Phase C/D/E)
+  dietaryClassification: {
+    status: { type: String, enum: ['VEGAN', 'VEGETARIAN', 'NON_VEGETARIAN', 'UNKNOWN'], default: 'UNKNOWN', index: true },
+    isVegetarian: { type: Boolean, default: false },
+    isNonVegetarian: { type: Boolean, default: false },
+    isVegan: { type: Boolean, default: false },
+    reason: { type: String, default: null },
+    supportingEvidence: { type: String, default: null },
+    source: { type: String, default: null },
+    verificationStatus: { type: String, enum: ['VERIFIED', 'UNVERIFIED', 'CONFLICT', 'UNAVAILABLE', 'NEEDS_REVIEW'], default: 'UNVERIFIED' },
+    confidence: { type: String, enum: ['HIGH', 'MODERATE', 'LOW', 'MEDIUM'], default: 'LOW' },
+    lastVerifiedAt: { type: Date, default: null }
+  },
+
+  // Authoritative Evidence-Based Dairy Classification
+  dairyClassification: {
+    classification: {
+      type: String,
+      enum: ['DAIRY_CONTAINS', 'DAIRY_FREE_VERIFIED', 'DAIRY_MAY_CONTAIN', 'DAIRY_UNKNOWN', 'DAIRY_CONFLICTING_EVIDENCE'],
+      default: 'DAIRY_UNKNOWN',
+      index: true
+    },
+    isDairyFree: { type: Boolean, default: false },
+    confidence: { type: Number, default: 0 },
+    evidence: [{
+      type: { type: String }, // 'INGREDIENT' | 'ALLERGEN_CONTAINS' | 'ALLERGEN_MAY_CONTAIN' | 'PRODUCT_IDENTITY' | 'MISSING_DATA' | 'CONFLICT' | 'VERIFIED_ABSENCE'
+      matchedTerm: { type: String },
+      sourceField: { type: String }
+    }],
+    verificationStatus: { type: String, default: 'UNVERIFIED' },
+    reason: { type: String, default: null }
+  },
+
   // Serving details
   serving: {
     servingSize: { type: String },
@@ -36,12 +69,28 @@ const productSchema = new mongoose.Schema({
     imageSource: { type: String, default: null } // 'openfoodfacts' | 'placeholder' | 'user'
   },
 
-  // Ingredients and composition
+  // Ingredients and composition (FSSAI Predominance Order & Verified Provenance)
   ingredients: {
     ingredients: { type: [String], default: [] },
     allergens: { type: [String], default: [] },
     additives: { type: [String], default: [] },
-    rawIngredientsText: { type: String, default: null }
+    rawIngredientsText: { type: String, default: null },
+    rawText: { type: String, default: null },
+    verificationStatus: { 
+      type: String, 
+      enum: ['VERIFIED', 'INGREDIENTS_UNVERIFIED', 'INGREDIENTS_UNAVAILABLE', 'INGREDIENTS_CONFLICT'], 
+      default: 'INGREDIENTS_UNVERIFIED' 
+    },
+    sourceUrl: { type: String, default: null },
+    sourceType: { type: String, default: null },
+    verifiedAt: { type: Date, default: null },
+    subIngredients: { type: mongoose.Schema.Types.Mixed, default: {} },
+    allergenDeclarations: {
+      contains: [{ type: String }],
+      mayContain: [{ type: String }],
+      status: { type: String, enum: ['ALLERGENS_IDENTIFIED', 'NO_ALLERGENS_DETECTED', 'UNKNOWN'], default: 'UNKNOWN' },
+      source: { type: String, default: null }
+    }
   },
 
   // Nutritional information (standardized to per 100g/ml)

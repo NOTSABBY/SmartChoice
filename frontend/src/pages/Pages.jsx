@@ -1,11 +1,10 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import { Search as SearchIcon, Image as ImageIcon, Plus, Trash2, GitCompare, ChevronRight, Activity, CheckCircle, AlertCircle, Info, Settings, Bot, ScanLine, Loader2 } from 'lucide-react';
 import { searchProducts, getProductById, getProductScore, getRecommendations, getProductAnalysis } from '../services/productService';
 import { getSimilarProducts, compareProducts } from '../services/comparisonService';
 import { useComparison } from '../context/ComparisonContext';
 import { usePreferences } from '../context/PreferenceContext';
-import { searchSemanticProducts } from '../services/semanticSearchService';
 import RecommendationList from '../components/RecommendationList';
 import axios from 'axios';
 import RagAssistantPage from './RagAssistantPage';
@@ -69,7 +68,6 @@ export const Search = () => {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [searchMode, setSearchMode] = useState('standard'); // 'standard' or 'semantic'
   const navigate = useNavigate();
   const { addProduct, hasProduct } = useComparison();
   const { preferences } = usePreferences();
@@ -81,17 +79,10 @@ export const Search = () => {
     setLoading(true);
     setError(null);
     try {
-      let response;
-      if (searchMode === 'semantic') {
-        response = await searchSemanticProducts(query);
-      } else {
-        response = await searchProducts(query);
-      }
+      const response = await searchProducts(query);
       
       if (response.success) {
-        // Semantic search returns { product, semanticScore }, standard returns array of products
-        // Let's normalize it to an array of products, optionally with a semanticScore attached
-        const products = searchMode === 'semantic' ? response.data.map(item => ({...item.product, semanticScore: item.semanticScore})) : response.data;
+        const products = response.data || [];
 
         if (products.length > 0) {
           try {
@@ -100,11 +91,11 @@ export const Search = () => {
             if (recRes.success) {
               // Create a map of rankings
               const rankMap = {};
-              recRes.data.forEach((r, idx) => {
+              recRes.data.forEach((r) => {
                 rankMap[r.productId] = r;
               });
               
-              // We can sort results by finalScore
+              // Sort results by finalScore
               products.sort((a, b) => {
                 const sA = rankMap[a._id]?.finalScore || 0;
                 const sB = rankMap[b._id]?.finalScore || 0;
@@ -142,29 +133,12 @@ export const Search = () => {
       </div>
       
       <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-        <div className="flex flex-col md:flex-row gap-6 mb-6 items-center bg-gray-50 p-1.5 rounded-xl self-start inline-flex">
-          <button 
-            type="button"
-            onClick={() => setSearchMode('standard')} 
-            className={`px-6 py-2.5 rounded-lg text-sm font-semibold transition-all ${searchMode === 'standard' ? 'bg-white text-gray-900 shadow' : 'text-gray-500 hover:text-gray-700'}`}
-          >
-            Standard Search
-          </button>
-          <button 
-            type="button"
-            onClick={() => setSearchMode('semantic')} 
-            className={`px-6 py-2.5 rounded-lg text-sm font-semibold transition-all flex items-center ${searchMode === 'semantic' ? 'bg-white text-indigo-700 shadow' : 'text-gray-500 hover:text-gray-700'}`}
-          >
-            <Bot className="w-4 h-4 mr-2"/> AI Semantic Search
-          </button>
-        </div>
-
         <form onSubmit={handleSearch} className="flex flex-col md:flex-row gap-3">
           <div className="relative flex-grow">
             <SearchIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input 
               type="text" 
-              placeholder={searchMode === 'semantic' ? "Describe what you want (e.g., healthy vegan snack with high protein)" : "Search by name or brand (e.g., potato chips)"} 
+              placeholder="Search by product name or brand (e.g., 'Parle-G', 'Maggi', 'Atta', 'Amul')..." 
               className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all text-gray-900 text-lg"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
@@ -195,7 +169,7 @@ export const Search = () => {
         <div className="p-12 text-center bg-white rounded-2xl border border-gray-100 shadow-sm animate-in">
           <SearchIcon className="w-12 h-12 text-gray-300 mx-auto mb-4" />
           <h3 className="text-xl font-bold text-gray-900 mb-2">No results found</h3>
-          <p className="text-gray-500">Try adjusting your search terms or use semantic search.</p>
+          <p className="text-gray-500">Try adjusting your search terms.</p>
         </div>
       )}
 
@@ -228,11 +202,6 @@ export const Search = () => {
                 {product.recommendation && (
                   <div className="absolute top-3 right-3 bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-bold px-2.5 py-1 rounded-full shadow-sm flex items-center z-10">
                     <Activity className="w-3 h-3 mr-1" /> Match: {product.recommendation.finalScore}
-                  </div>
-                )}
-                {product.semanticScore !== undefined && (
-                  <div className="absolute top-3 left-3 bg-purple-50 border border-purple-100 text-purple-700 text-xs font-bold px-2.5 py-1 rounded-full shadow-sm z-10">
-                    {Math.round(product.semanticScore * 100)}% Match
                   </div>
                 )}
                 {product.media?.imageUrl ? (
@@ -445,10 +414,11 @@ export const ProductDetail = () => {
                   <div>
                     <h4 className="font-bold text-sm mb-3 opacity-90 border-b border-current pb-2 uppercase tracking-wide">Score Breakdown</h4>
                     <ul className="space-y-2 text-sm font-medium">
-                      <li className="flex justify-between items-center"><span className="opacity-80">Nutrition</span> <span className="bg-white/50 px-2 py-0.5 rounded shadow-sm">{scoreData.breakdown.nutrition}</span></li>
-                      <li className="flex justify-between items-center"><span className="opacity-80">Ingredients</span> <span className="bg-white/50 px-2 py-0.5 rounded shadow-sm">{scoreData.breakdown.ingredients}</span></li>
-                      <li className="flex justify-between items-center"><span className="opacity-80">Processing</span> <span className="bg-white/50 px-2 py-0.5 rounded shadow-sm">{scoreData.breakdown.processing}</span></li>
-                      <li className="flex justify-between items-center"><span className="opacity-80">Protein/Fiber</span> <span className="bg-white/50 px-2 py-0.5 rounded shadow-sm">{scoreData.breakdown.proteinFiber}</span></li>
+                      <li className="flex justify-between items-center"><span className="opacity-80">Nutrition (40%)</span> <span className="bg-white/50 px-2 py-0.5 rounded shadow-sm">{scoreData.breakdown.nutrition}</span></li>
+                      <li className="flex justify-between items-center"><span className="opacity-80">Ingredients (20%)</span> <span className="bg-white/50 px-2 py-0.5 rounded shadow-sm">{scoreData.breakdown.ingredients}</span></li>
+                      <li className="flex justify-between items-center"><span className="opacity-80">Processing (15%)</span> <span className="bg-white/50 px-2 py-0.5 rounded shadow-sm">{scoreData.breakdown.processing}</span></li>
+                      <li className="flex justify-between items-center"><span className="opacity-80">Protein/Fiber (15%)</span> <span className="bg-white/50 px-2 py-0.5 rounded shadow-sm">{scoreData.breakdown.proteinFiber}</span></li>
+                      <li className="flex justify-between items-center"><span className="opacity-80">Preferences (10%)</span> <span className="bg-white/50 px-2 py-0.5 rounded shadow-sm">{scoreData.breakdown.preferences ?? 70}</span></li>
                     </ul>
                   </div>
                   <div>
@@ -603,13 +573,21 @@ export const ProductDetail = () => {
               <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
                 <span className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-2">Ingredients</span>
                 <p className="text-gray-700 text-sm leading-relaxed max-h-40 overflow-y-auto pr-2 custom-scrollbar">
-                  {product.ingredients?.ingredients?.length > 0 ? product.ingredients.ingredients.join(', ') : 'Not available'}
+                  {product.ingredients?.ingredients?.length > 0
+                    ? product.ingredients.ingredients.join(', ')
+                    : (product.ingredients?.rawText || analysisData?.ingredientAnalysis?.rawIngredientsText || 'Not available')}
                 </p>
               </div>
               <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex gap-4">
                 <div className="flex-1">
                   <span className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-2">Allergens</span>
-                  <p className="font-semibold text-red-600">{product.ingredients?.allergens?.length > 0 ? product.ingredients.allergens.join(', ') : 'None listed'}</p>
+                  <p className="font-semibold text-red-600">
+                    {product.ingredients?.allergens?.length > 0
+                      ? product.ingredients.allergens.join(', ')
+                      : (analysisData?.ingredientAnalysis?.allergens?.declaredAllergenClasses?.length > 0
+                          ? analysisData.ingredientAnalysis.allergens.declaredAllergenClasses.join(', ')
+                          : 'None listed')}
+                  </p>
                 </div>
                 <div className="flex-1 border-l pl-4">
                   <span className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-2">NOVA Processing</span>

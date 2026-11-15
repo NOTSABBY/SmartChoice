@@ -1,5 +1,9 @@
 const mongoose = require('mongoose');
 
+// Disable buffering so queries fail fast when Atlas is disconnected rather than timing out after 10000ms
+mongoose.set('bufferCommands', false);
+mongoose.set('bufferTimeoutMS', 2500);
+
 const connectDB = async () => {
   if (!process.env.MONGODB_URI) {
     console.warn("MONGODB_URI is not defined in environment variables. Database features will be unavailable.");
@@ -13,7 +17,7 @@ const connectDB = async () => {
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
       const conn = await mongoose.connect(process.env.MONGODB_URI, {
-        serverSelectionTimeoutMS: 15000
+        serverSelectionTimeoutMS: 2500
       });
       console.log(`MongoDB Connected: ${conn.connection.host}`);
       

@@ -12,6 +12,10 @@ const recommendationService = require('../services/recommendationService');
 const searchProducts = async (req, res, next) => {
   try {
     const query = req.query.q;
+    const rawCategoryId = req.query.categoryId;
+    const categoryId = (rawCategoryId !== undefined && rawCategoryId !== null && rawCategoryId !== '' && rawCategoryId !== 'null')
+      ? parseInt(rawCategoryId, 10)
+      : null;
     
     if (!query || query.trim().length === 0) {
       res.status(400);
@@ -19,20 +23,81 @@ const searchProducts = async (req, res, next) => {
     }
 
     const searchTerm = query.trim();
+    const searchPattern = searchTerm.replace(/['’]/g, '');
+    const regexStr = searchTerm !== searchPattern ? `${searchTerm}|${searchPattern}` : searchTerm;
 
     // 1. Check MongoDB first
     let localProducts = [];
     try {
       if (require('mongoose').connection.readyState === 1) {
-        localProducts = await Product.find({
+        const queryFilter = {
           $or: [
-            { 'identity.name': { $regex: searchTerm, $options: 'i' } },
-            { 'identity.brand': { $regex: searchTerm, $options: 'i' } }
+            { 'identity.name': { $regex: regexStr, $options: 'i' } },
+            { 'identity.brand': { $regex: regexStr, $options: 'i' } },
+            { 'catalog.productName': { $regex: regexStr, $options: 'i' } },
+            { 'catalog.brand': { $regex: regexStr, $options: 'i' } }
           ]
-        }).limit(10);
+        };
+
+        if (categoryId !== null && !isNaN(categoryId)) {
+          queryFilter.$and = [
+            {
+              $or: [
+                { 'catalog.categoryId': categoryId },
+                { 'category_id': categoryId },
+                { 'identity.categoryId': categoryId }
+              ]
+            }
+          ];
+        }
+
+        localProducts = await Product.find(queryFilter).limit(20);
       }
     } catch (err) {
       console.warn("Database query failed, bypassing local search:", err.message);
+    }
+
+    // 1b. If DB didn't find items or is offline, check catalogLoader
+    if (localProducts.length === 0) {
+      const catalogLoader = require('../utils/catalogLoader');
+      const catalogMatches = catalogLoader.searchProducts(searchTerm, 20, categoryId);
+      if (catalogMatches.length > 0) {
+        localProducts = catalogMatches;
+      }
+    }
+
+    // 1c. Filter by global dietary restrictions if preferences provided
+    let preferences = {};
+    if (req.query.preferences) {
+      try {
+        preferences = typeof req.query.preferences === 'string'
+          ? JSON.parse(req.query.preferences)
+          : req.query.preferences;
+      } catch (e) {
+        preferences = {};
+      }
+    } else if (req.query.vegetarian || req.query.vegan || req.query.avoidAllergens || req.query.excludedIngredients) {
+      preferences = {
+        vegetarian: req.query.vegetarian === 'true',
+        vegan: req.query.vegan === 'true',
+        avoidAllergens: req.query.avoidAllergens ? String(req.query.avoidAllergens).split(',') : [],
+        excludedIngredients: req.query.excludedIngredients ? String(req.query.excludedIngredients).split(',') : []
+      };
+    }
+
+    if (Object.keys(preferences).length > 0) {
+      const { evaluateProductEligibility } = require('../services/eligibilityService');
+      const scope = req.query.scope || preferences.scope || 'catalog';
+      localProducts = localProducts.filter(p => evaluateProductEligibility(p, preferences, { scope }).eligible);
+    }
+
+    // If an individual category is selected, return local results strictly without querying OFF
+    if (categoryId !== null && !isNaN(categoryId)) {
+      return res.json({
+        success: true,
+        data: localProducts,
+        message: localProducts.length > 0 ? 'Products retrieved from selected category' : 'No products found'
+      });
     }
 
     if (localProducts.length >= 5) {
@@ -113,14 +178,27 @@ const getProductByBarcode = async (req, res, next) => {
       throw new Error('Invalid barcode format');
     }
 
-    // 1. MongoDB lookup
-    let product = await Product.findOne({ 'identity.barcode': barcode });
+    // 1. MongoDB lookup (only if database is connected)
+    let product = null;
+    if (require('mongoose').connection.readyState === 1) {
+      try {
+        product = await Product.findOne({ 'identity.barcode': barcode });
+      } catch (dbErr) {
+        console.warn("MongoDB barcode query failed:", dbErr.message);
+      }
+    }
+
+    // 1b. Check local catalog fallback if not found in DB
+    if (!product) {
+      const catalogLoader = require('../utils/catalogLoader');
+      product = catalogLoader.getProductById(barcode);
+    }
 
     if (product) {
       return res.json({
         success: true,
         data: product,
-        message: 'Product retrieved from local database'
+        message: 'Product retrieved successfully'
       });
     }
 
@@ -132,8 +210,17 @@ const getProductByBarcode = async (req, res, next) => {
       throw new Error('Product not found');
     }
 
-    // 3. Save to MongoDB
-    product = await Product.create(offProduct);
+    // 3. Save to MongoDB if connected
+    if (require('mongoose').connection.readyState === 1) {
+      try {
+        product = await Product.create(offProduct);
+      } catch (err) {
+        console.warn("Failed to cache OFF product in DB:", err.message);
+        product = offProduct;
+      }
+    } else {
+      product = offProduct;
+    }
 
     res.json({
       success: true,
@@ -146,21 +233,52 @@ const getProductByBarcode = async (req, res, next) => {
   }
 };
 
-// @desc    Get product by MongoDB ID
+// @desc    Get product by MongoDB ID or Catalog ID
 // @route   GET /api/products/:id
 // @access  Public
 const getProductById = async (req, res, next) => {
   try {
     const { id } = req.params;
 
-    if (!id.match(/^[0-9a-fA-F]{24}$/)) {
+    if (!id || typeof id !== 'string' || id.trim().length === 0) {
       res.status(400);
       throw new Error('Invalid product ID');
     }
 
-    const product = await Product.findById(id);
+    const cleanId = id.trim();
+    let product = null;
+    const isDbConnected = require('mongoose').connection.readyState === 1;
+
+    // 1. Query MongoDB if connection is ready
+    if (isDbConnected) {
+      try {
+        if (cleanId.match(/^[0-9a-fA-F]{24}$/)) {
+          product = await Product.findById(cleanId).lean();
+        } else {
+          product = await Product.findOne({
+            $or: [
+              { 'catalog.productId': cleanId },
+              { 'identity.barcode': cleanId },
+              { _id: cleanId }
+            ]
+          }).lean();
+        }
+      } catch (dbErr) {
+        console.warn("MongoDB query in getProductById failed:", dbErr.message);
+      }
+    }
+
+    // 2. Fallback to catalogLoader if not in DB or DB offline
+    if (!product) {
+      const catalogLoader = require('../utils/catalogLoader');
+      product = catalogLoader.getProductById(cleanId);
+    }
 
     if (!product) {
+      if (!isDbConnected) {
+        res.status(503);
+        throw new Error('Database service is currently unavailable and product was not found in local catalogue');
+      }
       res.status(404);
       throw new Error('Product not found');
     }
@@ -181,12 +299,12 @@ const getProductById = async (req, res, next) => {
 const getSimilarProducts = async (req, res, next) => {
   try {
     const { id } = req.params;
-    if (!id.match(/^[0-9a-fA-F]{24}$/)) {
+    if (!id || typeof id !== 'string' || id.trim().length === 0) {
       res.status(400);
       throw new Error('Invalid product ID');
     }
 
-    const data = await similarityService.getSimilarProducts(id, 5);
+    const data = await similarityService.getSimilarProducts(id.trim(), 5);
     
     res.json({
       success: true,
@@ -196,6 +314,8 @@ const getSimilarProducts = async (req, res, next) => {
   } catch (error) {
     if (error.message === 'Target product not found') {
       res.status(404);
+    } else if (error.message.includes('unavailable')) {
+      res.status(503);
     }
     next(error);
   }
@@ -206,22 +326,22 @@ const getSimilarProducts = async (req, res, next) => {
 // @access  Public
 const compareProducts = async (req, res, next) => {
   try {
-    const { productIds } = req.body;
+    const { productIds, preferences = {} } = req.body;
     
     if (!Array.isArray(productIds)) {
       res.status(400);
       throw new Error('productIds must be an array');
     }
 
-    // Validate ObjectIds
+    // Validate that every product ID is a non-empty string
     for (const id of productIds) {
-      if (!id.match(/^[0-9a-fA-F]{24}$/)) {
+      if (!id || typeof id !== 'string' || id.trim().length === 0) {
         res.status(400);
         throw new Error(`Invalid product ID: ${id}`);
       }
     }
 
-    const data = await comparisonService.compareProducts(productIds);
+    const data = await comparisonService.compareProducts(productIds, preferences);
 
     res.json({
       success: true,
@@ -229,7 +349,7 @@ const compareProducts = async (req, res, next) => {
       message: 'Products compared successfully'
     });
   } catch (error) {
-    if (error.message.includes('between 2 and 5') || error.message.includes('Duplicate') || error.message.includes('enough products')) {
+    if (error.message.includes('between 2 and 5') || error.message.includes('Duplicate') || error.message.includes('enough products') || error.message.includes('Invalid product ID')) {
       res.status(400);
     }
     next(error);
@@ -242,7 +362,7 @@ const compareProducts = async (req, res, next) => {
 const getScore = async (req, res, next) => {
   try {
     const { id } = req.params;
-    if (!id.match(/^[0-9a-fA-F]{24}$/)) {
+    if (!id || typeof id !== 'string' || id.trim().length === 0) {
       res.status(400);
       throw new Error('Invalid product ID');
     }
@@ -252,12 +372,18 @@ const getScore = async (req, res, next) => {
       highProtein: req.query.highProtein === 'true',
       lowSugar: req.query.lowSugar === 'true',
       lowSodium: req.query.lowSodium === 'true',
-      highFiber: req.query.highFiber === 'true'
+      highFiber: req.query.highFiber === 'true',
+      lowCalories: req.query.lowCalories === 'true',
+      lowSaturatedFat: req.query.lowSaturatedFat === 'true',
+      lowFat: req.query.lowFat === 'true',
+      vegetarian: req.query.vegetarian === 'true',
+      vegan: req.query.vegan === 'true',
+      avoidAllergens: req.query.avoidAllergens ? (Array.isArray(req.query.avoidAllergens) ? req.query.avoidAllergens : req.query.avoidAllergens.split(',').map(s => s.trim())) : [],
+      avoidIngredients: req.query.avoidIngredients ? (Array.isArray(req.query.avoidIngredients) ? req.query.avoidIngredients : req.query.avoidIngredients.split(',').map(s => s.trim())) : []
     };
 
-    const data = await scoringService.getScoreForProduct(id, prefs);
+    const data = await scoringService.getScoreForProduct(id.trim(), prefs);
     
-    // As per requirement: "Return: { success: true, data: { product: {}, score: 76, breakdown: {}, confidence: {}, ... } }"
     res.json({
       success: true,
       data
@@ -265,6 +391,8 @@ const getScore = async (req, res, next) => {
   } catch (error) {
     if (error.message === 'Product not found') {
       res.status(404);
+    } else if (error.message.includes('unavailable')) {
+      res.status(503);
     }
     next(error);
   }
@@ -308,19 +436,80 @@ const getDefaultPreferences = (req, res) => {
 // @access  Public
 const getRecommendations = async (req, res, next) => {
   try {
-    const { productIds, preferences } = req.body;
+    const { productIds, preferences } = req.body || {};
     
-    if (!Array.isArray(productIds)) {
+    if (productIds !== undefined && productIds !== null && !Array.isArray(productIds)) {
       res.status(400);
       throw new Error('productIds must be an array');
     }
 
-    const products = await Product.find({ _id: { $in: productIds } });
-    if (products.length === 0) {
-       return res.json({ success: true, data: [] });
+    // Check if any preferences are active
+    const p = preferences || {};
+    const hasActivePrefs = Boolean(
+      p.highProtein || p.lowSugar || p.lowCalories || p.lowSaturatedFat || p.lowSodium || p.highFiber ||
+      p.vegetarian || p.vegan ||
+      (Array.isArray(p.avoidAllergens) && p.avoidAllergens.length > 0) ||
+      (Array.isArray(p.excludedIngredients) && p.excludedIngredients.length > 0) ||
+      (Array.isArray(p.avoidIngredients) && p.avoidIngredients.length > 0)
+    );
+
+    // If no specific productIds and no active preferences, return dedicated empty state
+    if ((!productIds || productIds.length === 0) && !hasActivePrefs) {
+      return res.json({
+        success: true,
+        data: [],
+        hasActivePreferences: false,
+        message: 'No active preferences selected. Personalize your preferences to receive recommendations.'
+      });
     }
 
-    const ranked = await recommendationService.rankProducts(products, preferences);
+    let products = [];
+    const catalogLoader = require('../utils/catalogLoader');
+
+    // 1. If explicit productIds provided, fetch those products
+    if (Array.isArray(productIds) && productIds.length > 0) {
+      if (require('mongoose').connection.readyState === 1) {
+        try {
+          const objectIds = productIds.filter(id => typeof id === 'string' && id.match(/^[0-9a-fA-F]{24}$/));
+          const catalogIds = productIds.filter(id => typeof id === 'string' && !id.match(/^[0-9a-fA-F]{24}$/));
+          const orClauses = [];
+          if (objectIds.length > 0) orClauses.push({ _id: { $in: objectIds } });
+          if (catalogIds.length > 0) orClauses.push({ 'catalog.productId': { $in: catalogIds } });
+          if (orClauses.length > 0) {
+            products = await Product.find({ $or: orClauses }).lean();
+          }
+        } catch (dbErr) {
+          console.warn("MongoDB query in getRecommendations failed:", dbErr.message);
+        }
+      }
+
+      // If DB returned fewer than requested or was offline, supplement from catalogLoader
+      if (products.length < productIds.length) {
+        const foundIds = new Set(products.map(p => (p._id ? p._id.toString() : p.catalog?.productId)));
+        const missingIds = productIds.filter(id => !foundIds.has(String(id)));
+        const diskItems = catalogLoader.getProductsByIds(missingIds);
+        products = [...products, ...diskItems];
+      }
+    } else {
+      // 2. If no productIds provided, retrieve all catalog products across all 25 categories
+      if (require('mongoose').connection.readyState === 1) {
+        try {
+          products = await Product.find({ 'catalog.productId': { $exists: true } }).lean();
+        } catch (dbErr) {
+          console.warn("MongoDB query in getRecommendations failed:", dbErr.message);
+        }
+      }
+
+      if (!products || products.length === 0) {
+        products = catalogLoader.loadProductsFromDisk();
+      }
+    }
+
+    if (!products || products.length === 0) {
+      return res.json({ success: true, data: [] });
+    }
+
+    const ranked = await recommendationService.rankProducts(products, preferences || {});
 
     res.json({
       success: true,
@@ -336,7 +525,7 @@ const getRecommendations = async (req, res, next) => {
 // @access  Public
 const semanticSearch = async (req, res, next) => {
   try {
-    const query = req.query.q;
+    const query = req.query.q || req.query.query;
     
     if (!query || query.trim().length === 0) {
       res.status(400);
@@ -348,15 +537,60 @@ const semanticSearch = async (req, res, next) => {
       throw new Error('Search query is too long (max 200 chars)');
     }
 
-    const limit = req.query.limit ? parseInt(req.query.limit, 10) : 10;
+    const limit = req.query.limit ? parseInt(req.query.limit, 10) : 500;
+    const page = req.query.page ? parseInt(req.query.page, 10) : 1;
+    const rawCategoryId = req.query.categoryId;
+    const categoryId = (rawCategoryId !== undefined && rawCategoryId !== null && rawCategoryId !== '' && rawCategoryId !== 'null' && rawCategoryId !== 'all')
+      ? parseInt(rawCategoryId, 10)
+      : null;
+
+    let preferences = {};
+    if (req.query.preferences) {
+      try {
+        preferences = typeof req.query.preferences === 'string'
+          ? JSON.parse(req.query.preferences)
+          : req.query.preferences;
+      } catch (e) {
+        preferences = {};
+      }
+    } else {
+      preferences = {
+        vegetarian: req.query.vegetarian === 'true',
+        vegan: req.query.vegan === 'true',
+        avoidAllergens: req.query.avoidAllergens ? String(req.query.avoidAllergens).split(',') : [],
+        excludedIngredients: req.query.excludedIngredients ? String(req.query.excludedIngredients).split(',') : []
+      };
+    }
     
     const vectorSearchService = require('../services/vectorSearchService');
-    const results = await vectorSearchService.semanticProductSearch(query, { limit });
+    const scope = req.query.scope || preferences.scope || 'catalog';
+    const results = await vectorSearchService.semanticProductSearch(query, { limit, page, categoryId, preferences, scope });
+
+    const items = Array.isArray(results) ? results : (results.data || []);
 
     res.json({
       success: true,
       query: query,
-      data: results,
+      categoryId: categoryId,
+      totalCatalogSize: results.totalCatalogSize ?? items.length,
+      totalEvaluated: results.totalEvaluated ?? items.length,
+      totalExcluded: results.totalExcluded ?? 0,
+      totalMatches: results.totalMatches ?? items.length,
+      totalEligible: results.totalEligible ?? results.totalMatches ?? items.length,
+      totalNeedsReview: results.totalNeedsReview ?? 0,
+      pagination: results.pagination ?? {
+        page,
+        limit,
+        totalPages: Math.ceil(items.length / limit) || 1,
+        totalCount: items.length,
+        hasNextPage: page < (Math.ceil(items.length / limit) || 1),
+        hasPrevPage: page > 1
+      },
+      understanding: results.understanding || results.intent || null,
+      filters_applied: results.filters_applied || null,
+      intent: results.intent || null,
+      results: items,
+      data: items,
       message: 'Semantic search completed successfully'
     });
   } catch (error) {

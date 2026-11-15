@@ -1,4 +1,4 @@
-﻿const express = require('express');
+const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
@@ -16,10 +16,11 @@ const analysisRoutes = require('./routes/analysisRoutes');
 // Connect to MongoDB and start server
 const startServer = async () => {
   try {
+    // 1. Await database initialization before listening for incoming HTTP requests
     try {
       await connectDB();
     } catch (dbError) {
-      console.error("Failed to connect to database, but starting server anyway:", dbError);
+      console.warn("MongoDB connection could not be established during startup; operating with local catalog fallback:", dbError.message);
     }
     
     const app = express();

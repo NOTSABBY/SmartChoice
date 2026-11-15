@@ -1,4 +1,4 @@
-﻿const { NUTRITION_THRESHOLDS, getCategoryFormat } = require('../config/analysisThresholds');
+const { NUTRITION_THRESHOLDS, getCategoryFormat } = require('../config/analysisThresholds');
 const { isValidFiniteNumber, isNonNegativeFiniteNumber, isPositiveFiniteNumber } = require('./validationUtils');
 
 /**
@@ -87,12 +87,12 @@ function evaluateTransFatFreeClaim({
   let thresholdG = null;
   let expectedBasisType = null; // 'MASS', 'VOLUME', or 'MASS_OR_VOLUME'
 
-  if (categoryFormat === 'SOLID_FOOD') {
+  if (categoryFormat === 'SOLID_FOOD' || categoryFormat === 'CONDIMENT_SPICE') {
     thresholdG = 0.2;
     expectedBasisType = 'MASS';
-  } else if (categoryFormat === 'BEVERAGE_GENERAL' || categoryFormat === 'BEVERAGE_DAIRY') {
+  } else if (categoryFormat === 'BEVERAGE_GENERAL' || categoryFormat === 'BEVERAGE_DAIRY' || categoryFormat === 'BEVERAGE_INFUSION') {
     thresholdG = 0.2;
-    expectedBasisType = 'VOLUME';
+    expectedBasisType = categoryFormat === 'BEVERAGE_INFUSION' ? 'MASS_OR_VOLUME' : 'VOLUME';
   } else if (categoryFormat === 'COOKING_OIL' || categoryFormat === 'EDIBLE_FATS_AND_OILS') {
     thresholdG = 1.0;
     expectedBasisType = 'MASS_OR_VOLUME';
@@ -221,19 +221,20 @@ function evaluateTransFatCompliance({ declaredTransFatG, declaredTotalFatG, ingr
  */
 function analyzeNutrition(product) {
   const categoryId = product.identity?.categoryId || product.catalog?.categoryId;
-  const categoryFormat = getCategoryFormat(categoryId);
+  const categoryFormat = getCategoryFormat(product);
   const thresholds = NUTRITION_THRESHOLDS[categoryFormat] || null;
 
+  const p100 = product.nutrition_info?.per_100g || {};
   const rawNutr = product.nutrition || {};
-  const basis = rawNutr.basis || 'UNKNOWN';
+  const basis = rawNutr.basis || product.nutrition_info?.basis || 'PER_100G';
   const servingSize = product.serving || null;
 
-  // Extract declared nutrients
-  const sugarsVal = rawNutr.sugar != null ? rawNutr.sugar : null;
-  const fatVal = rawNutr.fat != null ? rawNutr.fat : null;
-  const satFatVal = rawNutr.saturatedFat != null ? rawNutr.saturatedFat : null;
-  const sodiumVal = rawNutr.sodium != null ? rawNutr.sodium : null;
-  const transFatVal = rawNutr.transFat != null ? rawNutr.transFat : null;
+  // Extract declared nutrients supporting both Catalog-500 and legacy schema
+  const sugarsVal = rawNutr.sugar != null ? rawNutr.sugar : (typeof p100.total_sugars_g === 'number' ? p100.total_sugars_g : (typeof rawNutr.sugars === 'number' ? rawNutr.sugars : null));
+  const fatVal = rawNutr.fat != null ? rawNutr.fat : (typeof p100.total_fat_g === 'number' ? p100.total_fat_g : null);
+  const satFatVal = rawNutr.saturatedFat != null ? rawNutr.saturatedFat : (typeof p100.saturated_fat_g === 'number' ? p100.saturated_fat_g : null);
+  const sodiumVal = rawNutr.sodium != null ? rawNutr.sodium : (typeof p100.sodium_mg === 'number' ? p100.sodium_mg : null);
+  const transFatVal = rawNutr.transFat != null ? rawNutr.transFat : (typeof p100.trans_fat_g === 'number' ? p100.trans_fat_g : null);
 
   // Salt conversion: Salt (g) = Sodium (g) * 2.5 = (Sodium (mg) / 1000) * 2.5
   let saltEquivalentVal = null;

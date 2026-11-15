@@ -16,18 +16,10 @@ const RecommendationList = ({ recommendation }) => {
         </div>
       )}
 
-      <div className="grid grid-cols-3 gap-4 mb-6">
-        <div className="bg-white p-3 rounded-lg text-center shadow-sm">
-          <div className="text-xs font-bold text-gray-500 uppercase">SmartChoice</div>
-          <div className="text-xl font-black text-gray-800">{recommendation.smartChoiceScore}/100</div>
-        </div>
-        <div className="bg-white p-3 rounded-lg text-center shadow-sm border-2 border-indigo-100">
-          <div className="text-xs font-bold text-indigo-600 uppercase">Preferences</div>
-          <div className="text-xl font-black text-indigo-700">{recommendation.personalization.score}/100</div>
-        </div>
-        <div className="bg-white p-3 rounded-lg text-center shadow-sm border-b-4 border-b-green-500">
-          <div className="text-xs font-bold text-green-700 uppercase">Final Match</div>
-          <div className="text-xl font-black text-green-700">{recommendation.finalScore}/100</div>
+      <div className="grid grid-cols-1 gap-4 mb-6">
+        <div className="bg-white p-3 rounded-lg text-center shadow-xs border-2 border-emerald-100">
+          <div className="text-xs font-bold text-emerald-700 uppercase">Match Score</div>
+          <div className="text-xl font-black text-emerald-700">{recommendation.personalization?.score ?? recommendation.matchScore ?? recommendation.finalScore}%</div>
         </div>
       </div>
 

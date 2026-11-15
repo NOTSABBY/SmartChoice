@@ -1,48 +1,126 @@
-﻿const config = require('../config/scoringConfig');
+const config = require('../config/scoringConfig');
 const { getCategoryFormat, NUTRITION_THRESHOLDS } = require('../config/analysisThresholds');
 const { analyzeNutrition } = require('./nutritionAnalysisService');
 const { analyzeIngredientProfile } = require('./ingredientParsingService');
 const { classifyNova } = require('./novaAnalysisService');
 const { evaluateCompletenessAndConfidence } = require('./dataCompletenessService');
 const { isValidFiniteNumber, isNonNegativeFiniteNumber } = require('./validationUtils');
+const { hasActivePreferences } = require('./preferenceService');
 const Product = require('../models/Product');
 
 const clamp = (val, min, max) => Math.max(min, Math.min(max, val));
 
 /**
+ * Authoritative normalized nutrient extraction across Catalog-500 and database schemas.
+ */
+const getNormalizedNutrition = (product) => {
+  if (!product) return {};
+  const p100 = product.nutrition_info?.per_100g || {};
+  const nut = product.nutrition || {};
+  return {
+    calories: typeof nut.calories === 'number' ? nut.calories : (typeof nut.energyKcal === 'number' ? nut.energyKcal : (typeof p100.energy_kcal === 'number' ? p100.energy_kcal : null)),
+    sugar: typeof nut.sugar === 'number' ? nut.sugar : (typeof nut.sugars === 'number' ? nut.sugars : (typeof p100.total_sugars_g === 'number' ? p100.total_sugars_g : null)),
+    saturatedFat: typeof nut.saturatedFat === 'number' ? nut.saturatedFat : (typeof p100.saturated_fat_g === 'number' ? p100.saturated_fat_g : null),
+    sodium: typeof nut.sodium === 'number' ? nut.sodium : (typeof p100.sodium_mg === 'number' ? p100.sodium_mg : null),
+    protein: typeof nut.protein === 'number' ? nut.protein : (typeof p100.protein_g === 'number' ? p100.protein_g : null),
+    fiber: typeof nut.fiber === 'number' ? nut.fiber : (typeof nut.dietaryFiber === 'number' ? nut.dietaryFiber : (typeof p100.dietary_fiber_g === 'number' ? p100.dietary_fiber_g : null)),
+    fat: typeof nut.fat === 'number' ? nut.fat : (typeof p100.total_fat_g === 'number' ? p100.total_fat_g : null),
+    carbohydrates: typeof nut.carbohydrates === 'number' ? nut.carbohydrates : (typeof p100.carbohydrates_g === 'number' ? p100.carbohydrates_g : null)
+  };
+};
+
+/**
  * 1. Calculate Score Reliability / Confidence
- * Decoupled from product quality score. Measures information completeness and basis reliability.
+ * Decoupled from product quality score. Measures evidence reliability:
+ * Confidence = 0.45Nr + 0.35Ir + 0.20Pr
+ * Nr = Nutrition Reliability (45%), Ir = Ingredient Reliability (35%), Pr = Processing Reliability (20%)
  */
 const calculateScoreConfidence = (product) => {
   const missingFields = [];
-  let confidence = 100;
+  const rawNutr = getNormalizedNutrition(product);
 
-  const tn = product.nutrition || {};
-  if (tn.calories == null) { confidence -= 10; missingFields.push('calories'); }
-  if (tn.sugar == null) { confidence -= 15; missingFields.push('sugar'); }
-  if (tn.saturatedFat == null) { confidence -= 10; missingFields.push('saturatedFat'); }
-  if (tn.sodium == null) { confidence -= 15; missingFields.push('sodium'); }
-  if (tn.protein == null) { confidence -= 10; missingFields.push('protein'); }
-  if (tn.fiber == null) { confidence -= 10; missingFields.push('fiber'); }
+  // A. Nutrition Reliability Nr (0-100 scale, 45% weight)
+  const evaluatedNutrients = ['calories', 'protein', 'carbohydrates', 'sugar', 'fat', 'saturatedFat', 'sodium', 'fiber'];
+  let nutrFilled = 0;
+  evaluatedNutrients.forEach(n => {
+    if (rawNutr[n] != null) nutrFilled++;
+    else missingFields.push(`nutrition.${n}`);
+  });
 
-  const hasIngredients = (product.ingredients?.ingredients && product.ingredients.ingredients.length > 0) || !!product.ingredients?.rawText;
-  if (!hasIngredients) {
-    confidence -= 10;
+  const basis = product.nutrition?.basis || product.nutrition_info?.basis || 'PER_100G';
+  const basisFactor = (basis === 'PER_100G' || basis === 'PER_100ML') ? 1.0 : (basis === 'PER_SERVING' ? 0.70 : 0.85);
+  const nutritionReliability = Math.round((nutrFilled / 8.0) * basisFactor * 100);
+
+  // B. Ingredient Reliability Ir (0-100 scale, 35% weight)
+  const hasRawText = !!product.ingredients?.rawText || !!product.nutrition_info?.ingredients_text;
+  const hasTokens = (product.ingredients?.ingredients && product.ingredients.ingredients.length > 0);
+  const isVerifiedSource = product.ingredients?.verificationStatus === 'VERIFIED' ||
+                           product.nutrition_info?.verification_status === 'VERIFIED' ||
+                           product.dietary_classification?.verificationStatus === 'VERIFIED' ||
+                           product.dietaryClassification?.verificationStatus === 'VERIFIED';
+
+  let ingredientReliability = 0;
+  if (hasTokens || (hasRawText && isVerifiedSource)) {
+    ingredientReliability = 100;
+  } else if (hasRawText) {
+    ingredientReliability = 70;
+  } else {
+    ingredientReliability = 0;
     missingFields.push('ingredients');
   }
 
-  if (!product.processing?.novaGroup && !product.analysis?.processingAnalysis?.novaGroup) {
-    confidence -= 10;
-    missingFields.push('novaGroup');
+  // C. Processing Reliability Pr (0-100 scale, 20% weight)
+  const hasNova = product.processing?.novaGroup != null ||
+                  product.analysis?.processingAnalysis?.novaGroup != null ||
+                  product.nutrition_info?.nova_group != null;
+  const sourceCertainty = product.analysis?.processingAnalysis?.sourceCertainty ||
+                          product.processing?.sourceCertainty ||
+                          (hasNova ? 'SOURCE_REPORTED' : 'UNKNOWN');
+
+  let processingReliability = 0;
+  if (sourceCertainty === 'SOURCE_REPORTED' || (hasNova && isVerifiedSource)) {
+    processingReliability = 100;
+  } else if (sourceCertainty === 'INTERNALLY_ESTIMATED') {
+    processingReliability = 75;
+  } else if (hasNova) {
+    processingReliability = 60;
+  } else {
+    processingReliability = 0;
+    missingFields.push('processing.novaGroup');
   }
 
+  // Authoritative Formula: Confidence = 0.45Nr + 0.35Ir + 0.20Pr
+  const confidenceScore = clamp(
+    Math.round(0.45 * nutritionReliability + 0.35 * ingredientReliability + 0.20 * processingReliability),
+    0,
+    100
+  );
+
   let level = 'high';
-  if (confidence < 50) level = 'low';
-  else if (confidence < 80) level = 'medium';
+  let label = 'High Confidence';
+  if (confidenceScore < 60) {
+    level = 'low';
+    label = 'Low Confidence';
+  } else if (confidenceScore < 80) {
+    level = 'medium';
+    label = 'Moderate Confidence';
+  }
 
   return {
-    confidence: clamp(confidence, 0, 100),
+    score: confidenceScore,
+    confidence: confidenceScore, // backward-compatible alias
     level,
+    label,
+    breakdown: {
+      nutrition: nutritionReliability,
+      ingredients: ingredientReliability,
+      processing: processingReliability
+    },
+    weights: {
+      nutrition: 0.45,
+      ingredients: 0.35,
+      processing: 0.20
+    },
     missingFields
   };
 };
@@ -54,7 +132,9 @@ const calculateScoreConfidence = (product) => {
  */
 const calculateNutritionScore = (product, category) => {
   const categoryId = product.identity?.categoryId || product.catalog?.categoryId;
-  const categoryFormat = getCategoryFormat(categoryId);
+  const categoryFormat = (category && NUTRITION_THRESHOLDS[category]) 
+    ? category 
+    : getCategoryFormat(categoryId);
   const thresholds = NUTRITION_THRESHOLDS[categoryFormat];
 
   let score = 100;
@@ -292,22 +372,61 @@ const calculateProcessingScore = (product) => {
  */
 const calculateProteinFiberScore = (product) => {
   let score = 50; // Neutral baseline start
+  const p100 = product.nutrition_info?.per_100g || {};
   const tn = product.nutrition || {};
+  const proteinVal = tn.protein != null ? tn.protein : (typeof p100.protein_g === 'number' ? p100.protein_g : null);
+  const fiberVal = tn.fiber != null ? tn.fiber : (typeof p100.dietary_fiber_g === 'number' ? p100.dietary_fiber_g : (typeof tn.dietaryFiber === 'number' ? tn.dietaryFiber : null));
   const factors = [];
   const limitations = [];
   let evaluatedCount = 0;
   let isNeutralBaseline = false;
 
+  const categoryFormat = getCategoryFormat(product);
+
+  // Infusions, Spices, and Cooking Oils have specific biological / consumption baselines
+  if (categoryFormat === 'BEVERAGE_INFUSION') {
+    factors.push("Beverage infusion (tea/coffee) evaluated on as-consumed infusion basis (<0.1g protein, 0g fiber per 100ml); spent dry leaf biomass is not consumed.");
+    return {
+      score: 50,
+      factors,
+      limitations,
+      isNeutralBaseline: true,
+      coverage: { evaluatedCount: 2, missingCount: 0 }
+    };
+  }
+
+  if (categoryFormat === 'CONDIMENT_SPICE') {
+    factors.push("Spices/condiments are consumed in small quantities (1-5g); unconsumed dry biomass does not represent a significant macronutrient source.");
+    return {
+      score: 50,
+      factors,
+      limitations,
+      isNeutralBaseline: true,
+      coverage: { evaluatedCount: 2, missingCount: 0 }
+    };
+  }
+
+  if (categoryFormat === 'COOKING_OIL') {
+    factors.push("Cooking oils and fats naturally contain 0g protein and 0g dietary fiber.");
+    return {
+      score: 50,
+      factors,
+      limitations,
+      isNeutralBaseline: true,
+      coverage: { evaluatedCount: 2, missingCount: 0 }
+    };
+  }
+
   const pfAnalysis = product.analysis?.nutritionAnalysis?.positiveNutrients;
   const proteinClaim = pfAnalysis?.fssaiClaims?.protein?.status;
   const fibreClaim = pfAnalysis?.fssaiClaims?.fibre?.status;
 
-  if (isValidFiniteNumber(tn.protein)) {
+  if (isValidFiniteNumber(proteinVal)) {
     evaluatedCount++;
-    if (proteinClaim === 'HIGH_PROTEIN_ELIGIBLE' || tn.protein >= 10) {
+    if (proteinClaim === 'HIGH_PROTEIN_ELIGIBLE' || proteinVal >= 10) {
       score += 25;
       factors.push("High protein content");
-    } else if (proteinClaim === 'SOURCE_OF_PROTEIN_ELIGIBLE' || tn.protein >= 5) {
+    } else if (proteinClaim === 'SOURCE_OF_PROTEIN_ELIGIBLE' || proteinVal >= 5) {
       score += 15;
       factors.push("Good protein content");
     } else {
@@ -317,12 +436,12 @@ const calculateProteinFiberScore = (product) => {
     limitations.push("Missing protein data");
   }
 
-  if (isValidFiniteNumber(tn.fiber)) {
+  if (isValidFiniteNumber(fiberVal)) {
     evaluatedCount++;
-    if (fibreClaim === 'HIGH_FIBRE_ELIGIBLE' || tn.fiber >= 6) {
+    if (fibreClaim === 'HIGH_FIBRE_ELIGIBLE' || fiberVal >= 6) {
       score += 25;
       factors.push("High fibre content");
-    } else if (fibreClaim === 'SOURCE_OF_FIBRE_ELIGIBLE' || tn.fiber >= 3) {
+    } else if (fibreClaim === 'SOURCE_OF_FIBRE_ELIGIBLE' || fiberVal >= 3) {
       score += 15;
       factors.push("Good fibre content");
     } else {
@@ -347,67 +466,48 @@ const calculateProteinFiberScore = (product) => {
 
 /**
  * 6. Preference Score & Allergen Hard Exclusion
+ * Evaluates individual compatibility with active user preferences on a 0 - 100 scale.
+ * When no preferences are active: returns score = 0, factors = [].
  */
 const calculatePreferenceScore = (product, prefs = {}) => {
-  let score = 70; // Good neutral base
-  const tn = product.nutrition || {};
-  const factors = [];
-  const limitations = [];
-  let hardExclusionViolated = false;
-  let hardExclusionReason = '';
-
-  // Allergen Hard Exclusion Check
-  if (prefs.avoidAllergens && Array.isArray(prefs.avoidAllergens) && prefs.avoidAllergens.length > 0) {
-    const ing = product.ingredients || {};
-    const productAllergens = (ing.allergens || []).map(a => a.toLowerCase());
-    const declaredClasses = (product.analysis?.ingredientAnalysis?.allergens?.declaredAllergenClasses || []).map(a => a.toLowerCase());
-    const combinedAllergens = [...new Set([...productAllergens, ...declaredClasses])];
-
-    const rawText = (ing.rawText || (ing.ingredients || []).join(' ')).toLowerCase();
-
-    for (const avoided of prefs.avoidAllergens) {
-      const av = avoided.toLowerCase();
-      const matchInClasses = combinedAllergens.some(a => a.includes(av));
-      const matchInText = rawText.includes(av);
-
-      if (matchInClasses || matchInText) {
-        hardExclusionViolated = true;
-        hardExclusionReason = `Contains avoided allergen: ${avoided}`;
-        score = 0; // Hard exclusion
-        factors.push(`HARD EXCLUSION: ${hardExclusionReason}`);
-        break;
-      }
-    }
+  if (!prefs || !hasActivePreferences(prefs)) {
+    return {
+      score: 0,
+      factors: [],
+      limitations: [],
+      hardExclusionViolated: false,
+      hardExclusionReason: ''
+    };
   }
 
-  if (!hardExclusionViolated) {
-    if (prefs.highProtein) {
-      if (tn.protein != null && tn.protein >= 10) {
-        score += 15;
-        factors.push("Matches preference: High Protein");
-      } else if (tn.protein != null && tn.protein < 5) {
-        score -= 10;
-        factors.push("Does not meet preference: High Protein");
-      }
-    }
+  const recommendationService = require('./recommendationService');
+  const evalResults = recommendationService.evaluatePreferences(product, prefs);
 
-    if (prefs.lowSugar) {
-      if (tn.sugar != null && tn.sugar <= 5) {
-        score += 15;
-        factors.push("Matches preference: Low Sugar");
-      } else if (tn.sugar != null && tn.sugar > 15) {
-        score -= 10;
-        factors.push("Does not meet preference: Low Sugar");
-      }
-    }
+  if (!evalResults.isEligible) {
+    const hardExclusionReason = evalResults.results.find(r => r.isHardConstraint && r.status === 'NO_MATCH')?.reason || 'Safety exclusion constraint violated';
+    return {
+      score: 0,
+      factors: [`HARD EXCLUSION: ${hardExclusionReason}`],
+      limitations: [hardExclusionReason],
+      hardExclusionViolated: true,
+      hardExclusionReason
+    };
   }
+
+  const score = recommendationService.calculatePersonalizedScore(evalResults);
+  const factors = evalResults.results
+    .filter(r => !r.isHardConstraint && r.status === 'MATCH')
+    .map(r => r.reason);
+  const limitations = evalResults.results
+    .filter(r => r.status === 'UNKNOWN' || r.status === 'NO_MATCH')
+    .map(r => r.reason);
 
   return {
     score: clamp(score, 0, 100),
     factors,
     limitations,
-    hardExclusionViolated,
-    hardExclusionReason
+    hardExclusionViolated: false,
+    hardExclusionReason: ''
   };
 };
 
@@ -430,16 +530,22 @@ const calculateSmartChoiceScore = (product, preferences = {}) => {
   const pf = calculateProteinFiberScore(product);
   const pref = calculatePreferenceScore(product, preferences);
 
-  // Exact statutory weights (0.40 / 0.20 / 0.15 / 0.15 / 0.10)
-  const weightedSum = (
+  const hasActivePrefs = hasActivePreferences(preferences);
+
+  // Exact statutory component contributions out of 40, 20, 15, 15, 10
+  const nutContribution = Math.round(nut.score * config.weights.nutrition);
+  const ingContribution = Math.round(ing.score * config.weights.ingredients);
+  const procContribution = Math.round(proc.score * config.weights.processing);
+  const pfContribution = Math.round(pf.score * config.weights.proteinFiber);
+  const prefContribution = hasActivePrefs ? Math.round(pref.score * config.weights.preferences) : 0;
+
+  let totalScore = Math.round(
     nut.score * config.weights.nutrition +
     ing.score * config.weights.ingredients +
     proc.score * config.weights.processing +
     pf.score * config.weights.proteinFiber +
-    pref.score * config.weights.preferences
+    (hasActivePrefs ? pref.score * config.weights.preferences : 0)
   );
-
-  let totalScore = Math.round(weightedSum);
 
   // Hard exclusion override: if allergen safety constraint is violated, score is 0
   if (pref.hardExclusionViolated) {
@@ -447,14 +553,14 @@ const calculateSmartChoiceScore = (product, preferences = {}) => {
   }
 
   // Calculate Overall Data Completeness (0-100%)
-  const rawNutr = product.nutrition || {};
+  const rawNutr = getNormalizedNutrition(product);
   let nutrFilled = 0;
   ['calories', 'protein', 'sugar', 'saturatedFat', 'sodium', 'fiber'].forEach(f => {
     if (rawNutr[f] != null) nutrFilled++;
   });
   const nutrCompleteness = Math.round((nutrFilled / 6) * 100);
-  const ingCompleteness = (product.ingredients?.rawText || (product.ingredients?.ingredients || []).length > 0) ? 100 : 0;
-  const procCompleteness = (product.processing?.novaGroup || product.analysis?.processingAnalysis?.novaGroup) ? 100 : 0;
+  const ingCompleteness = (product.ingredients?.rawText || product.nutrition_info?.ingredients_text || (product.ingredients?.ingredients || []).length > 0) ? 100 : 0;
+  const procCompleteness = (product.processing?.novaGroup != null || product.analysis?.processingAnalysis?.novaGroup != null || product.nutrition_info?.nova_group != null) ? 100 : 0;
   
   const overallCompleteness = Math.round(
     nutrCompleteness * 0.50 +
@@ -509,7 +615,7 @@ const calculateSmartChoiceScore = (product, preferences = {}) => {
   // Traceable explanation synthesis
   const explanation = pref.hardExclusionViolated
     ? `Product score is 0 due to safety exclusion (${pref.hardExclusionReason}).`
-    : `Overall score of ${totalScore}/100 calculated from Nutrition (${Math.round(nut.score)}/100, 40% wt), Ingredients (${Math.round(ing.score)}/100, 20% wt), Processing (${Math.round(proc.score)}/100, 15% wt), Protein/Fibre (${Math.round(pf.score)}/100, 15% wt), and Preferences (${Math.round(pref.score)}/100, 10% wt). Completeness: ${overallCompleteness}%, Confidence: ${conf.confidence}% (${conf.level}).`;
+    : `Overall score of ${totalScore}/100 calculated from Nutrition (${Math.round(nut.score)}/100, 40% wt), Ingredients (${Math.round(ing.score)}/100, 20% wt), Processing (${Math.round(proc.score)}/100, 15% wt), Protein/Fibre (${Math.round(pf.score)}/100, 15% wt), and Preferences (${hasActivePrefs ? Math.round(pref.score) : 0}/100, 10% wt). Completeness: ${overallCompleteness}%, Confidence: ${conf.confidence}% (${conf.level}).`;
 
   return {
     totalScore,
@@ -518,12 +624,32 @@ const calculateSmartChoiceScore = (product, preferences = {}) => {
       ingredients: Math.round(ing.score),
       processing: Math.round(proc.score),
       proteinFiber: Math.round(pf.score),
-      preferences: Math.round(pref.score)
+      proteinFibre: Math.round(pf.score),
+      preferences: hasActivePrefs ? Math.round(pref.score) : 0
+    },
+    weightedBreakdown: {
+      nutrition: nutContribution,
+      ingredients: ingContribution,
+      processing: procContribution,
+      proteinFiber: pfContribution,
+      proteinFibre: pfContribution,
+      preferences: prefContribution
+    },
+    componentScores: {
+      nutrition: Math.round(nut.score),
+      ingredients: Math.round(ing.score),
+      processing: Math.round(proc.score),
+      proteinFiber: Math.round(pf.score),
+      preferences: hasActivePrefs ? Math.round(pref.score) : 0
     },
     appliedWeights: { ...config.weights },
     confidence: {
-      score: conf.confidence,
-      level: conf.level
+      score: conf.score,
+      confidence: conf.score,
+      level: conf.level,
+      label: conf.label,
+      breakdown: conf.breakdown,
+      weights: conf.weights
     },
     coverage: {
       overallCompleteness,
@@ -541,24 +667,98 @@ const calculateSmartChoiceScore = (product, preferences = {}) => {
 };
 
 const getScoreForProduct = async (productId, preferences = {}) => {
-  const product = await Product.findById(productId);
-  if (!product) throw new Error("Product not found");
+  let product = null;
+  const isDbConnected = require('mongoose').connection.readyState === 1;
+
+  if (isDbConnected) {
+    try {
+      if (typeof productId === 'string' && productId.match(/^[0-9a-fA-F]{24}$/)) {
+        product = await Product.findById(productId).lean();
+      }
+      if (!product) {
+        product = await Product.findOne({
+          $or: [
+            { 'catalog.productId': productId },
+            { 'identity.barcode': productId },
+            { _id: productId }
+          ]
+        }).lean();
+      }
+    } catch (dbErr) {
+      console.warn("MongoDB query in getScoreForProduct failed:", dbErr.message);
+    }
+  }
+
+  if (!product) {
+    const catalogLoader = require('../utils/catalogLoader');
+    product = catalogLoader.getProductById(productId);
+  }
+
+  if (!product) {
+    if (!isDbConnected) {
+      throw new Error("Database service is currently unavailable and product was not found in local catalogue");
+    }
+    throw new Error("Product not found");
+  }
+
   return {
     product,
     ...calculateSmartChoiceScore(product, preferences)
   };
 };
 
-const getScoresForProducts = async (productIds, preferences = {}) => {
-  const products = await Product.find({ _id: { $in: productIds } });
+const getScoresForProducts = async (productIds = [], preferences = {}) => {
+  let products = [];
+  const isDbConnected = require('mongoose').connection.readyState === 1;
+
+  if (isDbConnected && productIds.length > 0) {
+    try {
+      const objectIds = productIds.filter(id => typeof id === 'string' && id.match(/^[0-9a-fA-F]{24}$/));
+      const catalogIds = productIds.filter(id => typeof id === 'string' && !id.match(/^[0-9a-fA-F]{24}$/));
+      const orClauses = [];
+      if (objectIds.length > 0) orClauses.push({ _id: { $in: objectIds } });
+      if (catalogIds.length > 0) orClauses.push({ 'catalog.productId': { $in: catalogIds } });
+      if (orClauses.length > 0) {
+        products = await Product.find({ $or: orClauses }).lean();
+      }
+    } catch (dbErr) {
+      console.warn("MongoDB query in getScoresForProducts failed:", dbErr.message);
+    }
+  }
+
+  if (products.length < productIds.length) {
+    const catalogLoader = require('../utils/catalogLoader');
+    const foundIds = new Set(products.map(p => (p._id ? p._id.toString() : p.catalog?.productId)));
+    const missing = productIds.filter(id => !foundIds.has(String(id)));
+    const diskItems = catalogLoader.getProductsByIds(missing);
+    products = [...products, ...diskItems];
+  }
+
   return products.map(product => ({
     product,
     ...calculateSmartChoiceScore(product, preferences)
   }));
 };
 
+const SCORING_WEIGHTS = {
+  NUTRITION: 40,
+  INGREDIENTS: 20,
+  PROCESSING: 15,
+  PROTEIN_FIBRE: 15,
+  PREFERENCES: 10,
+  nutrition: 0.40,
+  ingredients: 0.20,
+  processing: 0.15,
+  proteinFiber: 0.15,
+  proteinFibre: 0.15,
+  preferences: 0.10
+};
+
 module.exports = {
+  SCORING_WEIGHTS,
   calculateSmartChoiceScore,
+  calculateScoreConfidence,
+  calculateConfidence: calculateScoreConfidence,
   calculateNutritionScore,
   calculateIngredientScore,
   calculateProcessingScore,

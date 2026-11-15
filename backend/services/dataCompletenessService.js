@@ -1,4 +1,4 @@
-﻿const { isValidFiniteNumber } = require('./validationUtils');
+const { isValidFiniteNumber } = require('./validationUtils');
 
 /**
  * Calculates decoupled completeness (0-100%) and analytical confidence (0-1.0).
@@ -94,6 +94,43 @@ function evaluateCompletenessAndConfidence(product, nutritionAnalysis, ingredien
   else if (overallConfidence >= 0.50) confidenceBand = 'MODERATE';
   else if (overallConfidence > 0) confidenceBand = 'LOW';
 
+  // --- 3. DATA QUALITY STATUS ---
+  // Status categories: VERIFIED, SOURCE_REPORTED, ESTIMATED, UNKNOWN, INVALID, NEEDS_REVIEW
+  let dataQualityStatus = 'UNKNOWN';
+  let dataQualityReason = '';
+
+  const proteinVal = rawNutr.protein || 0;
+  const carbsVal = rawNutr.carbohydrates || 0;
+  const fatVal = rawNutr.fat || 0;
+  const sumMacros = (isValidFiniteNumber(proteinVal) ? proteinVal : 0) +
+                    (isValidFiniteNumber(carbsVal) ? carbsVal : 0) +
+                    (isValidFiniteNumber(fatVal) ? fatVal : 0);
+
+  const rawSource = product.nutrition_info?.data_source || product.source?.type || 'unknown';
+
+  if (nutrCount === 0 && ingredientProfile.totalIngredientCount === 0) {
+    dataQualityStatus = 'UNKNOWN';
+    dataQualityReason = 'Product lacks declared nutritional values and ingredient statements.';
+  } else if (sumMacros > 105.0) {
+    dataQualityStatus = 'NEEDS_REVIEW';
+    dataQualityReason = `Sum of macronutrients (${sumMacros.toFixed(1)}g per 100g) exceeds 100g mass boundary.`;
+  } else if (rawNutr.calories != null && rawNutr.calories < 0) {
+    dataQualityStatus = 'INVALID';
+    dataQualityReason = 'Energy declaration is negative, violating physical validity constraints.';
+  } else if (rawSource === 'fssai_verified_declaration' || rawSource === 'verified_lab') {
+    dataQualityStatus = 'VERIFIED';
+    dataQualityReason = 'Independently verified against statutory FSSAI compliance declarations.';
+  } else if (rawSource === 'openfoodfacts') {
+    dataQualityStatus = 'SOURCE_REPORTED';
+    dataQualityReason = 'Reported directly by Open Food Facts community repository without laboratory verification.';
+  } else if (rawSource.includes('gemini') || rawSource.includes('estimated')) {
+    dataQualityStatus = 'ESTIMATED';
+    dataQualityReason = 'Standardized FSSAI nutritional baseline estimated using benchmark formulation algorithms.';
+  } else {
+    dataQualityStatus = 'SOURCE_REPORTED';
+    dataQualityReason = 'Source-reported nutritional values.';
+  }
+
   return {
     completeness: {
       overallPercentage,
@@ -109,6 +146,12 @@ function evaluateCompletenessAndConfidence(product, nutritionAnalysis, ingredien
       ingredientConfidence,
       processingConfidence,
       confidenceBand
+    },
+    dataQuality: {
+      status: dataQualityStatus,
+      reason: dataQualityReason,
+      rawSource,
+      sumMacros: Number(sumMacros.toFixed(2))
     }
   };
 }

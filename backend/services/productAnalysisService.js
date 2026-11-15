@@ -1,4 +1,4 @@
-﻿const { analyzeNutrition } = require('./nutritionAnalysisService');
+const { analyzeNutrition } = require('./nutritionAnalysisService');
 const { analyzeIngredientProfile } = require('./ingredientParsingService');
 const { classifyNova } = require('./novaAnalysisService');
 const { evaluateProteinClaim, evaluateFibreClaim, calculateCategoryNutrientDensity } = require('./proteinFibreAnalysisService');
@@ -11,7 +11,7 @@ const { getCategoryFormat } = require('../config/analysisThresholds');
  */
 function analyzeProduct(product, options = {}) {
   const categoryId = product.identity?.categoryId || product.catalog?.categoryId;
-  const categoryFormat = getCategoryFormat(categoryId);
+  const categoryFormat = getCategoryFormat(product);
 
   // 1. Nutrition Analysis
   const nutritionAnalysis = analyzeNutrition(product);
@@ -62,6 +62,7 @@ function analyzeProduct(product, options = {}) {
     engineVersion: '3.0.0-fssai',
     completeness: quality.completeness,
     confidence: quality.confidence,
+    dataQuality: quality.dataQuality,
     nutritionAnalysis: {
       basis: nutritionAnalysis.basis,
       categoryFormat: nutritionAnalysis.categoryFormat,
@@ -90,9 +91,23 @@ function analyzeProduct(product, options = {}) {
       evidence: novaResult.evidence,
       rationale: novaResult.rationale
     },
+    dietaryClassification: product.dietaryClassification || {
+      status: (product.dietary_type === 'NON_VEG' || product.catalog?.dietaryType === 'NON_VEG') ? 'NON_VEGETARIAN' : 
+              (product.dietary_type === 'VEG' || product.catalog?.dietaryType === 'VEG') ? 'VEGETARIAN' : 'UNKNOWN',
+      isVegetarian: (product.dietary_type === 'VEG' || product.catalog?.dietaryType === 'VEG'),
+      isNonVegetarian: (product.dietary_type === 'NON_VEG' || product.catalog?.dietaryType === 'NON_VEG'),
+      isVegan: false,
+      source: 'CATALOG_DECLARATION',
+      verificationStatus: 'UNVERIFIED',
+      confidence: 'LOW'
+    },
     ingredientAnalysis: {
       parseStatus: ingredientProfile.parseStatus,
+      verificationStatus: ingredientProfile.verificationStatus,
       totalIngredientCount: ingredientProfile.totalIngredientCount,
+      rawIngredientsText: ingredientProfile.rawText,
+      sourceUrl: ingredientProfile.sourceUrl,
+      sourceType: ingredientProfile.sourceType,
       additives: {
         detectionStatus: ingredientProfile.additives.detectionStatus,
         totalDetected: ingredientProfile.additives.totalDetected,
@@ -101,7 +116,10 @@ function analyzeProduct(product, options = {}) {
       },
       allergens: {
         detectionStatus: ingredientProfile.allergens.detectionStatus,
-        declaredAllergenClasses: ingredientProfile.allergens.declaredAllergenClasses
+        contains: ingredientProfile.allergens.contains,
+        mayContain: ingredientProfile.allergens.mayContain,
+        declaredAllergenClasses: ingredientProfile.allergens.declaredAllergenClasses,
+        specificAllergens: ingredientProfile.allergens.specificAllergens
       }
     }
   };

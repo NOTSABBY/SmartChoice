@@ -1,0 +1,893 @@
+{
+  "category_id": 2,
+  "category_name": "Breakfast Cereals & Oats",
+  "category_slug": "breakfast-cereals-oats",
+  "category_thumbnail": "https://images.openfoodfacts.org/images/products/841/018/801/2092/front_it.110.400.jpg",
+  "product_count": 20,
+  "products": [
+    {
+      "product_id": "PKG_PRD_0021",
+      "category_id": 2,
+      "category_name": "Breakfast Cereals & Oats",
+      "brand": "Kellogg's",
+      "product_name": "Kellogg's Corn Flakes Original",
+      "packaging_size": "Standard Pack",
+      "query_term": "Kellogg's Corn Flakes Original",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/841/018/801/2092/front_it.110.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/841/018/801/2092/front_it.110.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "30 g",
+        "nutri_score": "D",
+        "nova_group": 3,
+        "ingredients_text": "Mais, estratto di malto d'_orzo_, zucchero, sale, niacina, ferro, vitamina B6, riboflavina, tiamina, acido folico, vitamina D, vitamina B12.",
+        "allergens": [
+          "Gluten"
+        ],
+        "per_100g": {
+          "energy_kcal": 383.2,
+          "protein_g": 7.0,
+          "carbohydrates_g": 84.0,
+          "total_sugars_g": 8.0,
+          "added_sugars_g": 8.0,
+          "total_fat_g": 0.9,
+          "saturated_fat_g": 0.2,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 3.0,
+          "sodium_mg": 440.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 165,
+      "price": 153,
+      "discount_percent": 7,
+      "delivery_time_mins": 10,
+      "rating": 4.2,
+      "review_count": 1162,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0022",
+      "category_id": 2,
+      "category_name": "Breakfast Cereals & Oats",
+      "brand": "Quaker",
+      "product_name": "Quaker Rolled Oats",
+      "packaging_size": "Standard Pack",
+      "query_term": "Quaker Rolled Oats",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/316/893/000/3632/front_en.104.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/316/893/000/3632/front_en.104.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "40g",
+        "nutri_score": "A",
+        "nova_group": 4,
+        "ingredients_text": "100% oatmeal",
+        "allergens": [
+          "Gluten"
+        ],
+        "per_100g": {
+          "energy_kcal": 375.0,
+          "protein_g": 11.0,
+          "carbohydrates_g": 60.0,
+          "total_sugars_g": 1.1,
+          "added_sugars_g": 0.0,
+          "total_fat_g": 8.0,
+          "saturated_fat_g": 1.5,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 9.0,
+          "sodium_mg": 4.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 195,
+      "price": 170,
+      "discount_percent": 13,
+      "delivery_time_mins": 11,
+      "rating": 4.8,
+      "review_count": 628,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0023",
+      "category_id": 2,
+      "category_name": "Breakfast Cereals & Oats",
+      "brand": "Saffola Oats",
+      "product_name": "Saffola Masala Oats Veggie Twist",
+      "packaging_size": "Standard Pack",
+      "query_term": "Saffola Masala Oats Veggie Twist",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/890/108/806/8758/front_en.26.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/890/108/806/8758/front_en.26.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "38 g (1/2 cup)",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "Bled Oats (73.6%), Maltodextrin, lodised Salt, Dried Vegetables Carot (1.6%). Green Peas (1.15%), French Beans (0.7%), Onion Pader Sugar, Desiccated Coconut Powder, Spice & Condiments 30%) (Chilly. Turmeric, Ginger, Cardamom, Cinnamon, Curry ves Garlic), Milk Solids, Tomato Powder (1.2%), Hydrolysed hrtable Protein, Yeast Extract, Acidity Regulator (INS 330), Rovour Enhancers (INS 631, INS 627), Colour (INS 100), are-identical Flavouring Substances.",
+        "allergens": [
+          "Milk",
+          "Contains Oats",
+          "Soy & Nut."
+        ],
+        "per_100g": {
+          "energy_kcal": 376.0,
+          "protein_g": 8.8,
+          "carbohydrates_g": 69.2,
+          "total_sugars_g": 5.1,
+          "added_sugars_g": 3.6,
+          "total_fat_g": 9.9,
+          "saturated_fat_g": 3.4,
+          "trans_fat_g": 0.1,
+          "dietary_fiber_g": 12.4,
+          "sodium_mg": 2283.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 185,
+      "price": 174,
+      "discount_percent": 6,
+      "delivery_time_mins": 9,
+      "rating": 4.6,
+      "review_count": 1061,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0024",
+      "category_id": 2,
+      "category_name": "Breakfast Cereals & Oats",
+      "brand": "Bagrry's",
+      "product_name": "Bagrry's Crunchy Muesli Fruit & Nut",
+      "packaging_size": "Standard Pack",
+      "query_term": "Bagrry's Crunchy Muesli Fruit & Nut",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/890/271/050/8727/front_en.3.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/890/271/050/8727/front_en.3.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "30 g",
+        "nutri_score": "B",
+        "nova_group": 4,
+        "ingredients_text": "Rolled Oats (34.2%), Nuts & Raisins 22.9% (Raisins, Dates, Almonds), Whole Wheat Flakes 15.2% (Wheat, Sugar, lodised Salt, Cereal Extract and Antioxidants-INS 322& INS 307b), Invert Syrup, Dehydrated Fruits 6.6% (Mango Powder, Banana, Cranberry (1%), Papaya, Strawberry Powder & Lemon Juice Powder), Broken Rolled Wheat, Wheat Bran, Apple Juice Concentrate (2%), Oat Bran Honey, Beetroot Powder and Antioxidant (INS 307b).",
+        "allergens": [
+          "Banana",
+          "Gluten",
+          "Nuts"
+        ],
+        "per_100g": {
+          "energy_kcal": 380.0,
+          "protein_g": 9.0,
+          "carbohydrates_g": 80.7,
+          "total_sugars_g": 16.3,
+          "added_sugars_g": 12.0,
+          "total_fat_g": 4.0,
+          "saturated_fat_g": 0.7,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 7.3,
+          "sodium_mg": 156.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 190,
+      "price": 169,
+      "discount_percent": 11,
+      "delivery_time_mins": 9,
+      "rating": 4.6,
+      "review_count": 1826,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0025",
+      "category_id": 2,
+      "category_name": "Breakfast Cereals & Oats",
+      "brand": "Soulfull",
+      "product_name": "Tata Soulfull Ragi Chocos",
+      "packaging_size": "Standard Pack",
+      "query_term": "Tata Soulfull Ragi Chocos",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310B981%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23047857%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%A5%A3%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3ESOULFULL%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Tata%20Soulfull%20Ragi%20Cho%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Ecos%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23D1FAE5%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%23047857%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EBreakfast%20Cereals%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "front_thumb": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310B981%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23047857%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%A5%A3%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3ESOULFULL%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Tata%20Soulfull%20Ragi%20Cho%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Ecos%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23D1FAE5%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%23047857%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EBreakfast%20Cereals%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "image_source": "placeholder"
+      },
+      "nutrition_info": {
+        "serving_size": "40 g",
+        "nutri_score": "B",
+        "nova_group": 3,
+        "ingredients_text": "Rolled Whole Oats (78%), Whole Wheat Flakes, Invert Sugar, Malt Extract, Edible Vegetable Oil, Antioxidant (INS 307b), Iodised Salt, Mineral & Vitamin Premix (Iron, Calcium, Vitamin C, B-Complex).",
+        "allergens": [
+          "Gluten"
+        ],
+        "per_100g": {
+          "energy_kcal": 381.1,
+          "protein_g": 11.5,
+          "carbohydrates_g": 71.6,
+          "total_sugars_g": 6.0,
+          "added_sugars_g": 3.0,
+          "total_fat_g": 5.8,
+          "saturated_fat_g": 1.2,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 9.5,
+          "sodium_mg": 139.2
+        },
+        "data_source": "gemini_fssai_estimated"
+      },
+      "mrp": 170,
+      "price": 151,
+      "discount_percent": 11,
+      "delivery_time_mins": 9,
+      "rating": 4.7,
+      "review_count": 1806,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0026",
+      "category_id": 2,
+      "category_name": "Breakfast Cereals & Oats",
+      "brand": "Kellogg's",
+      "product_name": "Kellogg's Chocos Chocolate Cereal",
+      "packaging_size": "Standard Pack",
+      "query_term": "Kellogg's Chocos Chocolate Cereal",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/505/008/371/2296/front_fr.88.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/505/008/371/2296/front_fr.88.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "45 g",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "Flocons d'AVOINE(47%), Sucre, Huile de palme, Morceaux de chocolat(11%)(Sucre, Pâte de cacao, Beurre de cacao, Graisses végétales(Palme, Karité, Sal, Mangue) en proportions variables, Matière grasse du LAIT, Emulsifiant{Lecithine de SOJA}), Farine de BLÉ, NOISETTES(3%), Noix de coco séchée, Mélasse, Sel, Extrait de malt d'ORGE, Cannelle. Vitamines et Minéraux: Vitamines (Niacine, B6, B2, B1, Acide folique, B12) et Fer.",
+        "allergens": [
+          "Gluten",
+          "Milk",
+          "Nuts",
+          "Soybeans"
+        ],
+        "per_100g": {
+          "energy_kcal": 497.0,
+          "protein_g": 8.0,
+          "carbohydrates_g": 57.0,
+          "total_sugars_g": 21.0,
+          "added_sugars_g": 20.2,
+          "total_fat_g": 25.0,
+          "saturated_fat_g": 12.0,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 5.8,
+          "sodium_mg": 252.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 180,
+      "price": 142,
+      "discount_percent": 21,
+      "delivery_time_mins": 9,
+      "rating": 4.8,
+      "review_count": 2296,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0027",
+      "category_id": 2,
+      "category_name": "Breakfast Cereals & Oats",
+      "brand": "Monsoon Harvest",
+      "product_name": "Monsoon Harvest Toasted Millet Muesli",
+      "packaging_size": "Standard Pack",
+      "query_term": "Monsoon Harvest Toasted Millet Muesli",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310B981%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23047857%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%A5%A3%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EMONSOON%20HARVEST%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Monsoon%20Harvest%20Toaste%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Ed%20Millet%20Muesl%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23D1FAE5%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%23047857%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EBreakfast%20Cereals%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "front_thumb": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310B981%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23047857%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%A5%A3%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EMONSOON%20HARVEST%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Monsoon%20Harvest%20Toaste%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Ed%20Millet%20Muesl%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23D1FAE5%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%23047857%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EBreakfast%20Cereals%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "image_source": "placeholder"
+      },
+      "nutrition_info": {
+        "serving_size": "40 g",
+        "nutri_score": "B",
+        "nova_group": 3,
+        "ingredients_text": "Rolled Whole Oats (78%), Whole Wheat Flakes, Invert Sugar, Malt Extract, Edible Vegetable Oil, Antioxidant (INS 307b), Iodised Salt, Mineral & Vitamin Premix (Iron, Calcium, Vitamin C, B-Complex).",
+        "allergens": [
+          "Gluten"
+        ],
+        "per_100g": {
+          "energy_kcal": 412.0,
+          "protein_g": 11.8,
+          "carbohydrates_g": 74.5,
+          "total_sugars_g": 6.0,
+          "added_sugars_g": 3.0,
+          "total_fat_g": 6.1,
+          "saturated_fat_g": 1.2,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 9.5,
+          "sodium_mg": 145.9
+        },
+        "data_source": "gemini_fssai_estimated"
+      },
+      "mrp": 205,
+      "price": 156,
+      "discount_percent": 24,
+      "delivery_time_mins": 12,
+      "rating": 4.3,
+      "review_count": 1199,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0028",
+      "category_id": 2,
+      "category_name": "Breakfast Cereals & Oats",
+      "brand": "True Elements",
+      "product_name": "True Elements Rolled Oats",
+      "packaging_size": "Standard Pack",
+      "query_term": "True Elements Rolled Oats",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/890/611/266/2414/front_en.16.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/890/611/266/2414/front_en.16.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "40 g",
+        "nutri_score": "B",
+        "nova_group": 4,
+        "ingredients_text": "Rolled Oats",
+        "allergens": [],
+        "per_100g": {
+          "energy_kcal": 410.9,
+          "protein_g": 12.0,
+          "carbohydrates_g": 68.3,
+          "total_sugars_g": 0.0,
+          "added_sugars_g": 0.0,
+          "total_fat_g": 10.0,
+          "saturated_fat_g": 2.9,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 9.5,
+          "sodium_mg": 5.4
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 185,
+      "price": 142,
+      "discount_percent": 23,
+      "delivery_time_mins": 11,
+      "rating": 4.7,
+      "review_count": 498,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0029",
+      "category_id": 2,
+      "category_name": "Breakfast Cereals & Oats",
+      "brand": "Kellogg's",
+      "product_name": "Kellogg's All-Bran Wheat Flakes",
+      "packaging_size": "Standard Pack",
+      "query_term": "Kellogg's All-Bran Wheat Flakes",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/500/012/706/1828/front_en.25.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/500/012/706/1828/front_en.25.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "30g",
+        "nutri_score": "B",
+        "nova_group": 4,
+        "ingredients_text": "FR PETALES DE BLE COMPLET ET DE SON DE BLE ENRICHIS EN VITAMINES ED MINÉRAUX. INGRÉDIENTS: Blé complet(59%), son de blé (18%), farine de blé complet, sucre, extrait de malt d'orge, sirop de glucose, sel, arôme naturel VITAMINES ET MINÉRAUX: Niacine, fer, vitamine B6, riboflavine, thiamine, acide folique, vitamine D, vitamine B12. Allergènes : voir les ingrédients en gras. Peut contenir gluten provenant d'autres céréales, fruits à coque.",
+        "allergens": [
+          "Gluten"
+        ],
+        "per_100g": {
+          "energy_kcal": 358.0,
+          "protein_g": 11.0,
+          "carbohydrates_g": 65.0,
+          "total_sugars_g": 14.0,
+          "added_sugars_g": 0.0,
+          "total_fat_g": 2.2,
+          "saturated_fat_g": 0.4,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 17.0,
+          "sodium_mg": 264.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 200,
+      "price": 158,
+      "discount_percent": 21,
+      "delivery_time_mins": 9,
+      "rating": 4.4,
+      "review_count": 276,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0030",
+      "category_id": 2,
+      "category_name": "Breakfast Cereals & Oats",
+      "brand": "Quaker",
+      "product_name": "Quaker Oats Multigrain",
+      "packaging_size": "Standard Pack",
+      "query_term": "Quaker Oats Multigrain",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/890/149/170/2546/front_fr.3.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/890/149/170/2546/front_fr.3.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "100 g",
+        "nutri_score": "A",
+        "nova_group": 1,
+        "ingredients_text": "Oat flakes",
+        "allergens": [],
+        "per_100g": {
+          "energy_kcal": 407.0,
+          "protein_g": 11.1,
+          "carbohydrates_g": 71.0,
+          "total_sugars_g": 2.2,
+          "added_sugars_g": 1.2,
+          "total_fat_g": 9.0,
+          "saturated_fat_g": 1.8,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 12.0,
+          "sodium_mg": 117.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 195,
+      "price": 170,
+      "discount_percent": 13,
+      "delivery_time_mins": 11,
+      "rating": 4.8,
+      "review_count": 1228,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0031",
+      "category_id": 2,
+      "category_name": "Breakfast Cereals & Oats",
+      "brand": "Saffola Oats",
+      "product_name": "Saffola Masala Oats Peppy Tomato",
+      "packaging_size": "Standard Pack",
+      "query_term": "Saffola Masala Oats Peppy Tomato",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/890/108/806/8741/front_en.24.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/890/108/806/8741/front_en.24.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "1 serving (38 g)",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "Rolled Oats (75%), maltodexrin, Spices and Condiments (5.8%) (Onion, Pepper, Garlic, Coriander, Cumin, Fenugreek, Ginger, Turmeric, Cinnamon, Clove), Salt, Sugar, Dried Vegetables (Carrot (0.7% ), French Beans (0.5%), Tomato (0.3 %), Hydrolysed vegetable Protein, Wheat Powder, Flavour Enhancer (627, 631), Antioxidant (320). CONTAINS ADDED FLAVOUR - NATURAL AND NATURE IDENTICAL FLAVOURING SUBSTANCES.",
+        "allergens": [
+          "Gluten"
+        ],
+        "per_100g": {
+          "energy_kcal": 363.2,
+          "protein_g": 8.7,
+          "carbohydrates_g": 70.0,
+          "total_sugars_g": 7.4,
+          "added_sugars_g": 0.0,
+          "total_fat_g": 7.6,
+          "saturated_fat_g": 1.3,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 10.0,
+          "sodium_mg": 1915.8
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 195,
+      "price": 166,
+      "discount_percent": 15,
+      "delivery_time_mins": 8,
+      "rating": 4.8,
+      "review_count": 2230,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0032",
+      "category_id": 2,
+      "category_name": "Breakfast Cereals & Oats",
+      "brand": "Bagrry's",
+      "product_name": "Bagrry's Rolled Oats",
+      "packaging_size": "Standard Pack",
+      "query_term": "Bagrry's Rolled Oats",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310B981%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23047857%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%A5%A3%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EBAGRRY%26%23x27%3BS%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Bagrry%26%23x27%3Bs%20Rolled%20O%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Eats%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23D1FAE5%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%23047857%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EBreakfast%20Cereals%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "front_thumb": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310B981%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23047857%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%A5%A3%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EBAGRRY%26%23x27%3BS%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Bagrry%26%23x27%3Bs%20Rolled%20O%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Eats%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23D1FAE5%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%23047857%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EBreakfast%20Cereals%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "image_source": "placeholder"
+      },
+      "nutrition_info": {
+        "serving_size": "40 g",
+        "nutri_score": "B",
+        "nova_group": 3,
+        "ingredients_text": "Rolled Whole Oats (78%), Whole Wheat Flakes, Invert Sugar, Malt Extract, Edible Vegetable Oil, Antioxidant (INS 307b), Iodised Salt, Mineral & Vitamin Premix (Iron, Calcium, Vitamin C, B-Complex).",
+        "allergens": [
+          "Gluten"
+        ],
+        "per_100g": {
+          "energy_kcal": 369.6,
+          "protein_g": 11.3,
+          "carbohydrates_g": 70.6,
+          "total_sugars_g": 6.0,
+          "added_sugars_g": 3.0,
+          "total_fat_g": 5.6,
+          "saturated_fat_g": 1.2,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 9.5,
+          "sodium_mg": 136.6
+        },
+        "data_source": "gemini_fssai_estimated"
+      },
+      "mrp": 180,
+      "price": 148,
+      "discount_percent": 18,
+      "delivery_time_mins": 11,
+      "rating": 4.1,
+      "review_count": 813,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0033",
+      "category_id": 2,
+      "category_name": "Breakfast Cereals & Oats",
+      "brand": "Kellogg's",
+      "product_name": "Kellogg's Real Almond & Honey Muesli",
+      "packaging_size": "Standard Pack",
+      "query_term": "Kellogg's Real Almond & Honey Muesli",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310B981%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23047857%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%A5%A3%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EKELLOGG%26%23x27%3BS%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Kellogg%26%23x27%3Bs%20Real%20Al%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Emond%20%26amp%3B%20Honey%20Muesl%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23D1FAE5%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%23047857%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EBreakfast%20Cereals%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "front_thumb": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310B981%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23047857%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%A5%A3%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EKELLOGG%26%23x27%3BS%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Kellogg%26%23x27%3Bs%20Real%20Al%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Emond%20%26amp%3B%20Honey%20Muesl%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23D1FAE5%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%23047857%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EBreakfast%20Cereals%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "image_source": "placeholder"
+      },
+      "nutrition_info": {
+        "serving_size": "40 g",
+        "nutri_score": "B",
+        "nova_group": 3,
+        "ingredients_text": "Rolled Whole Oats (78%), Whole Wheat Flakes, Invert Sugar, Malt Extract, Edible Vegetable Oil, Antioxidant (INS 307b), Iodised Salt, Mineral & Vitamin Premix (Iron, Calcium, Vitamin C, B-Complex).",
+        "allergens": [
+          "Gluten"
+        ],
+        "per_100g": {
+          "energy_kcal": 408.1,
+          "protein_g": 11.8,
+          "carbohydrates_g": 74.2,
+          "total_sugars_g": 6.0,
+          "added_sugars_g": 3.0,
+          "total_fat_g": 6.1,
+          "saturated_fat_g": 1.2,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 9.5,
+          "sodium_mg": 145.0
+        },
+        "data_source": "gemini_fssai_estimated"
+      },
+      "mrp": 205,
+      "price": 158,
+      "discount_percent": 23,
+      "delivery_time_mins": 11,
+      "rating": 4.8,
+      "review_count": 2278,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0034",
+      "category_id": 2,
+      "category_name": "Breakfast Cereals & Oats",
+      "brand": "Soulfull",
+      "product_name": "Tata Soulfull Millet Muesli",
+      "packaging_size": "Standard Pack",
+      "query_term": "Tata Soulfull Millet Muesli",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310B981%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23047857%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%A5%A3%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3ESOULFULL%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Tata%20Soulfull%20Millet%20M%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Euesli%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23D1FAE5%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%23047857%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EBreakfast%20Cereals%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "front_thumb": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310B981%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23047857%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%A5%A3%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3ESOULFULL%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Tata%20Soulfull%20Millet%20M%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Euesli%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23D1FAE5%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%23047857%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EBreakfast%20Cereals%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "image_source": "placeholder"
+      },
+      "nutrition_info": {
+        "serving_size": "40 g",
+        "nutri_score": "B",
+        "nova_group": 3,
+        "ingredients_text": "Rolled Whole Oats (78%), Whole Wheat Flakes, Invert Sugar, Malt Extract, Edible Vegetable Oil, Antioxidant (INS 307b), Iodised Salt, Mineral & Vitamin Premix (Iron, Calcium, Vitamin C, B-Complex).",
+        "allergens": [
+          "Gluten"
+        ],
+        "per_100g": {
+          "energy_kcal": 365.8,
+          "protein_g": 11.3,
+          "carbohydrates_g": 70.2,
+          "total_sugars_g": 6.0,
+          "added_sugars_g": 3.0,
+          "total_fat_g": 5.6,
+          "saturated_fat_g": 1.2,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 9.5,
+          "sodium_mg": 135.8
+        },
+        "data_source": "gemini_fssai_estimated"
+      },
+      "mrp": 165,
+      "price": 153,
+      "discount_percent": 7,
+      "delivery_time_mins": 10,
+      "rating": 4.3,
+      "review_count": 482,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0035",
+      "category_id": 2,
+      "category_name": "Breakfast Cereals & Oats",
+      "brand": "True Elements",
+      "product_name": "True Elements Steel Cut Oats",
+      "packaging_size": "Standard Pack",
+      "query_term": "True Elements Steel Cut Oats",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/890/611/266/1059/front_en.4.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/890/611/266/1059/front_en.4.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "40 g",
+        "nutri_score": "B",
+        "nova_group": 3,
+        "ingredients_text": "Rolled Whole Oats (78%), Whole Wheat Flakes, Invert Sugar, Malt Extract, Edible Vegetable Oil, Antioxidant (INS 307b), Iodised Salt, Mineral & Vitamin Premix (Iron, Calcium, Vitamin C, B-Complex).",
+        "allergens": [
+          "Gluten"
+        ],
+        "per_100g": {
+          "energy_kcal": 400.4,
+          "protein_g": 11.7,
+          "carbohydrates_g": 73.4,
+          "total_sugars_g": 6.0,
+          "added_sugars_g": 3.0,
+          "total_fat_g": 6.0,
+          "saturated_fat_g": 1.2,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 9.5,
+          "sodium_mg": 143.4
+        },
+        "data_source": "gemini_fssai_estimated"
+      },
+      "mrp": 195,
+      "price": 164,
+      "discount_percent": 16,
+      "delivery_time_mins": 9,
+      "rating": 4.9,
+      "review_count": 1751,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0036",
+      "category_id": 2,
+      "category_name": "Breakfast Cereals & Oats",
+      "brand": "Kellogg's",
+      "product_name": "Kellogg's Special K Cereal",
+      "packaging_size": "Standard Pack",
+      "query_term": "Kellogg's Special K Cereal",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310B981%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23047857%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%A5%A3%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EKELLOGG%26%23x27%3BS%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Kellogg%26%23x27%3Bs%20Special%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3E%20K%20Cereal%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23D1FAE5%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%23047857%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EBreakfast%20Cereals%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "front_thumb": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310B981%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23047857%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%A5%A3%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EKELLOGG%26%23x27%3BS%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Kellogg%26%23x27%3Bs%20Special%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3E%20K%20Cereal%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23D1FAE5%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%23047857%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EBreakfast%20Cereals%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "image_source": "placeholder"
+      },
+      "nutrition_info": {
+        "serving_size": "40 g",
+        "nutri_score": "B",
+        "nova_group": 3,
+        "ingredients_text": "Rolled Whole Oats (78%), Whole Wheat Flakes, Invert Sugar, Malt Extract, Edible Vegetable Oil, Antioxidant (INS 307b), Iodised Salt, Mineral & Vitamin Premix (Iron, Calcium, Vitamin C, B-Complex).",
+        "allergens": [
+          "Gluten"
+        ],
+        "per_100g": {
+          "energy_kcal": 373.4,
+          "protein_g": 11.4,
+          "carbohydrates_g": 70.9,
+          "total_sugars_g": 6.0,
+          "added_sugars_g": 3.0,
+          "total_fat_g": 5.7,
+          "saturated_fat_g": 1.2,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 9.5,
+          "sodium_mg": 137.5
+        },
+        "data_source": "gemini_fssai_estimated"
+      },
+      "mrp": 200,
+      "price": 162,
+      "discount_percent": 19,
+      "delivery_time_mins": 12,
+      "rating": 4.2,
+      "review_count": 1114,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0037",
+      "category_id": 2,
+      "category_name": "Breakfast Cereals & Oats",
+      "brand": "Quaker",
+      "product_name": "Quaker Instant Oats Strawberries",
+      "packaging_size": "Standard Pack",
+      "query_term": "Quaker Instant Oats Strawberries",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310B981%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23047857%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%A5%A3%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EQUAKER%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Quaker%20Instant%20Oats%20St%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Erawberries%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23D1FAE5%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%23047857%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EBreakfast%20Cereals%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "front_thumb": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310B981%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23047857%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%A5%A3%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EQUAKER%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Quaker%20Instant%20Oats%20St%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Erawberries%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23D1FAE5%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%23047857%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EBreakfast%20Cereals%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "image_source": "placeholder"
+      },
+      "nutrition_info": {
+        "serving_size": "1 packet (30 g)",
+        "nutri_score": "D",
+        "nova_group": 4,
+        "ingredients_text": "Whole grain rolled oats, sugar, creaming agent (maltodextrin, sunflower and palm oils, whey, sodium caseinate), flavored and colored fruit pieces (dehydrated apples [treated with sodium sulfite to promote color retention], artificial strawberry flavor, citric acid, red 40), salt, guar gum, artificial flavor, citric acid, niacinamide*, vitamin a palmitate, reduced iron, pyridoxine hydrochloride*, riboflavin*, thiamin mononitrate*, folic acid*. *one of the b vitamins",
+        "allergens": [
+          "Milk"
+        ],
+        "per_100g": {
+          "energy_kcal": 408.0,
+          "protein_g": 5.5,
+          "carbohydrates_g": 63.5,
+          "total_sugars_g": 27.7,
+          "added_sugars_g": 30.0,
+          "total_fat_g": 13.9,
+          "saturated_fat_g": 4.0,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 5.0,
+          "sodium_mg": 248.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 175,
+      "price": 147,
+      "discount_percent": 16,
+      "delivery_time_mins": 9,
+      "rating": 4.4,
+      "review_count": 291,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0038",
+      "category_id": 2,
+      "category_name": "Breakfast Cereals & Oats",
+      "brand": "Bagrry's",
+      "product_name": "Bagrry's Superfood Granola",
+      "packaging_size": "Standard Pack",
+      "query_term": "Bagrry's Superfood Granola",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310B981%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23047857%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%A5%A3%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EBAGRRY%26%23x27%3BS%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Bagrry%26%23x27%3Bs%20Superfoo%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Ed%20Granola%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23D1FAE5%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%23047857%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EBreakfast%20Cereals%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "front_thumb": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310B981%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23047857%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%A5%A3%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EBAGRRY%26%23x27%3BS%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Bagrry%26%23x27%3Bs%20Superfoo%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Ed%20Granola%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23D1FAE5%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%23047857%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EBreakfast%20Cereals%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "image_source": "placeholder"
+      },
+      "nutrition_info": {
+        "serving_size": "40 g",
+        "nutri_score": "B",
+        "nova_group": 3,
+        "ingredients_text": "Rolled Whole Oats (78%), Whole Wheat Flakes, Invert Sugar, Malt Extract, Edible Vegetable Oil, Antioxidant (INS 307b), Iodised Salt, Mineral & Vitamin Premix (Iron, Calcium, Vitamin C, B-Complex).",
+        "allergens": [
+          "Gluten"
+        ],
+        "per_100g": {
+          "energy_kcal": 404.2,
+          "protein_g": 11.7,
+          "carbohydrates_g": 73.8,
+          "total_sugars_g": 6.0,
+          "added_sugars_g": 3.0,
+          "total_fat_g": 6.0,
+          "saturated_fat_g": 1.2,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 9.5,
+          "sodium_mg": 144.2
+        },
+        "data_source": "gemini_fssai_estimated"
+      },
+      "mrp": 190,
+      "price": 167,
+      "discount_percent": 12,
+      "delivery_time_mins": 10,
+      "rating": 4.4,
+      "review_count": 2187,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0039",
+      "category_id": 2,
+      "category_name": "Breakfast Cereals & Oats",
+      "brand": "Saffola Oats",
+      "product_name": "Saffola Oats Classic Masala",
+      "packaging_size": "Standard Pack",
+      "query_term": "Saffola Oats Classic Masala",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/890/108/806/8734/front_en.19.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/890/108/806/8734/front_en.19.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "1 serving (38 g)",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "Rolled Oats (73.9 %), Maltodectrin, Salt, Spices and Condiments (34%) (Onions, Tumeric, Pepper, Cumin, Garlic, Fenugreek, Clove, Nutmeg, Red Chili), Dried Vegetables (Carrots (1.15%), Onions Flakes (1.15%), Green Peas(0.69%)), Sugar, Starch, Hydrolysed Vegetable Protein, Wheat Powder, Flavour Enhancers NS 627,631), Anlioxidant (320). \r\nCONTAINS ADDED FLAVOUR-NATURAL AND NATURE IDENTICAL FLAVOURING SUBSTANCES.",
+        "allergens": [
+          "Gluten",
+          "None"
+        ],
+        "per_100g": {
+          "energy_kcal": 365.8,
+          "protein_g": 8.7,
+          "carbohydrates_g": 70.5,
+          "total_sugars_g": 6.1,
+          "added_sugars_g": 3.2,
+          "total_fat_g": 7.6,
+          "saturated_fat_g": 1.8,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 9.7,
+          "sodium_mg": 2088.9
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 170,
+      "price": 153,
+      "discount_percent": 10,
+      "delivery_time_mins": 8,
+      "rating": 4.2,
+      "review_count": 1885,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0040",
+      "category_id": 2,
+      "category_name": "Breakfast Cereals & Oats",
+      "brand": "Kellogg's",
+      "product_name": "Kellogg's Oats 100% Whole Grain",
+      "packaging_size": "Standard Pack",
+      "query_term": "Kellogg's Oats 100% Whole Grain",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310B981%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23047857%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%A5%A3%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EKELLOGG%26%23x27%3BS%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Kellogg%26%23x27%3Bs%20Oats%2010%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3E0%25%20Whole%20Grain%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23D1FAE5%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%23047857%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EBreakfast%20Cereals%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "front_thumb": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310B981%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23047857%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%A5%A3%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EKELLOGG%26%23x27%3BS%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Kellogg%26%23x27%3Bs%20Oats%2010%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3E0%25%20Whole%20Grain%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23D1FAE5%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%23047857%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EBreakfast%20Cereals%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "image_source": "placeholder"
+      },
+      "nutrition_info": {
+        "serving_size": "40 g",
+        "nutri_score": "B",
+        "nova_group": 3,
+        "ingredients_text": "Rolled Whole Oats (78%), Whole Wheat Flakes, Invert Sugar, Malt Extract, Edible Vegetable Oil, Antioxidant (INS 307b), Iodised Salt, Mineral & Vitamin Premix (Iron, Calcium, Vitamin C, B-Complex).",
+        "allergens": [
+          "Gluten"
+        ],
+        "per_100g": {
+          "energy_kcal": 412.0,
+          "protein_g": 11.8,
+          "carbohydrates_g": 74.5,
+          "total_sugars_g": 6.0,
+          "added_sugars_g": 3.0,
+          "total_fat_g": 6.1,
+          "saturated_fat_g": 1.2,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 9.5,
+          "sodium_mg": 145.9
+        },
+        "data_source": "gemini_fssai_estimated"
+      },
+      "mrp": 195,
+      "price": 168,
+      "discount_percent": 14,
+      "delivery_time_mins": 12,
+      "rating": 4.3,
+      "review_count": 2189,
+      "in_stock": true
+    }
+  ]
+}

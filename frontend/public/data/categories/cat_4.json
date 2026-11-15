@@ -1,0 +1,921 @@
+{
+  "category_id": 4,
+  "category_name": "Chocolates & Confectionery",
+  "category_slug": "chocolates-confectionery",
+  "category_thumbnail": "https://images.openfoodfacts.org/images/products/762/220/227/1861/front_en.9.400.jpg",
+  "product_count": 20,
+  "products": [
+    {
+      "product_id": "PKG_PRD_0061",
+      "category_id": 4,
+      "category_name": "Chocolates & Confectionery",
+      "brand": "Cadbury",
+      "product_name": "Cadbury Dairy Milk Silk Chocolate",
+      "packaging_size": "Standard Pack",
+      "query_term": "Cadbury Dairy Milk Silk Chocolate",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/762/220/227/1861/front_en.9.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/762/220/227/1861/front_en.9.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "1 portion (20 g)",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "Sugar, Milk solids(25%*), Cocoa butter, Cocoa solids, Emulisifiers(442,476), Flavours(natural, nature, identical, and artificial (vanilla) flavouring substances)",
+        "allergens": [
+          "Milk"
+        ],
+        "per_100g": {
+          "energy_kcal": 545.0,
+          "protein_g": 7.5,
+          "carbohydrates_g": 58.5,
+          "total_sugars_g": 55.0,
+          "added_sugars_g": 45.0,
+          "total_fat_g": 30.0,
+          "saturated_fat_g": 20.0,
+          "trans_fat_g": 0.2,
+          "dietary_fiber_g": 0.0,
+          "sodium_mg": 125.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 115,
+      "price": 93,
+      "discount_percent": 19,
+      "delivery_time_mins": 12,
+      "rating": 4.3,
+      "review_count": 1754,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0062",
+      "category_id": 4,
+      "category_name": "Chocolates & Confectionery",
+      "brand": "Amul",
+      "product_name": "Amul Dark Chocolate 55% Cocoa",
+      "packaging_size": "Standard Pack",
+      "query_term": "Amul Dark Chocolate 55% Cocoa",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/890/126/207/1536/front_en.4.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/890/126/207/1536/front_en.4.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "1 serving (10 g)",
+        "nutri_score": "U",
+        "nova_group": 4,
+        "ingredients_text": "Cocoa solids, sugar, cocoa butter, emulsifiers (322-476), artificial flavouring substances (cocoa, vanilla). 69 8336",
+        "allergens": [],
+        "per_100g": {
+          "energy_kcal": 521.0,
+          "protein_g": 6.4,
+          "carbohydrates_g": 51.4,
+          "total_sugars_g": 43.0,
+          "added_sugars_g": 42.5,
+          "total_fat_g": 33.1,
+          "saturated_fat_g": 18.6,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 0.0,
+          "sodium_mg": 38.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 120,
+      "price": 91,
+      "discount_percent": 24,
+      "delivery_time_mins": 12,
+      "rating": 4.5,
+      "review_count": 1159,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0063",
+      "category_id": 4,
+      "category_name": "Chocolates & Confectionery",
+      "brand": "KitKat",
+      "product_name": "Nestle KitKat 4 Finger Chocolate",
+      "packaging_size": "Standard Pack",
+      "query_term": "Nestle KitKat 4 Finger Chocolate",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/761/303/536/6749/front_en.132.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/761/303/536/6749/front_en.132.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "41.5 g",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "sugar,  wheat flour , skimmed milk powder, cocoa butter, cocoa mass, vegetable fats (palm, shea), butterfat ( milk ), fat reduced cocoa powder, emulsifier (lecithins), raising agent (sodium carbonates)",
+        "allergens": [
+          "Gluten",
+          "Milk"
+        ],
+        "per_100g": {
+          "energy_kcal": 510.0,
+          "protein_g": 6.6,
+          "carbohydrates_g": 60.6,
+          "total_sugars_g": 43.4,
+          "added_sugars_g": 37.7,
+          "total_fat_g": 26.1,
+          "saturated_fat_g": 14.7,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 2.5,
+          "sodium_mg": 60.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 80,
+      "price": 74,
+      "discount_percent": 7,
+      "delivery_time_mins": 10,
+      "rating": 4.1,
+      "review_count": 2322,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0064",
+      "category_id": 4,
+      "category_name": "Chocolates & Confectionery",
+      "brand": "Ferrero Rocher",
+      "product_name": "Ferrero Rocher Premium Chocolates",
+      "packaging_size": "Standard Pack",
+      "query_term": "Ferrero Rocher Premium Chocolates",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%238B5CF6%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%236D28D9%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%8D%AB%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EFERRERO%20ROCHER%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Ferrero%20Rocher%20Premium%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3E%20Chocolates%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23EDE9FE%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%236D28D9%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EChocolates%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "front_thumb": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%238B5CF6%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%236D28D9%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%8D%AB%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EFERRERO%20ROCHER%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Ferrero%20Rocher%20Premium%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3E%20Chocolates%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23EDE9FE%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%236D28D9%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EChocolates%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "image_source": "placeholder"
+      },
+      "nutrition_info": {
+        "serving_size": "20 g",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "Sugar, Milk Solids (20%), Cocoa Butter (18%), Cocoa Solids (12%), Edible Vegetable Fats (Hydrogenated Vegetable Fat, Sal Fat), Emulsifiers (INS 442, INS 476), Nature Identical Flavouring Substances (Vanilla).",
+        "allergens": [
+          "Milk",
+          "Soy",
+          "Tree Nuts"
+        ],
+        "per_100g": {
+          "energy_kcal": 502.9,
+          "protein_g": 7.1,
+          "carbohydrates_g": 56.6,
+          "total_sugars_g": 53.0,
+          "added_sugars_g": 46.0,
+          "total_fat_g": 29.5,
+          "saturated_fat_g": 18.5,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 3.0,
+          "sodium_mg": 125.3
+        },
+        "data_source": "gemini_fssai_estimated"
+      },
+      "mrp": 95,
+      "price": 75,
+      "discount_percent": 21,
+      "delivery_time_mins": 9,
+      "rating": 4.8,
+      "review_count": 1696,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0065",
+      "category_id": 4,
+      "category_name": "Chocolates & Confectionery",
+      "brand": "Snickers",
+      "product_name": "Snickers Peanut Chocolate Bar",
+      "packaging_size": "Standard Pack",
+      "query_term": "Snickers Peanut Chocolate Bar",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/590/095/131/1123/front_fr.10.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/590/095/131/1123/front_fr.10.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "1 portion (100 g)",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "Sucre, sirop de glucose, cacahuètes, lait écrémé en poudre, beure de cacao, pâte de cacao, perméat de lactosérum (lait), hule de tournesol, matière grasse du lait, matière grasse de palme sel émulsifiant (lécithine de soja), blanc d'oeuf en poudre. (Peut contenir: noisettes). Le chocolat au lait contient des matières grasses végétales en plus du beurre de cacao. A T",
+        "allergens": [
+          "Eggs",
+          "Milk",
+          "Peanuts",
+          "Soybeans",
+          "Nl:Cacahuètes",
+          "Nl:Lait",
+          "Nl:Lécithine De Soja"
+        ],
+        "per_100g": {
+          "energy_kcal": 489.0,
+          "protein_g": 8.6,
+          "carbohydrates_g": 60.0,
+          "total_sugars_g": 51.0,
+          "added_sugars_g": 68.2,
+          "total_fat_g": 23.0,
+          "saturated_fat_g": 7.6,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 0.0,
+          "sodium_mg": 208.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 90,
+      "price": 77,
+      "discount_percent": 14,
+      "delivery_time_mins": 12,
+      "rating": 4.7,
+      "review_count": 1689,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0066",
+      "category_id": 4,
+      "category_name": "Chocolates & Confectionery",
+      "brand": "Kinder",
+      "product_name": "Kinder Joy Chocolate with Toy",
+      "packaging_size": "Standard Pack",
+      "query_term": "Kinder Joy Chocolate with Toy",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%238B5CF6%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%236D28D9%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%8D%AB%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EKINDER%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Kinder%20Joy%20Chocolate%20w%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Eith%20Toy%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23EDE9FE%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%236D28D9%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EChocolates%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "front_thumb": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%238B5CF6%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%236D28D9%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%8D%AB%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EKINDER%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Kinder%20Joy%20Chocolate%20w%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Eith%20Toy%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23EDE9FE%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%236D28D9%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EChocolates%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "image_source": "placeholder"
+      },
+      "nutrition_info": {
+        "serving_size": "20 g",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "Sugar, Milk Solids (20%), Cocoa Butter (18%), Cocoa Solids (12%), Edible Vegetable Fats (Hydrogenated Vegetable Fat, Sal Fat), Emulsifiers (INS 442, INS 476), Nature Identical Flavouring Substances (Vanilla).",
+        "allergens": [
+          "Milk",
+          "Soy",
+          "Tree Nuts"
+        ],
+        "per_100g": {
+          "energy_kcal": 551.1,
+          "protein_g": 7.4,
+          "carbohydrates_g": 59.3,
+          "total_sugars_g": 53.0,
+          "added_sugars_g": 46.0,
+          "total_fat_g": 31.7,
+          "saturated_fat_g": 18.5,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 3.0,
+          "sodium_mg": 132.3
+        },
+        "data_source": "gemini_fssai_estimated"
+      },
+      "mrp": 105,
+      "price": 94,
+      "discount_percent": 10,
+      "delivery_time_mins": 8,
+      "rating": 4.5,
+      "review_count": 265,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0067",
+      "category_id": 4,
+      "category_name": "Chocolates & Confectionery",
+      "brand": "Galaxy",
+      "product_name": "Galaxy Smooth Milk Chocolate",
+      "packaging_size": "Standard Pack",
+      "query_term": "Galaxy Smooth Milk Chocolate",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/500/015/955/3018/front_en.50.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/500/015/955/3018/front_en.50.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "6 pieces (20 g)",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "sugar, skimmed milk powder, cocoa butter, cocoa mass, milk fat, whey permeate (milk), palm fat, emulsifier (soya lecithin).",
+        "allergens": [
+          "Milk",
+          "Soybeans"
+        ],
+        "per_100g": {
+          "energy_kcal": 544.0,
+          "protein_g": 7.3,
+          "carbohydrates_g": 55.0,
+          "total_sugars_g": 54.0,
+          "added_sugars_g": 56.2,
+          "total_fat_g": 32.0,
+          "saturated_fat_g": 4.0,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 0.0,
+          "sodium_mg": 24.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 115,
+      "price": 91,
+      "discount_percent": 21,
+      "delivery_time_mins": 9,
+      "rating": 4.9,
+      "review_count": 2036,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0068",
+      "category_id": 4,
+      "category_name": "Chocolates & Confectionery",
+      "brand": "Toblerone",
+      "product_name": "Toblerone Milk Chocolate with Honey Almond",
+      "packaging_size": "Standard Pack",
+      "query_term": "Toblerone Milk Chocolate with Honey Almond",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/761/450/001/0013/front_en.362.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/761/450/001/0013/front_en.362.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "25 g",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "Zucker, VOLLMILCHPULVER, Kakaobutter (kakao mindestens 28%), Kakaomasse, Honig (3%), BUTTERREINFETT, MANDELN (1,6%), Emulgator (SOJALECITHINE), EIKLAR, Aroma.",
+        "allergens": [
+          "Eggs",
+          "Milk",
+          "Nuts",
+          "Soybeans",
+          "Nl:Butterreinfett",
+          "Nl:Eiklar",
+          "Nl:Mandeln",
+          "Nl:Vollmilchpulver"
+        ],
+        "per_100g": {
+          "energy_kcal": 529.0,
+          "protein_g": 5.6,
+          "carbohydrates_g": 61.0,
+          "total_sugars_g": 60.0,
+          "added_sugars_g": 0.0,
+          "total_fat_g": 28.0,
+          "saturated_fat_g": 17.0,
+          "trans_fat_g": 0.4,
+          "dietary_fiber_g": 2.4,
+          "sodium_mg": 48.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 95,
+      "price": 76,
+      "discount_percent": 20,
+      "delivery_time_mins": 8,
+      "rating": 4.3,
+      "review_count": 335,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0069",
+      "category_id": 4,
+      "category_name": "Chocolates & Confectionery",
+      "brand": "M&M's",
+      "product_name": "M&M's Peanut Chocolate Candies",
+      "packaging_size": "Standard Pack",
+      "query_term": "M&M's Peanut Chocolate Candies",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/500/015/949/2737/front_en.89.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/500/015/949/2737/front_en.89.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "47.1 g",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "Sucre, _cacahuètes_, pâte de cacao, _lait_ entier en poudre, beurre de cacao, amidon, matière grasse de palme, sirop de glucose, _lait_ écrémé en poudre, émulsifiant (lécithine de _soja_), _lactose_, stabilisant (gomme arabique), matière grasse de karité, matière grasse du _lait_, dextrine, colorants (E100, E120, E133. E160a, E160e, E170), agent d'enrobage (cire de carnauba), huile de palmiste, arômes, sel.",
+        "allergens": [
+          "Milk",
+          "Peanuts",
+          "Soybeans"
+        ],
+        "per_100g": {
+          "energy_kcal": 524.4,
+          "protein_g": 9.8,
+          "carbohydrates_g": 59.4,
+          "total_sugars_g": 53.1,
+          "added_sugars_g": 47.7,
+          "total_fat_g": 25.5,
+          "saturated_fat_g": 10.6,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 0.0,
+          "sodium_mg": 42.5
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 105,
+      "price": 94,
+      "discount_percent": 10,
+      "delivery_time_mins": 8,
+      "rating": 4.3,
+      "review_count": 1985,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0070",
+      "category_id": 4,
+      "category_name": "Chocolates & Confectionery",
+      "brand": "Milkybar",
+      "product_name": "Nestle Milkybar White Chocolate",
+      "packaging_size": "Standard Pack",
+      "query_term": "Nestle Milkybar White Chocolate",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/890/105/801/8639/front_en.3.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/890/105/801/8639/front_en.3.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "11.2 g",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "Milk solids (35%), sugar, hydrogenated vegetable fats, fractionated vegetable fat, emulsifier (soya lecithin) and nature-identical flavouring substance.",
+        "allergens": [
+          "Milk",
+          "Soybeans"
+        ],
+        "per_100g": {
+          "energy_kcal": 524.0,
+          "protein_g": 11.1,
+          "carbohydrates_g": 50.1,
+          "total_sugars_g": 40.9,
+          "added_sugars_g": 33.9,
+          "total_fat_g": 30.0,
+          "saturated_fat_g": 28.7,
+          "trans_fat_g": 0.1,
+          "dietary_fiber_g": 0.0,
+          "sodium_mg": 117.1
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 100,
+      "price": 76,
+      "discount_percent": 24,
+      "delivery_time_mins": 12,
+      "rating": 4.9,
+      "review_count": 1379,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0071",
+      "category_id": 4,
+      "category_name": "Chocolates & Confectionery",
+      "brand": "Cadbury",
+      "product_name": "Cadbury 5 Star Chocolate Bar",
+      "packaging_size": "Standard Pack",
+      "query_term": "Cadbury 5 Star Chocolate Bar",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/762/220/231/8078/front_en.14.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/762/220/231/8078/front_en.14.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "18g",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "Sugar, Liquid Glucose, Milk Solids, Invert Sugar, Hydrogenated Oil, Coroa State Cocoa Butter, Fractionated Fat, Emulsifiers (442, 471, 476), Hydrolyzed Vegetable Protein, lodised For Salt, Farus (Natural, Nature Identical and Artificial (Milk, Caramel and Vanilla) Flavouring Substances). Here Information: Contains Milk, Soy, Sulphites. May Contain Peanut, Wheat, Barley and Tree Nut. 14",
+        "allergens": [
+          "Milk",
+          "Soybeans",
+          "Sulphur-Dioxide-And-Sulphites"
+        ],
+        "per_100g": {
+          "energy_kcal": 444.0,
+          "protein_g": 3.3,
+          "carbohydrates_g": 72.9,
+          "total_sugars_g": 55.5,
+          "added_sugars_g": 52.6,
+          "total_fat_g": 15.9,
+          "saturated_fat_g": 10.1,
+          "trans_fat_g": 0.1,
+          "dietary_fiber_g": 0.0,
+          "sodium_mg": 170.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 80,
+      "price": 76,
+      "discount_percent": 5,
+      "delivery_time_mins": 8,
+      "rating": 4.2,
+      "review_count": 1240,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0072",
+      "category_id": 4,
+      "category_name": "Chocolates & Confectionery",
+      "brand": "Amul",
+      "product_name": "Amul Milk Chocolate",
+      "packaging_size": "Standard Pack",
+      "query_term": "Amul Milk Chocolate",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/890/126/207/0546/front_en.24.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/890/126/207/0546/front_en.24.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "10 g",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "Sugar, hydrogenated edible vegetable oil (palm kernel oil), milk solids, cocoa solids, emulsifiers (492, 322), artificial flavouring substances (cocoa, vanilla).\nAllergen Information: Contains milk.",
+        "allergens": [
+          "Milk"
+        ],
+        "per_100g": {
+          "energy_kcal": 526.0,
+          "protein_g": 5.3,
+          "carbohydrates_g": 61.1,
+          "total_sugars_g": 56.6,
+          "added_sugars_g": 51.0,
+          "total_fat_g": 29.3,
+          "saturated_fat_g": 28.3,
+          "trans_fat_g": 0.1,
+          "dietary_fiber_g": 0.0,
+          "sodium_mg": 60.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 95,
+      "price": 78,
+      "discount_percent": 18,
+      "delivery_time_mins": 11,
+      "rating": 4.7,
+      "review_count": 1773,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0073",
+      "category_id": 4,
+      "category_name": "Chocolates & Confectionery",
+      "brand": "Cadbury",
+      "product_name": "Cadbury Fruit & Nut Dairy Milk",
+      "packaging_size": "Standard Pack",
+      "query_term": "Cadbury Fruit & Nut Dairy Milk",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/762/220/114/9611/front_en.3.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/762/220/114/9611/front_en.3.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "30 g",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "milk, sugar, dried grapes, cocoa butter, almonds, cocoa mass, vegetable fats (palm, shea), emulsifiers (e442, e476), flavourings",
+        "allergens": [
+          "Milk",
+          "Nuts"
+        ],
+        "per_100g": {
+          "energy_kcal": 500.0,
+          "protein_g": 7.8,
+          "carbohydrates_g": 55.0,
+          "total_sugars_g": 54.0,
+          "added_sugars_g": 46.4,
+          "total_fat_g": 27.0,
+          "saturated_fat_g": 13.0,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 3.2,
+          "sodium_mg": 76.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 105,
+      "price": 96,
+      "discount_percent": 9,
+      "delivery_time_mins": 12,
+      "rating": 4.9,
+      "review_count": 1064,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0074",
+      "category_id": 4,
+      "category_name": "Chocolates & Confectionery",
+      "brand": "Ferrero Rocher",
+      "product_name": "Raffaello Coconut Treats",
+      "packaging_size": "Standard Pack",
+      "query_term": "Raffaello Coconut Treats",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%238B5CF6%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%236D28D9%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%8D%AB%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EFERRERO%20ROCHER%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Raffaello%20Coconut%20Trea%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Ets%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23EDE9FE%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%236D28D9%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EChocolates%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "front_thumb": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%238B5CF6%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%236D28D9%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%8D%AB%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EFERRERO%20ROCHER%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Raffaello%20Coconut%20Trea%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Ets%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23EDE9FE%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%236D28D9%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EChocolates%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "image_source": "placeholder"
+      },
+      "nutrition_info": {
+        "serving_size": "3 PIECES (30 g)",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "Vegetable oils (palm and sheanut). dry coconut, sugar, almonds, skim milk powder, whey powder (milk), wheat flour, natural and artificial flavors, lecithin as emulsifier (soy), salt, sodium bicarbonate as leavening agent.",
+        "allergens": [
+          "Gluten",
+          "Milk",
+          "Nuts",
+          "Soybeans"
+        ],
+        "per_100g": {
+          "energy_kcal": 633.0,
+          "protein_g": 6.7,
+          "carbohydrates_g": 40.0,
+          "total_sugars_g": 33.3,
+          "added_sugars_g": 0.0,
+          "total_fat_g": 50.0,
+          "saturated_fat_g": 30.0,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 3.3,
+          "sodium_mg": 117.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 100,
+      "price": 94,
+      "discount_percent": 6,
+      "delivery_time_mins": 9,
+      "rating": 4.5,
+      "review_count": 421,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0075",
+      "category_id": 4,
+      "category_name": "Chocolates & Confectionery",
+      "brand": "Cadbury",
+      "product_name": "Cadbury Celebrations Gift Pack",
+      "packaging_size": "Standard Pack",
+      "query_term": "Cadbury Celebrations Gift Pack",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%238B5CF6%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%236D28D9%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%8D%AB%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3ECADBURY%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Cadbury%20Celebrations%20G%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Eift%20Pack%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23EDE9FE%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%236D28D9%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EChocolates%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "front_thumb": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%238B5CF6%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%236D28D9%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%8D%AB%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3ECADBURY%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Cadbury%20Celebrations%20G%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Eift%20Pack%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23EDE9FE%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%236D28D9%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EChocolates%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "image_source": "placeholder"
+      },
+      "nutrition_info": {
+        "serving_size": "20 g",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "Sugar, Milk Solids (20%), Cocoa Butter (18%), Cocoa Solids (12%), Edible Vegetable Fats (Hydrogenated Vegetable Fat, Sal Fat), Emulsifiers (INS 442, INS 476), Nature Identical Flavouring Substances (Vanilla).",
+        "allergens": [
+          "Milk",
+          "Soy",
+          "Tree Nuts"
+        ],
+        "per_100g": {
+          "energy_kcal": 551.1,
+          "protein_g": 7.4,
+          "carbohydrates_g": 59.3,
+          "total_sugars_g": 53.0,
+          "added_sugars_g": 46.0,
+          "total_fat_g": 31.7,
+          "saturated_fat_g": 18.5,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 3.0,
+          "sodium_mg": 132.3
+        },
+        "data_source": "gemini_fssai_estimated"
+      },
+      "mrp": 110,
+      "price": 94,
+      "discount_percent": 15,
+      "delivery_time_mins": 8,
+      "rating": 4.2,
+      "review_count": 2470,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0076",
+      "category_id": 4,
+      "category_name": "Chocolates & Confectionery",
+      "brand": "Snickers",
+      "product_name": "Snickers Crisp Chocolate Bar",
+      "packaging_size": "Standard Pack",
+      "query_term": "Snickers Crisp Chocolate Bar",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/460/706/573/5302/front_en.29.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/460/706/573/5302/front_en.29.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "20g",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "Glukosesirup, Zucker, Erdnüsse, Reismehl, Palmfett, Vollmilchpulver, Kakaobutter, Kakaomasse, Feuchthaltemittel (Glycerin), Magermilchpulver, Milchzucker, Salz, Dextrose, Emulgator Sojalecithin), natürlicher Vanilleextrakt,",
+        "allergens": [
+          "Milk",
+          "Peanuts",
+          "Soybeans"
+        ],
+        "per_100g": {
+          "energy_kcal": 483.0,
+          "protein_g": 7.1,
+          "carbohydrates_g": 61.0,
+          "total_sugars_g": 44.0,
+          "added_sugars_g": 41.6,
+          "total_fat_g": 23.0,
+          "saturated_fat_g": 9.2,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 0.0,
+          "sodium_mg": 212.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 115,
+      "price": 94,
+      "discount_percent": 18,
+      "delivery_time_mins": 11,
+      "rating": 4.5,
+      "review_count": 1033,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0077",
+      "category_id": 4,
+      "category_name": "Chocolates & Confectionery",
+      "brand": "Kinder",
+      "product_name": "Kinder Bueno Milk Chocolate Cream",
+      "packaging_size": "Standard Pack",
+      "query_term": "Kinder Bueno Milk Chocolate Cream",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%238B5CF6%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%236D28D9%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%8D%AB%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EKINDER%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Kinder%20Bueno%20Milk%20Choc%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Eolate%20Cream%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23EDE9FE%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%236D28D9%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EChocolates%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "front_thumb": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%238B5CF6%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%236D28D9%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%8D%AB%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EKINDER%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Kinder%20Bueno%20Milk%20Choc%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Eolate%20Cream%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23EDE9FE%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%236D28D9%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EChocolates%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "image_source": "placeholder"
+      },
+      "nutrition_info": {
+        "serving_size": "20 g",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "Sugar, Milk Solids (20%), Cocoa Butter (18%), Cocoa Solids (12%), Edible Vegetable Fats (Hydrogenated Vegetable Fat, Sal Fat), Emulsifiers (INS 442, INS 476), Nature Identical Flavouring Substances (Vanilla).",
+        "allergens": [
+          "Milk",
+          "Soy",
+          "Tree Nuts"
+        ],
+        "per_100g": {
+          "energy_kcal": 556.4,
+          "protein_g": 7.4,
+          "carbohydrates_g": 59.6,
+          "total_sugars_g": 53.0,
+          "added_sugars_g": 46.0,
+          "total_fat_g": 32.0,
+          "saturated_fat_g": 18.5,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 3.0,
+          "sodium_mg": 133.1
+        },
+        "data_source": "gemini_fssai_estimated"
+      },
+      "mrp": 80,
+      "price": 75,
+      "discount_percent": 6,
+      "delivery_time_mins": 9,
+      "rating": 4.6,
+      "review_count": 521,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0078",
+      "category_id": 4,
+      "category_name": "Chocolates & Confectionery",
+      "brand": "Cadbury",
+      "product_name": "Cadbury Temptations Almond Treat",
+      "packaging_size": "Standard Pack",
+      "query_term": "Cadbury Temptations Almond Treat",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%238B5CF6%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%236D28D9%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%8D%AB%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3ECADBURY%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Cadbury%20Temptations%20Al%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Emond%20Treat%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23EDE9FE%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%236D28D9%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EChocolates%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "front_thumb": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%238B5CF6%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%236D28D9%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%8D%AB%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3ECADBURY%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Cadbury%20Temptations%20Al%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Emond%20Treat%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23EDE9FE%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%236D28D9%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EChocolates%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "image_source": "placeholder"
+      },
+      "nutrition_info": {
+        "serving_size": "1.0 bar (72.0 g)",
+        "nutri_score": "U",
+        "nova_group": 4,
+        "ingredients_text": "",
+        "allergens": [],
+        "per_100g": {
+          "energy_kcal": 555.0,
+          "protein_g": 8.9,
+          "carbohydrates_g": 53.5,
+          "total_sugars_g": 0.0,
+          "added_sugars_g": 0.0,
+          "total_fat_g": 35.1,
+          "saturated_fat_g": 0.0,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 0.0,
+          "sodium_mg": 120.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 90,
+      "price": 77,
+      "discount_percent": 14,
+      "delivery_time_mins": 12,
+      "rating": 4.3,
+      "review_count": 1649,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0079",
+      "category_id": 4,
+      "category_name": "Chocolates & Confectionery",
+      "brand": "Amul",
+      "product_name": "Amul Fruit N Nut Chocolate",
+      "packaging_size": "Standard Pack",
+      "query_term": "Amul Fruit N Nut Chocolate",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "https://images.openfoodfacts.org/images/products/890/126/207/0539/front_en.21.400.jpg",
+        "front_thumb": "https://images.openfoodfacts.org/images/products/890/126/207/0539/front_en.21.200.jpg",
+        "image_source": "openfoodfacts"
+      },
+      "nutrition_info": {
+        "serving_size": "10 g",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "sugar, cocoa solids, cocoa butter, almonds(8%), raisins(5%), permitted emulsifiers (e322, e476),",
+        "allergens": [
+          "Nuts"
+        ],
+        "per_100g": {
+          "energy_kcal": 499.0,
+          "protein_g": 7.2,
+          "carbohydrates_g": 46.7,
+          "total_sugars_g": 38.3,
+          "added_sugars_g": 0.0,
+          "total_fat_g": 32.5,
+          "saturated_fat_g": 16.2,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 0.0,
+          "sodium_mg": 33.0
+        },
+        "data_source": "openfoodfacts"
+      },
+      "mrp": 105,
+      "price": 93,
+      "discount_percent": 11,
+      "delivery_time_mins": 9,
+      "rating": 4.2,
+      "review_count": 2386,
+      "in_stock": true
+    },
+    {
+      "product_id": "PKG_PRD_0080",
+      "category_id": 4,
+      "category_name": "Chocolates & Confectionery",
+      "brand": "Milkybar",
+      "product_name": "Nestle Milkybar Choo Treat",
+      "packaging_size": "Standard Pack",
+      "query_term": "Nestle Milkybar Choo Treat",
+      "dietary_type": "VEG",
+      "images": {
+        "front_hd": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%238B5CF6%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%236D28D9%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%8D%AB%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EMILKYBAR%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Nestle%20Milkybar%20Choo%20T%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Ereat%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23EDE9FE%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%236D28D9%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EChocolates%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "front_thumb": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23F8FAFC%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EDF2F7%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22packGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%238B5CF6%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%236D28D9%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22packShadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22130%25%22%20height%3D%22130%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2216%22%20stdDeviation%3D%2214%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.14%22/%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%224%22%20stdDeviation%3D%226%22%20flood-color%3D%22%230F172A%22%20flood-opacity%3D%220.08%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%0A%20%20%3C%21--%20Studio%20Background%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url%28%23bgGrad%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Subtle%20Studio%20Spotlight%20--%3E%0A%20%20%3CradialGradient%20id%3D%22spotlight%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2255%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFFFFF%22%20stop-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23E2E8F0%22%20stop-opacity%3D%220.2%22/%3E%0A%20%20%3C/radialGradient%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22180%22%20r%3D%22160%22%20fill%3D%22url%28%23spotlight%29%22/%3E%0A%20%20%0A%20%20%3C%21--%20Studio%20Shadow%20Oval%20on%20Counter%20--%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%22110%22%20ry%3D%2216%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.08%22/%3E%0A%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22350%22%20rx%3D%2275%22%20ry%3D%229%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.12%22/%3E%0A%0A%20%20%3C%21--%20Packshot%20Box%20--%3E%0A%20%20%3Cg%20filter%3D%22url%28%23packShadow%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%22275%22%20rx%3D%2220%22%20fill%3D%22url%28%23packGrad%29%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Top%20Foil%20/%20Gloss%20Highlight%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2085%2075%20Q%20200%2065%20315%2075%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%220.35%22%20stroke-width%3D%224%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Header%20Ribbon%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2260%22%20width%3D%22250%22%20height%3D%2242%22%20rx%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2282%22%20width%3D%22250%22%20height%3D%2220%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.18%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20FSSAI%20Veg%20/%20Non-Veg%20emblem%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2272%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%223%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%2316A34A%22%20stroke-width%3D%221.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22104%22%20cy%3D%2281%22%20r%3D%225%22%20fill%3D%22%2316A34A%22/%3E%0A%0A%20%20%20%20%3C%21--%20Category%20Icon%20/%20Tag%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22295%22%20y%3D%2286%22%20text-anchor%3D%22end%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-size%3D%2216%22%3E%F0%9F%8D%AB%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Brand%20Name%20Banner%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22132%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2220%22%20fill%3D%22%23FFFFFF%22%20letter-spacing%3D%221.5%22%3EMILKYBAR%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Center%20Product%20Visual%20Badge%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%22152%22%20width%3D%22200%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.94%22/%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Product%20Name%20inside%20badge%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22192%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2213%22%20fill%3D%22%231E293B%22%3E%0A%20%20%20%20%20%20Nestle%20Milkybar%20Choo%20T%0A%20%20%20%20%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2211%22%20fill%3D%22%23475569%22%3Ereat%3C/text%3E%0A%20%20%20%20%0A%20%20%20%20%3C%21--%20Packaging%20Size%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22135%22%20y%3D%22224%22%20width%3D%22130%22%20height%3D%2220%22%20rx%3D%2210%22%20fill%3D%22%23EDE9FE%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22238%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2210.5%22%20fill%3D%22%236D28D9%22%3ENET%3A%20Standard%20Pack%3C/text%3E%0A%0A%20%20%20%20%3C%21--%20Bottom%20Authentic%20Seal%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22295%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2211%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.9%22%20letter-spacing%3D%220.8%22%3E%E2%98%85%20100%25%20AUTHENTIC%20PACK%20%E2%98%85%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22315%22%20text-anchor%3D%22middle%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20sans-serif%22%20font-weight%3D%22600%22%20font-size%3D%229.5%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.75%22%3EChocolates%3C/text%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E",
+        "image_source": "placeholder"
+      },
+      "nutrition_info": {
+        "serving_size": "20 g",
+        "nutri_score": "E",
+        "nova_group": 4,
+        "ingredients_text": "Sugar, Milk Solids (20%), Cocoa Butter (18%), Cocoa Solids (12%), Edible Vegetable Fats (Hydrogenated Vegetable Fat, Sal Fat), Emulsifiers (INS 442, INS 476), Nature Identical Flavouring Substances (Vanilla).",
+        "allergens": [
+          "Milk",
+          "Soy",
+          "Tree Nuts"
+        ],
+        "per_100g": {
+          "energy_kcal": 518.9,
+          "protein_g": 7.2,
+          "carbohydrates_g": 57.5,
+          "total_sugars_g": 53.0,
+          "added_sugars_g": 46.0,
+          "total_fat_g": 30.3,
+          "saturated_fat_g": 18.5,
+          "trans_fat_g": 0.0,
+          "dietary_fiber_g": 3.0,
+          "sodium_mg": 127.7
+        },
+        "data_source": "gemini_fssai_estimated"
+      },
+      "mrp": 120,
+      "price": 91,
+      "discount_percent": 24,
+      "delivery_time_mins": 12,
+      "rating": 4.2,
+      "review_count": 1519,
+      "in_stock": true
+    }
+  ]
+}

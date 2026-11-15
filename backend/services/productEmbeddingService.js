@@ -1,69 +1,28 @@
 const crypto = require('crypto');
 const embeddingService = require('./embeddingService');
 const Product = require('../models/Product');
+const { normalizeProductName } = require('./productNameNormalizationService');
 
 const EMBEDDING_CONFIG = {
   model: process.env.HUGGINGFACE_EMBEDDING_MODEL || 'sentence-transformers/all-MiniLM-L6-v2',
-  version: "v1" // Increment if logic for building text changes
+  version: "v2" // v2: strictly product-name-only embedding input (zero ingredients/nutrition)
 };
 
 class ProductEmbeddingService {
   /**
    * Deterministically builds the embedding input text for a product.
-   * Excludes metadata and dynamic scores.
+   * STRICT REQUIREMENT: Primary embedding input is the normalized product name.
+   * Absolutely NO ingredients, nutrition facts, allergens, processing data,
+   * health claims, or dynamic scores.
    * @param {Object} product - Product document
    * @returns {string} - Formatted text string for embedding
    */
   buildProductEmbeddingText(product) {
     if (!product) return '';
 
-    const parts = [];
-
-    if (product.identity) {
-      if (product.identity.name) parts.push(`Product: ${product.identity.name}`);
-      if (product.identity.brand) parts.push(`Brand: ${product.identity.brand}`);
-      if (product.identity.productType) parts.push(`Type: ${product.identity.productType}`);
-      if (product.identity.categories && product.identity.categories.length > 0) {
-        parts.push(`Categories: ${product.identity.categories.join(', ')}`);
-      }
-    }
-
-    if (product.ingredients) {
-      if (product.ingredients.ingredients && product.ingredients.ingredients.length > 0) {
-        parts.push(`Ingredients: ${product.ingredients.ingredients.join(', ')}`);
-      }
-      if (product.ingredients.allergens && product.ingredients.allergens.length > 0) {
-        parts.push(`Allergens: ${product.ingredients.allergens.join(', ')}`);
-      }
-      if (product.ingredients.additives && product.ingredients.additives.length > 0) {
-        parts.push(`Additives: ${product.ingredients.additives.join(', ')}`);
-      }
-    }
-
-    if (product.nutrition) {
-      const n = product.nutrition;
-      const nutParts = [];
-      if (n.calories !== undefined) nutParts.push(`${n.calories}kcal calories`);
-      if (n.protein !== undefined) nutParts.push(`${n.protein}g protein`);
-      if (n.carbohydrates !== undefined) nutParts.push(`${n.carbohydrates}g carbs`);
-      if (n.sugar !== undefined) nutParts.push(`${n.sugar}g sugar`);
-      if (n.fat !== undefined) nutParts.push(`${n.fat}g fat`);
-      if (n.fiber !== undefined) nutParts.push(`${n.fiber}g fiber`);
-      if (n.sodium !== undefined) nutParts.push(`${n.sodium}mg sodium`);
-      
-      if (nutParts.length > 0) {
-        parts.push(`Nutrition per 100g: ${nutParts.join(', ')}`);
-      }
-    }
-
-    if (product.processing) {
-      if (product.processing.novaGroup) parts.push(`Processing: NOVA ${product.processing.novaGroup}`);
-      if (product.processing.labels && product.processing.labels.length > 0) {
-        parts.push(`Dietary Labels: ${product.processing.labels.join(', ')}`);
-      }
-    }
-
-    return parts.join('\n').trim();
+    const name = product.product_name || product.catalog?.productName || product.identity?.name || '';
+    const { cleanName } = normalizeProductName(name);
+    return cleanName || '';
   }
 
   /**

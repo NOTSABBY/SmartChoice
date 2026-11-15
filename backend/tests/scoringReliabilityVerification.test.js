@@ -1,4 +1,4 @@
-﻿const assert = require('assert');
+const assert = require('assert');
 const { calculateSmartChoiceScore } = require('../services/scoringService');
 
 console.log('=== TEST SUITE: PHASE 4 FINAL SCORING RELIABILITY & CONFIDENCE VERIFICATION ===');
@@ -21,13 +21,13 @@ function runTest(name, fn) {
 runTest('RV-01: Score confidence is calculated separately and does not conflate with totalScore', () => {
   const incompleteProduct = {
     identity: { categoryId: 1 },
-    nutrition: { sugar: 0, saturatedFat: 0 }, // missing 4 nutrients (-50)
-    ingredients: {}, // missing ingredients (-10)
-    processing: {}   // missing processing (-10) -> total confidence = 30
+    nutrition: { sugar: 0, saturatedFat: 0 }, // 2 of 8 nutrients -> Nr = 25
+    ingredients: {}, // missing ingredients -> Ir = 0
+    processing: {}   // missing processing -> Pr = 0 -> Confidence = 0.45*25 = 11
   };
   const res = calculateSmartChoiceScore(incompleteProduct);
   assert.ok(res.totalScore > 40, `totalScore should reflect evaluated quality (${res.totalScore})`);
-  assert.strictEqual(res.confidence.score, 35);
+  assert.strictEqual(res.confidence.score, 11);
   assert.strictEqual(res.confidence.level, 'low');
 });
 
@@ -35,9 +35,9 @@ runTest('RV-01: Score confidence is calculated separately and does not conflate 
 runTest('RV-02: Component coverage and overall completeness are explicitly exposed', () => {
   const product = {
     identity: { categoryId: 1 },
-    nutrition: { sugar: 2, saturatedFat: 1, sodium: 50, calories: 150, protein: 10, fiber: 5 },
-    ingredients: { rawText: 'Whole wheat flour' },
-    processing: { novaGroup: 1 }
+    nutrition: { sugar: 2, saturatedFat: 1, sodium: 50, calories: 150, protein: 10, fiber: 5, carbohydrates: 20, fat: 5 },
+    ingredients: { rawText: 'Whole wheat flour', verificationStatus: 'VERIFIED' },
+    processing: { novaGroup: 1, sourceCertainty: 'SOURCE_REPORTED' }
   };
   const res = calculateSmartChoiceScore(product);
   assert.strictEqual(res.coverage.overallCompleteness, 100);

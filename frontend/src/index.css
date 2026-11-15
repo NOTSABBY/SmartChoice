@@ -60,3 +60,56 @@
 ::-webkit-scrollbar-thumb {
   @apply bg-gray-300 rounded-full hover:bg-gray-400 transition-colors;
 }
+
+/* Continuous Left-to-Right Single-Instance Announcement Ticker */
+@keyframes ticker-ltr {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+.animate-ticker-ltr {
+  display: inline-flex;
+  white-space: nowrap;
+  will-change: transform;
+  animation: ticker-ltr 22s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ticker-ltr {
+    animation: none;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Green Navigation Indicator Blinking Animation */
+@keyframes nav-dot-blink {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(0.8);
+  }
+}
+
+.animate-nav-dot-blink {
+  animation: nav-dot-blink 1.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-nav-dot-blink {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+

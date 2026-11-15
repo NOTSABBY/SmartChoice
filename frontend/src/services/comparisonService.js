@@ -2,8 +2,8 @@ import axios from 'axios';
 
 const API_URL = 'http://localhost:8080/api';
 
-export const compareProducts = async (productIds) => {
-  const response = await axios.post(`${API_URL}/compare`, { productIds });
+export const compareProducts = async (productIds, preferences = {}) => {
+  const response = await axios.post(`${API_URL}/compare`, { productIds, preferences });
   return response.data;
 };
 

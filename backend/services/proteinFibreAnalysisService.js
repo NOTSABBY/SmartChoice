@@ -1,4 +1,4 @@
-﻿const { getIcmrRdaProfile } = require('../config/icmrRdaReference');
+const { getIcmrRdaProfile } = require('../config/icmrRdaReference');
 const { getCategoryFormat } = require('../config/analysisThresholds');
 const { isValidFiniteNumber, isNonNegativeFiniteNumber, isPositiveFiniteNumber } = require('./validationUtils');
 
@@ -54,6 +54,22 @@ function evaluateProteinClaim({
   } else {
     result.statutoryClaim.status = 'UNSUPPORTED_UNIT';
     result.statutoryClaim.reason = `Unsupported protein unit: '${declaredUnit}'.`;
+    return result;
+  }
+
+  if (categoryFormat === 'BEVERAGE_INFUSION') {
+    result.statutoryClaim.status = 'NOT_ELIGIBLE';
+    result.statutoryClaim.reason = "Beverage infusion (tea/coffee) requires brewing; evaluated on an 'as consumed' liquid basis (<0.1g protein/100ml), spent leaf biomass is discarded and ineligible for statutory protein claims under FSSAI regulations.";
+    return result;
+  }
+  if (categoryFormat === 'CONDIMENT_SPICE') {
+    result.statutoryClaim.status = 'NOT_ELIGIBLE';
+    result.statutoryClaim.reason = "Condiments and spices are consumed in small quantities (1-5g pinch) as flavorings; ineligible for bulk 100g statutory protein claims.";
+    return result;
+  }
+  if (categoryFormat === 'COOKING_OIL' || categoryFormat === 'EDIBLE_FATS_AND_OILS') {
+    result.statutoryClaim.status = 'NOT_ELIGIBLE';
+    result.statutoryClaim.reason = "Cooking oils and edible fats do not contain protein.";
     return result;
   }
 
@@ -244,6 +260,22 @@ function evaluateFibreClaim({
   }
   result.provenance.convertedGramsValue = fibreG;
 
+  if (categoryFormat === 'BEVERAGE_INFUSION') {
+    result.status = 'NOT_ELIGIBLE';
+    result.reason = "Beverage infusion (tea/coffee) requires brewing; evaluated on an 'as consumed' liquid basis (0g fibre/100ml), spent leaf biomass is discarded and ineligible for statutory fibre claims under FSSAI regulations.";
+    return result;
+  }
+  if (categoryFormat === 'CONDIMENT_SPICE') {
+    result.status = 'NOT_ELIGIBLE';
+    result.reason = "Condiments and spices are consumed in small quantities (1-5g pinch) as flavorings; ineligible for bulk 100g statutory fibre claims.";
+    return result;
+  }
+  if (categoryFormat === 'COOKING_OIL' || categoryFormat === 'EDIBLE_FATS_AND_OILS') {
+    result.status = 'NOT_ELIGIBLE';
+    result.reason = "Cooking oils and edible fats do not contain dietary fibre.";
+    return result;
+  }
+
   const isSolid = categoryFormat === 'SOLID_FOOD';
   const isLiquid = categoryFormat === 'BEVERAGE_GENERAL' || categoryFormat === 'BEVERAGE_DAIRY';
   if (!isSolid && !isLiquid) {
@@ -356,6 +388,35 @@ function evaluateFibreClaim({
  * Clearly separate from statutory claims.
  */
 function calculateCategoryNutrientDensity(proteinG, fibreG, categoryId) {
+  const catFormat = getCategoryFormat(categoryId);
+
+  if (categoryId === 9 || catFormat === 'BEVERAGE_INFUSION') {
+    return {
+      type: 'SMARTCHOICE_INTERNAL_RATING',
+      proteinRating: 'NEGLIGIBLE',
+      fibreRating: 'NEGLIGIBLE',
+      categoryContext: 'Beverage infusion (tea/coffee) evaluated on as-consumed infusion basis (<0.1g protein, 0g fibre per 100ml)'
+    };
+  }
+
+  if (categoryId === 10 || categoryId === 16 || catFormat === 'CONDIMENT_SPICE') {
+    return {
+      type: 'SMARTCHOICE_INTERNAL_RATING',
+      proteinRating: 'LOW',
+      fibreRating: 'LOW',
+      categoryContext: 'Condiment/spice evaluated on per-serving basis (1-5g pinch)'
+    };
+  }
+
+  if (categoryId === 11 || catFormat === 'COOKING_OIL') {
+    return {
+      type: 'SMARTCHOICE_INTERNAL_RATING',
+      proteinRating: 'NONE',
+      fibreRating: 'NONE',
+      categoryContext: 'Pure fats and oils containing 0g protein and 0g fibre'
+    };
+  }
+
   let proteinRating = 'LOW';
   let fibreRating = 'LOW';
 

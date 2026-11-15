@@ -93,21 +93,70 @@ const calculateSimilarity = (target, candidate) => {
 };
 
 const getSimilarProducts = async (productId, limit = 5) => {
-  const targetProduct = await Product.findById(productId);
+  let targetProduct = null;
+  const isDbConnected = require('mongoose').connection.readyState === 1;
+
+  if (isDbConnected) {
+    try {
+      if (typeof productId === 'string' && productId.match(/^[0-9a-fA-F]{24}$/)) {
+        targetProduct = await Product.findById(productId).lean();
+      }
+      if (!targetProduct) {
+        targetProduct = await Product.findOne({
+          $or: [
+            { 'catalog.productId': productId },
+            { 'identity.barcode': productId },
+            { _id: productId }
+          ]
+        }).lean();
+      }
+    } catch (dbErr) {
+      console.warn("MongoDB query in getSimilarProducts failed:", dbErr.message);
+    }
+  }
+
   if (!targetProduct) {
+    const catalogLoader = require('../utils/catalogLoader');
+    targetProduct = catalogLoader.getProductById(productId);
+  }
+
+  if (!targetProduct) {
+    if (!isDbConnected) {
+      throw new Error("Database service is currently unavailable and product was not found in local catalogue");
+    }
     throw new Error("Target product not found");
   }
 
   const categories = targetProduct.identity?.categories || [];
-  
-  // Find candidates: same categories, excluding the target itself
-  const query = { _id: { $ne: targetProduct._id } };
-  
-  if (categories.length > 0) {
-    query['identity.categories'] = { $in: categories };
+  let candidates = [];
+
+  if (isDbConnected) {
+    try {
+      const query = { _id: { $ne: targetProduct._id } };
+      if (categories.length > 0) {
+        query['identity.categories'] = { $in: categories };
+      }
+      candidates = await Product.find(query).limit(50).lean();
+    } catch (candErr) {
+      console.warn("MongoDB candidates query in getSimilarProducts failed:", candErr.message);
+    }
   }
 
-  const candidates = await Product.find(query).limit(50); // limit retrieval pool for performance
+  if (candidates.length === 0) {
+    const catalogLoader = require('../utils/catalogLoader');
+    const all = catalogLoader.getAllProducts();
+    const targetId = targetProduct._id || targetProduct.catalog?.productId;
+    candidates = all.filter(p => {
+      const pId = p._id || p.catalog?.productId;
+      if (pId === targetId) return false;
+      const cats = p.identity?.categories || [];
+      return categories.some(c => cats.includes(c));
+    }).slice(0, 50);
+
+    if (candidates.length === 0) {
+      candidates = catalogLoader.getDiverseSample(30).filter(p => (p._id || p.catalog?.productId) !== targetId);
+    }
+  }
 
   const results = candidates.map(candidate => {
     const sim = calculateSimilarity(targetProduct, candidate);

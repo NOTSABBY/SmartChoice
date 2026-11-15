@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import { Search, Bot, ScanLine, Camera, GitCompare, Settings, Menu, X, Leaf } from 'lucide-react';
+import { Search, Bot, GitCompare, Settings, Menu, X, Leaf } from 'lucide-react';
 import { useComparison } from '../context/ComparisonContext';
 
 const NavLink = ({ to, icon: Icon, children, badge }) => {
@@ -36,8 +36,6 @@ const MainLayout = () => {
   const navItems = [
     { to: '/search', icon: Search, label: 'Search' },
     { to: '/assistant', icon: Bot, label: 'AI Assistant' },
-    { to: '/scanner', icon: ScanLine, label: 'Scan Barcode' },
-    { to: '/ocr', icon: Camera, label: 'Scan Label' },
     { to: '/compare', icon: GitCompare, label: 'Compare', badge: getProductCount() },
     { to: '/preferences', icon: Settings, label: 'Preferences' }
   ];
@@ -98,9 +96,9 @@ const MainLayout = () => {
                   className="flex items-center w-full px-3 py-3 rounded-lg text-base font-medium text-gray-700 hover:bg-green-50 hover:text-green-700 transition-colors"
                 >
                   <Icon className="w-5 h-5 mr-3 text-gray-400" />
-                  {item.label}
+                  <span>{item.label}</span>
                   {item.badge !== undefined && item.badge > 0 && (
-                    <span className="ml-auto bg-green-100 text-green-800 text-xs font-bold px-2 py-0.5 rounded-full">
+                    <span className="ml-auto bg-green-100 text-green-800 text-xs px-2 py-0.5 rounded-full font-bold">
                       {item.badge}
                     </span>
                   )}
@@ -111,23 +109,10 @@ const MainLayout = () => {
         </div>
       </header>
 
-      <main className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-in">
+      {/* Main Content Body */}
+      <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
         <Outlet />
       </main>
-
-      <footer className="bg-white border-t border-gray-200 mt-auto">
-        <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center gap-2 mb-4 md:mb-0 opacity-80">
-              <Leaf className="w-4 h-4 text-green-600" />
-              <span className="font-bold text-gray-900 tracking-tight">SmartChoice</span>
-            </div>
-            <p className="text-center text-sm text-gray-500">
-              &copy; {new Date().getFullYear()} SmartChoice. Product intelligence platform.
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
