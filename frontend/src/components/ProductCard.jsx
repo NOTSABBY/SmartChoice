@@ -3,7 +3,6 @@ import { Check, Info, ShieldCheck, Scale, Ban } from 'lucide-react';
 import { generatePackshotSvgClient } from '../utils/packshotFallback';
 import { calculateProductQualityScore, calculateProductConfidence } from '../utils/productScoring';
 import { calculateProductVerification } from '../utils/productVerification';
-import { DietaryEmblem } from './DietaryEmblem';
 
 export const ProductCard = ({
   product,
@@ -69,12 +68,7 @@ export const ProductCard = ({
       isAllergenExcluded ? 'border-rose-200 bg-rose-50/20 opacity-75' : 'border-slate-200/90 hover:border-emerald-300'
     }`}>
       {/* Top Badges Strip */}
-      <div className="flex items-center justify-between mb-2 gap-1">
-        {/* FSSAI Statutory Dietary Classification Emblem */}
-        <div className="flex items-center gap-1.5 shrink-0">
-          <DietaryEmblem product={product} />
-        </div>
-
+      <div className="flex items-center justify-end mb-2 gap-1 min-h-[18px]">
         {/* Personalized Match, SmartChoice Score & NOVA Badges */}
         <div className="flex items-center gap-1 shrink-0">
           {product.semanticScore !== undefined && product.semanticScore !== null && (

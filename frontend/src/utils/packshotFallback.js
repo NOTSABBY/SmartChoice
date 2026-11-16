@@ -5,9 +5,6 @@ export function generatePackshotSvgClient(
   categoryId = 1,
   dietaryType = 'VEG'
 ) {
-  const isVeg = dietaryType?.toUpperCase() === 'VEG';
-  const dotColor = isVeg ? '#16A34A' : '#DC2626';
-
   const categoryPalettes = {
     1: { bg: '#F59E0B', accent: '#B45309', icon: '🍪' },
     2: { bg: '#10B981', accent: '#047857', icon: '🥣' },
@@ -50,8 +47,6 @@ export function generatePackshotSvgClient(
   </defs>
   <rect width="100%" height="100%" rx="24" fill="url(#g)"/>
   <rect x="20" y="20" width="360" height="360" rx="16" fill="#FFFFFF" fill-opacity="0.94"/>
-  <rect x="30" y="30" width="24" height="24" rx="4" fill="none" stroke="${dotColor}" stroke-width="2"/>
-  <circle cx="42" cy="42" r="6" fill="${dotColor}"/>
   <text x="360" y="52" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="28" text-anchor="end">${theme.icon}</text>
   <text x="200" y="110" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="900" font-size="16" fill="#6B7280" text-anchor="middle" letter-spacing="1.5">${brandClean}</text>
   <text x="200" y="150" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="20" fill="#111827" text-anchor="middle">${prodClean}</text>
