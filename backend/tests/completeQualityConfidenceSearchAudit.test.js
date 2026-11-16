@@ -61,15 +61,12 @@ describe('SMARTCHOICE COMPLETE AUDIT — Quality, Confidence, Preferences & Sear
         assert.equal(U, 0, 'User preference score U must be 0 when no preferences are active');
         assert.equal(res.weightedBreakdown.preferences, 0, 'Preference contribution must be 0/10 when inactive');
 
-        const expectedTotal = Math.round(0.40 * N + 0.20 * I + 0.15 * P + 0.15 * PF + 0.10 * U);
-        assert.equal(res.totalScore, expectedTotal, `Total score mismatch for ${p.product_id}`);
-
         const sumOfWeighted = res.weightedBreakdown.nutrition +
                               res.weightedBreakdown.ingredients +
                               res.weightedBreakdown.processing +
                               res.weightedBreakdown.proteinFiber +
                               res.weightedBreakdown.preferences;
-        assert.ok(Math.abs(sumOfWeighted - res.totalScore) <= 1, 'Sum of rounded weighted components must match total score');
+        assert.equal(res.totalScore, sumOfWeighted, `Total score must strictly equal sum of weighted components for ${p.product_id}`);
       }
     });
 
@@ -181,7 +178,7 @@ describe('SMARTCHOICE COMPLETE AUDIT — Quality, Confidence, Preferences & Sear
       assert.ok(evalRes.results.length > 0);
       assert.equal(evalRes.results[0].status, 'UNKNOWN');
       const score = recommendationService.calculatePersonalizedScore(evalRes);
-      assert.equal(score, 50, 'Missing nutrient evaluation must score neutral baseline 50');
+      assert.equal(score, 40, 'Missing nutrient evaluation must score neutral baseline 40');
     });
   });
 

@@ -101,7 +101,7 @@ export function calculateProductBreakdown(product, activePrefs = {}) {
   const sodium = extractNutrient(product, 'sodium');
   const protein = extractNutrient(product, 'protein');
   const fiber = extractNutrient(product, 'fiber');
-  const nova = product.nutrition_info?.nova_group ?? product.processing?.novaGroup ?? 3;
+  const nova = product.nutrition_info?.nova_group ?? product.processing?.novaGroup ?? product.analysis?.processingAnalysis?.novaGroup ?? null;
 
   // 1. Nutrition Component (40% weight, 0-100 scale)
   let nutrScore = 100;
@@ -109,39 +109,58 @@ export function calculateProductBreakdown(product, activePrefs = {}) {
     if (satFat != null) {
       if (satFat > 35) nutrScore -= 40;
       else if (satFat > 15) nutrScore -= 20;
+    } else {
+      nutrScore = 50;
     }
   } else {
     const isLiquid = format.includes('BEVERAGE');
-    const sugarThreshold = isLiquid ? 11.25 : 22.5;
+    const isDairy = format === 'BEVERAGE_DAIRY';
+    const sugarThreshold = isDairy ? 13.5 : (isLiquid ? 11.25 : 22.5);
     const satFatThreshold = isLiquid ? 2.5 : 5.0;
     const sodiumThreshold = isLiquid ? 300 : 600;
 
+    let evaluatedNutrients = 0;
     if (sugar != null) {
+      evaluatedNutrients++;
       if (sugar > sugarThreshold) nutrScore -= 30;
-      else if (sugar > (isLiquid ? 2.5 : 5.0)) nutrScore -= 15;
+      else if (sugar > (isDairy ? 5.0 : (isLiquid ? 2.5 : 5.0))) nutrScore -= 15;
     }
     if (satFat != null) {
+      evaluatedNutrients++;
       if (satFat > satFatThreshold) nutrScore -= 25;
       else if (satFat > (isLiquid ? 0.75 : 1.5)) nutrScore -= 10;
     }
     if (sodium != null) {
+      evaluatedNutrients++;
       if (sodium > sodiumThreshold) nutrScore -= 25;
       else if (sodium > (isLiquid ? 60 : 120)) nutrScore -= 10;
+    }
+    if (evaluatedNutrients === 0) {
+      nutrScore = 50;
     }
   }
   nutrScore = Math.max(0, Math.min(100, nutrScore));
 
   // 2. Ingredients Component (20% weight, 0-100 scale)
   let ingScore = 100;
-  const ingredientsText = (product.nutrition_info?.ingredients_text || product.ingredients?.rawText || '').toLowerCase();
-  if (ingredientsText) {
-    if (/\b(sugar|syrup|sucrose|glucose|invert sugar)\b/i.test(ingredientsText)) ingScore -= 15;
-    if (/\b(color|colour|flavour enhancer|preservative|ins\s*[0-9]{3})\b/i.test(ingredientsText)) ingScore -= 15;
+  const ingredientsText = String(
+    product.nutrition_info?.ingredients_text ||
+    product.ingredients?.rawText ||
+    product.ingredients?.rawIngredientsText ||
+    (Array.isArray(product.ingredients?.ingredients) ? product.ingredients.ingredients.map(i => typeof i === 'string' ? i : (i.name || '')).join(', ') : '') ||
+    ''
+  ).toLowerCase().trim();
+
+  if (!ingredientsText) {
+    ingScore = 50;
+  } else {
+    if (/\b(sugar|syrup|sucrose|glucose|invert sugar|high fructose)\b/i.test(ingredientsText)) ingScore -= 15;
+    if (/\b(color|colour|flavour enhancer|preservative|ins\s*[0-9]{3}|synthetic)\b/i.test(ingredientsText)) ingScore -= 15;
   }
   ingScore = Math.max(0, Math.min(100, ingScore));
 
   // 3. Processing NOVA Component (15% weight, 0-100 scale)
-  let procScore = 60;
+  let procScore = 50;
   if (nova === 1) procScore = 100;
   else if (nova === 2) procScore = 80;
   else if (nova === 3) procScore = 60;
@@ -179,15 +198,14 @@ export function calculateProductBreakdown(product, activePrefs = {}) {
   const pfContribution = Math.round(pfScore * 0.15);
   const prefContribution = Math.round(prefScore * 0.10);
 
-  const rawSum = Math.round(
-    nutrScore * 0.40 +
-    ingScore * 0.20 +
-    procScore * 0.15 +
-    pfScore * 0.15 +
-    prefScore * 0.10
-  );
-
-  const totalScore = !isEligible ? 0 : Math.max(0, Math.min(100, rawSum));
+  // Authoritative Exact Sum Additivity: Overall Score strictly equals sum of weighted component contributions
+  const totalScore = !isEligible ? 0 : Math.max(0, Math.min(100,
+    nutContribution +
+    ingContribution +
+    procContribution +
+    pfContribution +
+    prefContribution
+  ));
 
   return {
     totalScore,

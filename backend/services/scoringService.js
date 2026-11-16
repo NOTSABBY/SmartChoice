@@ -131,10 +131,10 @@ const calculateScoreConfidence = (product) => {
  * Does NOT penalize nutrients legitimately unclassified for the category (e.g., cooking oils).
  */
 const calculateNutritionScore = (product, category) => {
-  const categoryId = product.identity?.categoryId || product.catalog?.categoryId;
+  const categoryId = product.identity?.categoryId || product.catalog?.categoryId || product.category_id || product.categoryId;
   const categoryFormat = (category && NUTRITION_THRESHOLDS[category]) 
     ? category 
-    : getCategoryFormat(categoryId);
+    : getCategoryFormat(categoryId || product);
   const thresholds = NUTRITION_THRESHOLDS[categoryFormat];
 
   let score = 100;
@@ -237,18 +237,6 @@ const calculateNutritionScore = (product, category) => {
       missingCount++;
       limitations.push("Missing sodium data");
     }
-  }
-
-  // Calories (Minor adjustment)
-  const calVal = product.nutrition?.calories;
-  if (isValidFiniteNumber(calVal)) {
-    evaluatedCount++;
-    if (calVal > 300) {
-      score -= 10;
-      factors.push("High calorie density");
-    }
-  } else {
-    missingCount++;
   }
 
   // Neutral anchoring for completely missing nutritional data
@@ -512,8 +500,8 @@ const calculatePreferenceScore = (product, prefs = {}) => {
 };
 
 const getCategory = (product) => {
-  const categoryId = product.identity?.categoryId || product.catalog?.categoryId;
-  return getCategoryFormat(categoryId);
+  const categoryId = product.identity?.categoryId || product.catalog?.categoryId || product.category_id || product.categoryId;
+  return getCategoryFormat(categoryId || product);
 };
 
 /**
@@ -539,13 +527,14 @@ const calculateSmartChoiceScore = (product, preferences = {}) => {
   const pfContribution = Math.round(pf.score * config.weights.proteinFiber);
   const prefContribution = hasActivePrefs ? Math.round(pref.score * config.weights.preferences) : 0;
 
-  let totalScore = Math.round(
-    nut.score * config.weights.nutrition +
-    ing.score * config.weights.ingredients +
-    proc.score * config.weights.processing +
-    pf.score * config.weights.proteinFiber +
-    (hasActivePrefs ? pref.score * config.weights.preferences : 0)
-  );
+  // Authoritative Exact Sum Additivity: Overall Score strictly equals sum of weighted component contributions
+  let totalScore = Math.max(0, Math.min(100,
+    nutContribution +
+    ingContribution +
+    procContribution +
+    pfContribution +
+    prefContribution
+  ));
 
   // Hard exclusion override: if allergen safety constraint is violated, score is 0
   if (pref.hardExclusionViolated) {

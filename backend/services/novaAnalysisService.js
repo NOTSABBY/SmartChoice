@@ -1,4 +1,4 @@
-﻿const { parseIngredientTokens } = require('./ingredientParsingService');
+const { parseIngredientTokens } = require('./ingredientParsingService');
 const { analyzeAdditives } = require('./additiveAnalysisService');
 
 // Industrial fractionated / reconstituted markers
@@ -12,7 +12,7 @@ const PROCESSING_TECHNIQUE_REGEX = /\b(extruded|carbonated|pre-fried|reconstitut
  * Category priors provide supporting context ONLY and CANNOT assign NOVA alone.
  */
 function classifyNova(product) {
-  const extNova = product.processing?.novaGroup;
+  const extNova = product.processing?.novaGroup || product.nutrition_info?.nova_group;
   
   // 1. Check for external reported source
   if (extNova && [1, 2, 3, 4].includes(extNova)) {
