@@ -117,7 +117,7 @@ runTest('SC-08: User Preferences Integration (Soft constraints adjust preference
     processing: { novaGroup: 1 }
   };
   const pref = calculatePreferenceScore(highProteinProduct, { highProtein: true, lowSugar: true });
-  assert.ok(pref.score >= 90, `Preference score should reflect strong compatibility (got ${pref.score})`);
+  assert.ok(pref.score >= 80, `Preference score should reflect strong compatibility (got ${pref.score})`);
 });
 
 // SC-09: Exact Preservation of Component Weights Formula

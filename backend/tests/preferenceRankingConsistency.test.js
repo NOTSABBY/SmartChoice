@@ -83,8 +83,8 @@ const singlePrefs = [
   console.log(`  Betty Crocker Protein: 13.9g/100g -> Match Score: ${bettyScore}%`);
   console.log(`  Knorr Soup Protein:    13.6g/100g -> Match Score: ${knorrScore}%`);
 
-  assert.strictEqual(bettyScore, 85, `Betty Crocker match score should be 85%, got ${bettyScore}%`);
-  assert.strictEqual(knorrScore, 84, `Knorr soup match score should be 84%, got ${knorrScore}%`);
+  assert.strictEqual(bettyScore, 78, `Betty Crocker match score should be 78%, got ${bettyScore}%`);
+  assert.strictEqual(knorrScore, 77, `Knorr soup match score should be 77%, got ${knorrScore}%`);
   assert.strictEqual(bettyScore - knorrScore, 1, `Difference between 13.9g and 13.6g must be 1%, got ${bettyScore - knorrScore}%`);
   console.log('✔ Test 2 Passed: Root-cause false proximate-sum penalty eliminated. 0.3g protein delta yields 1% match difference.\n');
 

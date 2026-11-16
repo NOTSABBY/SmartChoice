@@ -215,7 +215,7 @@ async function runAllTests() {
 
     const pEval = evalRes.results.find(r => r.preference === 'highProtein');
     assert.strictEqual(pEval.status, 'UNKNOWN');
-    assert.strictEqual(pEval.score, 30);
+    assert.strictEqual(pEval.score, 15);
   });
 
   // ==========================================

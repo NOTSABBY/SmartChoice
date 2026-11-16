@@ -177,9 +177,9 @@ const evaluatePreferences = (product, prefs) => {
       results.push({
         preference: 'highProtein',
         status: UNKNOWN,
-        score: 30,
+        score: 15,
         declaredValue: 'Physically Invalid',
-        reason: 'Nutritional declaration exceeds physical mass boundaries (>100g/100g); marked unevaluated.',
+        reason: 'Nutritional declaration exceeds physical mass boundaries (>100g/100g); marked invalid.',
         isHardConstraint: false
       });
       unknownCount++;
@@ -216,13 +216,15 @@ const evaluatePreferences = (product, prefs) => {
     } else if (tn.protein != null) {
       let score = 0;
       if (isLiquid) {
-        if (tn.protein >= 6.0) score = 100;
-        else if (tn.protein >= 3.0) score = Math.round(60 + ((tn.protein - 3.0) / 3.0) * 40);
+        if (tn.protein >= 12.0) score = 100;
+        else if (tn.protein >= 6.0) score = Math.round(90 + ((tn.protein - 6.0) / 6.0) * 10);
+        else if (tn.protein >= 3.0) score = Math.round(60 + ((tn.protein - 3.0) / 3.0) * 30);
         else score = Math.round((tn.protein / 3.0) * 60);
       } else {
-        if (tn.protein >= 20.0) score = 100;
-        else if (tn.protein >= 10.0) score = Math.round(75 + ((tn.protein - 10.0) / 10.0) * 25);
-        else if (tn.protein >= 5.0) score = Math.round(35 + ((tn.protein - 5.0) / 5.0) * 40);
+        if (tn.protein >= 45.0) score = 100;
+        else if (tn.protein >= 20.0) score = Math.round(90 + ((tn.protein - 20.0) / 25.0) * 10);
+        else if (tn.protein >= 10.0) score = Math.round(70 + ((tn.protein - 10.0) / 10.0) * 20);
+        else if (tn.protein >= 5.0) score = Math.round(35 + ((tn.protein - 5.0) / 5.0) * 35);
         else score = Math.round((tn.protein / 5.0) * 35);
       }
 
@@ -247,8 +249,8 @@ const evaluatePreferences = (product, prefs) => {
       results.push({
         preference: 'highProtein',
         status: UNKNOWN,
-        score: 50,
-        declaredValue: 'Unknown',
+        score: 40,
+        declaredValue: 'Unavailable',
         reason: 'Protein data is unavailable.',
         isHardConstraint: false
       });
@@ -262,9 +264,9 @@ const evaluatePreferences = (product, prefs) => {
       results.push({
         preference: 'lowCalories',
         status: UNKNOWN,
-        score: 30,
+        score: 15,
         declaredValue: 'Physically Invalid',
-        reason: 'Nutritional declaration is physically impossible; marked unevaluated.',
+        reason: 'Nutritional declaration is physically impossible; marked invalid.',
         isHardConstraint: false
       });
       unknownCount++;
@@ -273,16 +275,18 @@ const evaluatePreferences = (product, prefs) => {
       if (cals != null) {
         let score = 0;
         if (isLiquid) {
-          if (cals <= 20) score = 100;
-          else if (cals <= 60) score = Math.round(100 - ((cals - 20) / 40) * 40);
+          if (cals <= 20) score = Math.round(100 - (cals / 20) * 10);
+          else if (cals <= 60) score = Math.round(90 - ((cals - 20) / 40) * 30);
           else if (cals <= 120) score = Math.round(60 - ((cals - 60) / 60) * 40);
-          else score = Math.max(0, Math.round(20 - ((cals - 120) / 60) * 20));
+          else if (cals <= 180) score = Math.max(0, Math.round(20 - ((cals - 120) / 60) * 20));
+          else score = 0;
         } else {
-          if (cals <= 40) score = 100;
-          else if (cals <= 120) score = Math.round(100 - ((cals - 40) / 80) * 30);
-          else if (cals <= 250) score = Math.round(70 - ((cals - 120) / 130) * 40);
-          else if (cals <= 400) score = Math.max(5, Math.round(30 - ((cals - 250) / 150) * 25));
-          else score = 0; // High energy dense items (e.g. crisps 530 kcal, peanut butter 625 kcal)
+          if (cals <= 40) score = Math.round(100 - (cals / 40) * 10);
+          else if (cals <= 120) score = Math.round(90 - ((cals - 40) / 80) * 20);
+          else if (cals <= 250) score = Math.round(70 - ((cals - 120) / 130) * 35);
+          else if (cals <= 400) score = Math.round(35 - ((cals - 250) / 150) * 25);
+          else if (cals <= 500) score = Math.max(0, Math.round(10 - ((cals - 400) / 100) * 10));
+          else score = 0;
         }
 
         const status = score >= 70 ? MATCH : (score >= 30 ? PARTIAL_MATCH : NO_MATCH);
@@ -306,8 +310,8 @@ const evaluatePreferences = (product, prefs) => {
         results.push({
           preference: 'lowCalories',
           status: UNKNOWN,
-          score: 50,
-          declaredValue: 'Unknown',
+          score: 40,
+          declaredValue: 'Unavailable',
           reason: 'Calorie data is unavailable.',
           isHardConstraint: false
         });
@@ -321,15 +325,16 @@ const evaluatePreferences = (product, prefs) => {
     if (tn.sugar != null) {
       let score = 0;
       if (isLiquid) {
-        if (tn.sugar <= 1.0) score = 100;
-        else if (tn.sugar <= 2.5) score = Math.round(75 + ((2.5 - tn.sugar) / 1.5) * 25);
-        else if (tn.sugar <= 7.5) score = Math.round(30 + ((7.5 - tn.sugar) / 5.0) * 45);
-        else score = Math.max(0, Math.round(((11.25 - tn.sugar) / 3.75) * 30));
+        if (tn.sugar <= 1.0) score = Math.round(100 - (tn.sugar / 1.0) * 10);
+        else if (tn.sugar <= 2.5) score = Math.round(90 - ((tn.sugar - 1.0) / 1.5) * 15);
+        else if (tn.sugar <= 7.5) score = Math.round(75 - ((tn.sugar - 2.5) / 5.0) * 45);
+        else if (tn.sugar <= 11.25) score = Math.max(0, Math.round(30 - ((tn.sugar - 7.5) / 3.75) * 30));
+        else score = 0;
       } else {
-        if (tn.sugar <= 2.5) score = 100;
-        else if (tn.sugar <= 5.0) score = Math.round(80 + ((5.0 - tn.sugar) / 2.5) * 20);
-        else if (tn.sugar <= 15.0) score = Math.round(40 + ((15.0 - tn.sugar) / 10.0) * 40);
-        else if (tn.sugar <= 25.0) score = Math.max(0, Math.round(((25.0 - tn.sugar) / 10.0) * 40));
+        if (tn.sugar <= 2.5) score = Math.round(100 - (tn.sugar / 2.5) * 10);
+        else if (tn.sugar <= 5.0) score = Math.round(90 - ((tn.sugar - 2.5) / 2.5) * 15);
+        else if (tn.sugar <= 15.0) score = Math.round(75 - ((tn.sugar - 5.0) / 10.0) * 40);
+        else if (tn.sugar <= 25.0) score = Math.max(0, Math.round(35 - ((tn.sugar - 15.0) / 10.0) * 35));
         else score = 0;
       }
 
@@ -354,8 +359,8 @@ const evaluatePreferences = (product, prefs) => {
       results.push({
         preference: 'lowSugar',
         status: UNKNOWN,
-        score: 50,
-        declaredValue: 'Unknown',
+        score: 40,
+        declaredValue: 'Unavailable',
         reason: 'Sugar data is unavailable.',
         isHardConstraint: false
       });
@@ -377,8 +382,9 @@ const evaluatePreferences = (product, prefs) => {
       noMatchCount++;
     } else if (tn.fiber != null) {
       let score = 0;
-      if (tn.fiber >= 8.0) score = 100;
-      else if (tn.fiber >= 6.0) score = Math.round(80 + ((tn.fiber - 6.0) / 2.0) * 20);
+      if (tn.fiber >= 15.0) score = 100;
+      else if (tn.fiber >= 8.0) score = Math.round(90 + ((tn.fiber - 8.0) / 7.0) * 10);
+      else if (tn.fiber >= 6.0) score = Math.round(80 + ((tn.fiber - 6.0) / 2.0) * 10);
       else if (tn.fiber >= 3.0) score = Math.round(40 + ((tn.fiber - 3.0) / 3.0) * 40);
       else score = Math.round((tn.fiber / 3.0) * 40);
 
@@ -403,8 +409,8 @@ const evaluatePreferences = (product, prefs) => {
       results.push({
         preference: 'highFiber',
         status: UNKNOWN,
-        score: 50,
-        declaredValue: 'Unknown',
+        score: 40,
+        declaredValue: 'Unavailable',
         reason: 'Fiber data is unavailable.',
         isHardConstraint: false
       });
@@ -416,10 +422,12 @@ const evaluatePreferences = (product, prefs) => {
   if (prefs.lowSodium) {
     if (tn.sodium != null) {
       let score = 0;
-      if (tn.sodium <= 120) score = 100;
-      else if (tn.sodium <= 400) score = Math.round(60 + ((400 - tn.sodium) / 280) * 40);
-      else if (tn.sodium <= 600) score = Math.round(20 + ((600 - tn.sodium) / 200) * 40);
-      else score = Math.max(0, Math.round(((1000 - tn.sodium) / 400) * 20));
+      if (tn.sodium <= 40) score = Math.round(100 - (tn.sodium / 40) * 5);
+      else if (tn.sodium <= 120) score = Math.round(95 - ((tn.sodium - 40) / 80) * 10);
+      else if (tn.sodium <= 400) score = Math.round(85 - ((tn.sodium - 120) / 280) * 35);
+      else if (tn.sodium <= 600) score = Math.round(50 - ((tn.sodium - 400) / 200) * 30);
+      else if (tn.sodium <= 1000) score = Math.max(0, Math.round(20 - ((tn.sodium - 600) / 400) * 20));
+      else score = 0;
 
       const status = score >= 75 ? MATCH : (score >= 40 ? PARTIAL_MATCH : NO_MATCH);
       if (status === MATCH) matchCount++;
@@ -442,8 +450,8 @@ const evaluatePreferences = (product, prefs) => {
       results.push({
         preference: 'lowSodium',
         status: UNKNOWN,
-        score: 50,
-        declaredValue: 'Unknown',
+        score: 40,
+        declaredValue: 'Unavailable',
         reason: 'Sodium data is unavailable.',
         isHardConstraint: false
       });
@@ -455,9 +463,11 @@ const evaluatePreferences = (product, prefs) => {
   if (prefs.lowSaturatedFat) {
     if (tn.saturatedFat != null) {
       let score = 0;
-      if (tn.saturatedFat <= 1.5) score = 100;
-      else if (tn.saturatedFat <= 5.0) score = Math.round(50 + ((5.0 - tn.saturatedFat) / 3.5) * 50);
-      else score = Math.max(0, Math.round(((10.0 - tn.saturatedFat) / 5.0) * 50));
+      if (tn.saturatedFat <= 0.5) score = Math.round(100 - (tn.saturatedFat / 0.5) * 5);
+      else if (tn.saturatedFat <= 1.5) score = Math.round(95 - ((tn.saturatedFat - 0.5) / 1.0) * 10);
+      else if (tn.saturatedFat <= 5.0) score = Math.round(85 - ((tn.saturatedFat - 1.5) / 3.5) * 40);
+      else if (tn.saturatedFat <= 10.0) score = Math.max(0, Math.round(45 - ((tn.saturatedFat - 5.0) / 5.0) * 45));
+      else score = 0;
 
       const status = score >= 75 ? MATCH : (score >= 40 ? PARTIAL_MATCH : NO_MATCH);
       if (status === MATCH) matchCount++;
@@ -480,8 +490,8 @@ const evaluatePreferences = (product, prefs) => {
       results.push({
         preference: 'lowSaturatedFat',
         status: UNKNOWN,
-        score: 50,
-        declaredValue: 'Unknown',
+        score: 40,
+        declaredValue: 'Unavailable',
         reason: 'Saturated fat data is unavailable.',
         isHardConstraint: false
       });
@@ -494,13 +504,17 @@ const evaluatePreferences = (product, prefs) => {
     if (tn.fat != null) {
       let score = 0;
       if (isLiquid) {
-        if (tn.fat <= 1.5) score = 100;
-        else if (tn.fat <= 3.0) score = Math.round(60 + ((3.0 - tn.fat) / 1.5) * 40);
-        else score = Math.max(0, Math.round(((10.0 - tn.fat) / 7.0) * 60));
+        if (tn.fat <= 0.75) score = Math.round(100 - (tn.fat / 0.75) * 5);
+        else if (tn.fat <= 1.5) score = Math.round(95 - ((tn.fat - 0.75) / 0.75) * 10);
+        else if (tn.fat <= 3.0) score = Math.round(85 - ((tn.fat - 1.5) / 1.5) * 35);
+        else if (tn.fat <= 10.0) score = Math.max(0, Math.round(50 - ((tn.fat - 3.0) / 7.0) * 50));
+        else score = 0;
       } else {
-        if (tn.fat <= 3.0) score = 100;
-        else if (tn.fat <= 10.0) score = Math.round(60 + ((10.0 - tn.fat) / 7.0) * 40);
-        else score = Math.max(0, Math.round(((25.0 - tn.fat) / 15.0) * 60));
+        if (tn.fat <= 1.5) score = Math.round(100 - (tn.fat / 1.5) * 5);
+        else if (tn.fat <= 3.0) score = Math.round(95 - ((tn.fat - 1.5) / 1.5) * 10);
+        else if (tn.fat <= 10.0) score = Math.round(85 - ((tn.fat - 3.0) / 7.0) * 35);
+        else if (tn.fat <= 25.0) score = Math.max(0, Math.round(50 - ((tn.fat - 10.0) / 15.0) * 50));
+        else score = 0;
       }
 
       const status = score >= 75 ? MATCH : (score >= 40 ? PARTIAL_MATCH : NO_MATCH);
@@ -524,8 +538,8 @@ const evaluatePreferences = (product, prefs) => {
       results.push({
         preference: 'lowFat',
         status: UNKNOWN,
-        score: 50,
-        declaredValue: 'Unknown',
+        score: 40,
+        declaredValue: 'Unavailable',
         reason: 'Fat data is unavailable.',
         isHardConstraint: false
       });
@@ -535,10 +549,10 @@ const evaluatePreferences = (product, prefs) => {
 
   // 9. Vegetarian
   if (prefs.vegetarian) {
-    const dc = product.dietaryClassification;
+    const dc = product.dietary_classification || product.dietaryClassification;
     const dietaryType = String(dc?.status || ident.dietaryType || product.dietary_type || product.catalog?.dietaryType || '').toUpperCase();
-    const isVeg = dc ? dc.isVegetarian : (dietaryType.includes('VEG') && !dietaryType.includes('NON'));
-    const isNonVeg = dc ? dc.isNonVegetarian : dietaryType.includes('NON');
+    const isVeg = Boolean(dc ? (dc.status === 'VEGETARIAN' || dc.status === 'VEGAN' || dc.isVegetarian) : (dietaryType.includes('VEG') && !dietaryType.includes('NON')));
+    const isNonVeg = Boolean(dc ? (dc.status === 'NON_VEGETARIAN' || dc.isNonVegetarian) : dietaryType.includes('NON'));
     if (isVeg) {
       results.push({
         preference: 'vegetarian',
@@ -563,7 +577,7 @@ const evaluatePreferences = (product, prefs) => {
       results.push({
         preference: 'vegetarian',
         status: UNKNOWN,
-        score: 50,
+        score: 40,
         declaredValue: 'Unspecified',
         reason: 'Vegetarian status cannot be verified from label.',
         isHardConstraint: false
@@ -574,10 +588,14 @@ const evaluatePreferences = (product, prefs) => {
 
   // 10. Vegan
   if (prefs.vegan) {
-    const dc = product.dietaryClassification;
+    const dc = product.dietary_classification || product.dietaryClassification;
     const labels = (product.processing?.labels || []).map(l => String(l).toLowerCase());
-    const isExplicitVegan = Boolean(dc?.isVegan || labels.some(l => l.includes('vegan')));
-    const isNonVegan = Boolean(dc?.isNonVegetarian || (dc && !dc.isVegan && dc.isVegetarian));
+    const isExplicitVegan = Boolean(dc?.status === 'VEGAN' || dc?.isVegan || labels.some(l => l.includes('vegan')));
+    const isNonVegan = Boolean(
+      dc?.status === 'NON_VEGETARIAN' || 
+      dc?.isNonVegetarian || 
+      (dc && dc.status === 'VEGETARIAN' && !isExplicitVegan)
+    );
 
     if (isExplicitVegan) {
       results.push({
@@ -603,7 +621,7 @@ const evaluatePreferences = (product, prefs) => {
       results.push({
         preference: 'vegan',
         status: UNKNOWN,
-        score: 50,
+        score: 40,
         declaredValue: 'Unverified',
         reason: 'Vegan certification cannot be verified.',
         isHardConstraint: false
@@ -638,15 +656,32 @@ const calculatePersonalizedScore = (evalResults) => {
   }
 
   const scores = softEvals.map(r => r.score);
-  const avg = scores.reduce((sum, s) => sum + s, 0) / scores.length;
-  const min = Math.min(...scores);
+  const N = scores.length;
+  let score = 0;
 
-  // Multi-preference synergy: 70% average + 30% worst-case constraint
-  const score = softEvals.length === 1
-    ? Math.round(avg)
-    : Math.round(0.70 * avg + 0.30 * min);
+  if (N === 1) {
+    score = Math.round(scores[0]);
+  } else {
+    const avg = scores.reduce((sum, s) => sum + s, 0) / N;
+    const min = Math.min(...scores);
+    const zeroCount = scores.filter(s => s === 0).length;
 
-  return Math.max(0, Math.min(100, score));
+    // Base synergy: 65% average + 35% minimum-score constraint
+    let combined = 0.65 * avg + 0.35 * min;
+
+    // Critical Failure Guard: Prevents dilution anomaly when a product fails one goal
+    if (min === 0) {
+      const cap = Math.max(15, 30 - (zeroCount - 1) * 10);
+      combined = Math.min(combined, cap);
+    } else if (min < 35) {
+      const cap = 40 + (min / 35) * 15;
+      combined = Math.min(combined, cap);
+    }
+
+    score = Math.max(0, Math.min(100, Math.round(combined)));
+  }
+
+  return score;
 };
 
 const extractNutrient = (product, nutrientName) => {

@@ -418,8 +418,26 @@ export function evaluateProductPreferences(product, preferences = {}) {
 
   // 1. Hard Constraints: Avoid Allergens
   if (preferences.avoidAllergens && preferences.avoidAllergens.length > 0) {
-    const pAllergens = (product.nutrition_info?.allergens || product.ingredients?.allergens || []).map(a => String(a).toLowerCase().trim());
-    const ingText = (product.nutrition_info?.ingredients_text || product.ingredients?.rawText || '').toLowerCase();
+    const ing = product.ingredients || {};
+    const pAllergens = [
+      ...(ing.allergens || []),
+      ...(ing.allergenDeclarations?.contains || []),
+      ...(ing.allergenDeclarations?.mayContain || []),
+      ...(product.nutrition_info?.allergens || []),
+      ...(product.nutrition_info?.may_contain || []),
+      ...(product.analysis?.ingredientAnalysis?.allergens?.contains || []),
+      ...(product.analysis?.ingredientAnalysis?.allergens?.mayContain || []),
+      ...(product.analysis?.ingredientAnalysis?.allergens?.specificAllergens || []),
+      ...(product.analysis?.ingredientAnalysis?.allergens?.declaredAllergenClasses || [])
+    ].map(a => String(a).toLowerCase().trim());
+
+    const ingText = String(
+      product.declared_ingredients_text ||
+      product.ingredients_text ||
+      ing.rawText ||
+      product.nutrition_info?.ingredients_text ||
+      ''
+    ).toLowerCase();
     
     for (const avoided of preferences.avoidAllergens) {
       const av = String(avoided).toLowerCase().trim();
@@ -444,11 +462,22 @@ export function evaluateProductPreferences(product, preferences = {}) {
   // 2. Hard Constraints: Excluded Ingredients
   const avoidIngs = [...(preferences.avoidIngredients || []), ...(preferences.excludedIngredients || [])];
   if (avoidIngs.length > 0 && isEligible) {
-    const ingText = (product.nutrition_info?.ingredients_text || product.ingredients?.rawText || '').toLowerCase();
+    const ing = product.ingredients || {};
+    const productIngredients = (ing.ingredients || []).map(i => typeof i === 'string' ? i.toLowerCase() : String(i.name || '').toLowerCase());
+    const ingText = String(
+      product.declared_ingredients_text ||
+      product.ingredients_text ||
+      ing.rawText ||
+      product.nutrition_info?.ingredients_text ||
+      ''
+    ).toLowerCase();
+
     for (const avoided of avoidIngs) {
       const av = String(avoided).toLowerCase().trim();
       if (!av) continue;
-      if (ingText.includes(av)) {
+      const inDeclared = productIngredients.some(i => i.includes(av) || av.includes(i));
+      const inText = ingText.includes(av);
+      if (inDeclared || inText) {
         isEligible = false;
         hardExclusionReason = `Contains excluded ingredient: ${avoided}`;
         evaluations.push({
@@ -481,10 +510,10 @@ export function evaluateProductPreferences(product, preferences = {}) {
     if (isPhysicallyImpossible) {
       evaluations.push({
         preference: 'highProtein',
-        status: 'UNKNOWN',
-        score: 30,
-        declaredValue: 'Invalid',
-        reason: 'Nutritional declaration exceeds physical mass boundaries (>100g/100g); marked unevaluated.'
+        status: 'INVALID',
+        score: 15,
+        declaredValue: 'Invalid Data',
+        reason: 'Nutritional declaration exceeds physical mass boundaries (>100g/100g); marked invalid.'
       });
     } else if (format === 'BEVERAGE_INFUSION') {
       evaluations.push({
@@ -514,13 +543,15 @@ export function evaluateProductPreferences(product, preferences = {}) {
       const isLiquid = format.includes('BEVERAGE');
       let score = 0;
       if (isLiquid) {
-        if (protein >= 6.0) score = 100;
-        else if (protein >= 3.0) score = Math.round(60 + ((protein - 3.0) / 3.0) * 40);
+        if (protein >= 12.0) score = 100;
+        else if (protein >= 6.0) score = Math.round(90 + ((protein - 6.0) / 6.0) * 10);
+        else if (protein >= 3.0) score = Math.round(60 + ((protein - 3.0) / 3.0) * 30);
         else score = Math.round((protein / 3.0) * 60);
       } else {
-        if (protein >= 20.0) score = 100;
-        else if (protein >= 10.0) score = Math.round(75 + ((protein - 10.0) / 10.0) * 25);
-        else if (protein >= 5.0) score = Math.round(35 + ((protein - 5.0) / 5.0) * 40);
+        if (protein >= 45.0) score = 100;
+        else if (protein >= 20.0) score = Math.round(90 + ((protein - 20.0) / 25.0) * 10);
+        else if (protein >= 10.0) score = Math.round(70 + ((protein - 10.0) / 10.0) * 20);
+        else if (protein >= 5.0) score = Math.round(35 + ((protein - 5.0) / 5.0) * 35);
         else score = Math.round((protein / 5.0) * 35);
       }
       evaluations.push({
@@ -534,8 +565,8 @@ export function evaluateProductPreferences(product, preferences = {}) {
       evaluations.push({
         preference: 'highProtein',
         status: 'UNKNOWN',
-        score: 50,
-        declaredValue: 'Unknown',
+        score: 40,
+        declaredValue: 'Unavailable',
         reason: 'Protein information is unavailable.'
       });
     }
@@ -546,25 +577,27 @@ export function evaluateProductPreferences(product, preferences = {}) {
     if (isPhysicallyImpossible) {
       evaluations.push({
         preference: 'lowCalories',
-        status: 'UNKNOWN',
-        score: 30,
-        declaredValue: 'Invalid',
-        reason: 'Nutritional declaration is physically impossible; marked unevaluated.'
+        status: 'INVALID',
+        score: 15,
+        declaredValue: 'Invalid Data',
+        reason: 'Nutritional declaration is physically impossible; marked invalid.'
       });
     } else if (calories != null) {
       const isLiquid = format.includes('BEVERAGE');
       let score = 0;
       if (isLiquid) {
-        if (calories <= 20) score = 100;
-        else if (calories <= 60) score = Math.round(100 - ((calories - 20) / 40) * 40);
+        if (calories <= 20) score = Math.round(100 - (calories / 20) * 10);
+        else if (calories <= 60) score = Math.round(90 - ((calories - 20) / 40) * 30);
         else if (calories <= 120) score = Math.round(60 - ((calories - 60) / 60) * 40);
-        else score = Math.max(0, Math.round(20 - ((calories - 120) / 60) * 20));
+        else if (calories <= 180) score = Math.max(0, Math.round(20 - ((calories - 120) / 60) * 20));
+        else score = 0;
       } else {
-        if (calories <= 40) score = 100;
-        else if (calories <= 120) score = Math.round(100 - ((calories - 40) / 80) * 30);
-        else if (calories <= 250) score = Math.round(70 - ((calories - 120) / 130) * 40);
-        else if (calories <= 400) score = Math.max(5, Math.round(30 - ((calories - 250) / 150) * 25));
-        else score = 0; // High energy dense foods
+        if (calories <= 40) score = Math.round(100 - (calories / 40) * 10);
+        else if (calories <= 120) score = Math.round(90 - ((calories - 40) / 80) * 20);
+        else if (calories <= 250) score = Math.round(70 - ((calories - 120) / 130) * 35);
+        else if (calories <= 400) score = Math.round(35 - ((calories - 250) / 150) * 25);
+        else if (calories <= 500) score = Math.max(0, Math.round(10 - ((calories - 400) / 100) * 10));
+        else score = 0;
       }
       evaluations.push({
         preference: 'lowCalories',
@@ -577,8 +610,8 @@ export function evaluateProductPreferences(product, preferences = {}) {
       evaluations.push({
         preference: 'lowCalories',
         status: 'UNKNOWN',
-        score: 50,
-        declaredValue: 'Unknown',
+        score: 40,
+        declaredValue: 'Unavailable',
         reason: 'Calorie information is unavailable.'
       });
     }
@@ -590,15 +623,16 @@ export function evaluateProductPreferences(product, preferences = {}) {
       const isLiquid = format.includes('BEVERAGE');
       let score = 0;
       if (isLiquid) {
-        if (sugar <= 1.0) score = 100;
-        else if (sugar <= 2.5) score = Math.round(75 + ((2.5 - sugar) / 1.5) * 25);
-        else if (sugar <= 7.5) score = Math.round(30 + ((7.5 - sugar) / 5.0) * 45);
-        else score = Math.max(0, Math.round(((11.25 - sugar) / 3.75) * 30));
+        if (sugar <= 1.0) score = Math.round(100 - (sugar / 1.0) * 10);
+        else if (sugar <= 2.5) score = Math.round(90 - ((sugar - 1.0) / 1.5) * 15);
+        else if (sugar <= 7.5) score = Math.round(75 - ((sugar - 2.5) / 5.0) * 45);
+        else if (sugar <= 11.25) score = Math.max(0, Math.round(30 - ((sugar - 7.5) / 3.75) * 30));
+        else score = 0;
       } else {
-        if (sugar <= 2.5) score = 100;
-        else if (sugar <= 5.0) score = Math.round(80 + ((5.0 - sugar) / 2.5) * 20);
-        else if (sugar <= 15.0) score = Math.round(40 + ((15.0 - sugar) / 10.0) * 40);
-        else if (sugar <= 25.0) score = Math.max(0, Math.round(((25.0 - sugar) / 10.0) * 40));
+        if (sugar <= 2.5) score = Math.round(100 - (sugar / 2.5) * 10);
+        else if (sugar <= 5.0) score = Math.round(90 - ((sugar - 2.5) / 2.5) * 15);
+        else if (sugar <= 15.0) score = Math.round(75 - ((sugar - 5.0) / 10.0) * 40);
+        else if (sugar <= 25.0) score = Math.max(0, Math.round(35 - ((sugar - 15.0) / 10.0) * 35));
         else score = 0;
       }
       evaluations.push({
@@ -612,8 +646,8 @@ export function evaluateProductPreferences(product, preferences = {}) {
       evaluations.push({
         preference: 'lowSugar',
         status: 'UNKNOWN',
-        score: 50,
-        declaredValue: 'Unknown',
+        score: 40,
+        declaredValue: 'Unavailable',
         reason: 'Sugar information is unavailable.'
       });
     }
@@ -631,8 +665,9 @@ export function evaluateProductPreferences(product, preferences = {}) {
       });
     } else if (fiber != null) {
       let score = 0;
-      if (fiber >= 8.0) score = 100;
-      else if (fiber >= 6.0) score = Math.round(80 + ((fiber - 6.0) / 2.0) * 20);
+      if (fiber >= 15.0) score = 100;
+      else if (fiber >= 8.0) score = Math.round(90 + ((fiber - 8.0) / 7.0) * 10);
+      else if (fiber >= 6.0) score = Math.round(80 + ((fiber - 6.0) / 2.0) * 10);
       else if (fiber >= 3.0) score = Math.round(40 + ((fiber - 3.0) / 3.0) * 40);
       else score = Math.round((fiber / 3.0) * 40);
       evaluations.push({
@@ -646,8 +681,8 @@ export function evaluateProductPreferences(product, preferences = {}) {
       evaluations.push({
         preference: 'highFiber',
         status: 'UNKNOWN',
-        score: 50,
-        declaredValue: 'Unknown',
+        score: 40,
+        declaredValue: 'Unavailable',
         reason: 'Fibre information is unavailable.'
       });
     }
@@ -657,10 +692,12 @@ export function evaluateProductPreferences(product, preferences = {}) {
   if (preferences.lowSodium) {
     if (sodium != null) {
       let score = 0;
-      if (sodium <= 120) score = 100;
-      else if (sodium <= 400) score = Math.round(60 + ((400 - sodium) / 280) * 40);
-      else if (sodium <= 600) score = Math.round(20 + ((600 - sodium) / 200) * 40);
-      else score = Math.max(0, Math.round(((1000 - sodium) / 400) * 20));
+      if (sodium <= 40) score = Math.round(100 - (sodium / 40) * 5);
+      else if (sodium <= 120) score = Math.round(95 - ((sodium - 40) / 80) * 10);
+      else if (sodium <= 400) score = Math.round(85 - ((sodium - 120) / 280) * 35);
+      else if (sodium <= 600) score = Math.round(50 - ((sodium - 400) / 200) * 30);
+      else if (sodium <= 1000) score = Math.max(0, Math.round(20 - ((sodium - 600) / 400) * 20));
+      else score = 0;
       evaluations.push({
         preference: 'lowSodium',
         status: score >= 75 ? 'MATCH' : score >= 40 ? 'PARTIAL_MATCH' : 'NO_MATCH',
@@ -672,8 +709,8 @@ export function evaluateProductPreferences(product, preferences = {}) {
       evaluations.push({
         preference: 'lowSodium',
         status: 'UNKNOWN',
-        score: 50,
-        declaredValue: 'Unknown',
+        score: 40,
+        declaredValue: 'Unavailable',
         reason: 'Sodium information is unavailable.'
       });
     }
@@ -683,9 +720,11 @@ export function evaluateProductPreferences(product, preferences = {}) {
   if (preferences.lowSaturatedFat) {
     if (satFat != null) {
       let score = 0;
-      if (satFat <= 1.5) score = 100;
-      else if (satFat <= 5.0) score = Math.round(50 + ((5.0 - satFat) / 3.5) * 50);
-      else score = Math.max(0, Math.round(((10.0 - satFat) / 5.0) * 50));
+      if (satFat <= 0.5) score = Math.round(100 - (satFat / 0.5) * 5);
+      else if (satFat <= 1.5) score = Math.round(95 - ((satFat - 0.5) / 1.0) * 10);
+      else if (satFat <= 5.0) score = Math.round(85 - ((satFat - 1.5) / 3.5) * 40);
+      else if (satFat <= 10.0) score = Math.max(0, Math.round(45 - ((satFat - 5.0) / 5.0) * 45));
+      else score = 0;
       evaluations.push({
         preference: 'lowSaturatedFat',
         status: score >= 75 ? 'MATCH' : score >= 40 ? 'PARTIAL_MATCH' : 'NO_MATCH',
@@ -697,8 +736,8 @@ export function evaluateProductPreferences(product, preferences = {}) {
       evaluations.push({
         preference: 'lowSaturatedFat',
         status: 'UNKNOWN',
-        score: 50,
-        declaredValue: 'Unknown',
+        score: 40,
+        declaredValue: 'Unavailable',
         reason: 'Saturated fat information is unavailable.'
       });
     }
@@ -711,13 +750,17 @@ export function evaluateProductPreferences(product, preferences = {}) {
       const isLiquid = format.includes('BEVERAGE');
       let score = 0;
       if (isLiquid) {
-        if (fat <= 1.5) score = 100;
-        else if (fat <= 3.0) score = Math.round(60 + ((3.0 - fat) / 1.5) * 40);
-        else score = Math.max(0, Math.round(((10.0 - fat) / 7.0) * 60));
+        if (fat <= 0.75) score = Math.round(100 - (fat / 0.75) * 5);
+        else if (fat <= 1.5) score = Math.round(95 - ((fat - 0.75) / 0.75) * 10);
+        else if (fat <= 3.0) score = Math.round(85 - ((fat - 1.5) / 1.5) * 35);
+        else if (fat <= 10.0) score = Math.max(0, Math.round(50 - ((fat - 3.0) / 7.0) * 50));
+        else score = 0;
       } else {
-        if (fat <= 3.0) score = 100;
-        else if (fat <= 10.0) score = Math.round(60 + ((10.0 - fat) / 7.0) * 40);
-        else score = Math.max(0, Math.round(((25.0 - fat) / 15.0) * 60));
+        if (fat <= 1.5) score = Math.round(100 - (fat / 1.5) * 5);
+        else if (fat <= 3.0) score = Math.round(95 - ((fat - 1.5) / 1.5) * 10);
+        else if (fat <= 10.0) score = Math.round(85 - ((fat - 3.0) / 7.0) * 35);
+        else if (fat <= 25.0) score = Math.max(0, Math.round(50 - ((fat - 10.0) / 15.0) * 50));
+        else score = 0;
       }
       evaluations.push({
         preference: 'lowFat',
@@ -730,8 +773,8 @@ export function evaluateProductPreferences(product, preferences = {}) {
       evaluations.push({
         preference: 'lowFat',
         status: 'UNKNOWN',
-        score: 50,
-        declaredValue: 'Unknown',
+        score: 40,
+        declaredValue: 'Unavailable',
         reason: 'Fat information is unavailable.'
       });
     }
@@ -739,28 +782,74 @@ export function evaluateProductPreferences(product, preferences = {}) {
 
   // 9. Vegetarian
   if (preferences.vegetarian) {
-    const dietary = String(product.dietary_type || product.catalog?.dietaryType || '').toUpperCase();
-    const isVeg = dietary.includes('VEG') && !dietary.includes('NON');
-    evaluations.push({
-      preference: 'vegetarian',
-      status: isVeg ? 'MATCH' : 'NO_MATCH',
-      score: isVeg ? 100 : 0,
-      declaredValue: isVeg ? 'Vegetarian' : 'Non-Vegetarian',
-      reason: isVeg ? 'Verified vegetarian dietary profile' : 'Non-vegetarian formulation'
-    });
+    const dc = product.dietary_classification || product.dietaryClassification;
+    const dietaryType = String(dc?.status || product.dietary_type || product.catalog?.dietaryType || '').toUpperCase();
+    const isVeg = Boolean(dc ? (dc.status === 'VEGETARIAN' || dc.status === 'VEGAN' || dc.isVegetarian) : (dietaryType.includes('VEG') && !dietaryType.includes('NON')));
+    const isNonVeg = Boolean(dc ? (dc.status === 'NON_VEGETARIAN' || dc.isNonVegetarian) : dietaryType.includes('NON'));
+
+    if (isVeg) {
+      evaluations.push({
+        preference: 'vegetarian',
+        status: 'MATCH',
+        score: 100,
+        declaredValue: 'Vegetarian',
+        reason: 'Verified vegetarian dietary profile'
+      });
+    } else if (isNonVeg) {
+      evaluations.push({
+        preference: 'vegetarian',
+        status: 'NO_MATCH',
+        score: 0,
+        declaredValue: 'Non-Vegetarian',
+        reason: 'Non-vegetarian product formulation'
+      });
+    } else {
+      evaluations.push({
+        preference: 'vegetarian',
+        status: 'UNKNOWN',
+        score: 40,
+        declaredValue: 'Unverified',
+        reason: 'Vegetarian status cannot be verified from label'
+      });
+    }
   }
 
   // 10. Vegan
   if (preferences.vegan) {
+    const dc = product.dietary_classification || product.dietaryClassification;
     const labels = (product.processing?.labels || []).map(l => String(l).toLowerCase());
-    const isVegan = labels.some(l => l.includes('vegan'));
-    evaluations.push({
-      preference: 'vegan',
-      status: isVegan ? 'MATCH' : 'NO_MATCH',
-      score: isVegan ? 100 : 0,
-      declaredValue: isVegan ? 'Vegan' : 'Non-Vegan',
-      reason: isVegan ? 'Verified vegan plant-based product' : 'Non-vegan or unverified animal derivatives'
-    });
+    const isExplicitVegan = Boolean(dc?.status === 'VEGAN' || dc?.isVegan || labels.some(l => l.includes('vegan')));
+    const isNonVegan = Boolean(
+      dc?.status === 'NON_VEGETARIAN' || 
+      dc?.isNonVegetarian || 
+      (dc && dc.status === 'VEGETARIAN' && !isExplicitVegan)
+    );
+
+    if (isExplicitVegan) {
+      evaluations.push({
+        preference: 'vegan',
+        status: 'MATCH',
+        score: 100,
+        declaredValue: 'Vegan',
+        reason: 'Verified vegan plant-based product'
+      });
+    } else if (isNonVegan) {
+      evaluations.push({
+        preference: 'vegan',
+        status: 'NO_MATCH',
+        score: 0,
+        declaredValue: 'Non-Vegan',
+        reason: 'Contains animal derivatives, dairy, egg, or honey'
+      });
+    } else {
+      evaluations.push({
+        preference: 'vegan',
+        status: 'UNKNOWN',
+        score: 40,
+        declaredValue: 'Unverified',
+        reason: 'Vegan status cannot be verified from label'
+      });
+    }
   }
 
   // Combine Active Soft Preferences
@@ -779,13 +868,32 @@ export function evaluateProductPreferences(product, preferences = {}) {
   }
 
   const scores = softEvals.map(e => e.score);
-  const avg = scores.reduce((sum, s) => sum + s, 0) / scores.length;
-  const min = Math.min(...scores);
+  const N = scores.length;
+  let matchScore = 0;
 
-  // Synergy formula: Penalizes products that fail one of the user's explicit goals
-  const matchScore = softEvals.length === 1
-    ? Math.round(avg)
-    : Math.round(0.70 * avg + 0.30 * min);
+  if (N === 0) {
+    matchScore = isEligible ? 100 : 0;
+  } else if (N === 1) {
+    matchScore = Math.round(scores[0]);
+  } else {
+    const avg = scores.reduce((sum, s) => sum + s, 0) / N;
+    const min = Math.min(...scores);
+    const zeroCount = scores.filter(s => s === 0).length;
+
+    // Base synergy: 65% average + 35% minimum-score constraint
+    let combined = 0.65 * avg + 0.35 * min;
+
+    // Critical Failure Guard: Prevents dilution anomaly when a product fails one goal
+    if (min === 0) {
+      const cap = Math.max(15, 30 - (zeroCount - 1) * 10);
+      combined = Math.min(combined, cap);
+    } else if (min < 35) {
+      const cap = 40 + (min / 35) * 15;
+      combined = Math.min(combined, cap);
+    }
+
+    matchScore = Math.max(0, Math.min(100, Math.round(combined)));
+  }
 
   const positiveMatches = softEvals.filter(e => e.status === 'MATCH');
   const partialMatches = softEvals.filter(e => e.status === 'PARTIAL_MATCH');
