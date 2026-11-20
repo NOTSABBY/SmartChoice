@@ -56,13 +56,19 @@ export function extractNutrient(product, nutrientName) {
     case 'protein':
       return typeof p100.protein_g === 'number' ? p100.protein_g : (typeof nut.protein === 'number' ? nut.protein : null);
     case 'carbs':
+    case 'carbohydrates':
       return typeof p100.carbohydrates_g === 'number' ? p100.carbohydrates_g : (typeof nut.carbohydrates === 'number' ? nut.carbohydrates : null);
     case 'sugar':
+    case 'sugars':
       return typeof p100.total_sugars_g === 'number' ? p100.total_sugars_g : (typeof nut.sugar === 'number' ? nut.sugar : (typeof nut.sugars === 'number' ? nut.sugars : null));
+    case 'addedSugars':
+      return typeof p100.added_sugars_g === 'number' ? p100.added_sugars_g : (typeof nut.addedSugars === 'number' ? nut.addedSugars : null);
     case 'fat':
       return typeof p100.total_fat_g === 'number' ? p100.total_fat_g : (typeof nut.fat === 'number' ? nut.fat : null);
     case 'saturatedFat':
       return typeof p100.saturated_fat_g === 'number' ? p100.saturated_fat_g : (typeof nut.saturatedFat === 'number' ? nut.saturatedFat : null);
+    case 'transFat':
+      return typeof p100.trans_fat_g === 'number' ? p100.trans_fat_g : (typeof nut.transFat === 'number' ? nut.transFat : null);
     case 'fiber':
       return typeof p100.dietary_fiber_g === 'number' ? p100.dietary_fiber_g : (typeof nut.fiber === 'number' ? nut.fiber : (typeof nut.dietaryFiber === 'number' ? nut.dietaryFiber : null));
     case 'sodium':
@@ -209,10 +215,17 @@ export function calculateProductBreakdown(product, activePrefs = {}) {
 
   return {
     totalScore,
+    nutrition: nutContribution,
+    ingredients: ingContribution,
+    processing: procContribution,
+    proteinFiber: pfContribution,
+    proteinFibre: pfContribution,
+    preferences: prefContribution,
     componentScores: {
       nutrition: nutrScore,
       ingredients: ingScore,
       processing: procScore,
+      proteinFiber: pfScore,
       proteinFibre: pfScore,
       preferences: prefScore
     },
@@ -220,6 +233,7 @@ export function calculateProductBreakdown(product, activePrefs = {}) {
       nutrition: nutContribution,
       ingredients: ingContribution,
       processing: procContribution,
+      proteinFiber: pfContribution,
       proteinFibre: pfContribution,
       preferences: prefContribution
     },
@@ -227,6 +241,7 @@ export function calculateProductBreakdown(product, activePrefs = {}) {
       nutrition: nutContribution,
       ingredients: ingContribution,
       processing: procContribution,
+      proteinFiber: pfContribution,
       proteinFibre: pfContribution,
       preferences: prefContribution
     }
@@ -239,32 +254,113 @@ export function calculateProductBreakdown(product, activePrefs = {}) {
  * Nr = Nutrition Reliability (45%), Ir = Ingredient Reliability (35%), Pr = Processing Reliability (20%)
  */
 export function calculateProductConfidence(product) {
-  if (product.score?.confidence?.score != null && product.score?.confidence?.breakdown != null) {
+  if (product?.score?.confidence?.score != null && product?.score?.confidence?.breakdown != null && product.score.confidence.score < 100) {
     return product.score.confidence;
   }
 
-  const evaluatedNutrients = ['calories', 'protein', 'carbs', 'sugar', 'fat', 'saturatedFat', 'sodium', 'fiber'];
-  let nutrFilled = 0;
-  evaluatedNutrients.forEach(n => {
-    if (extractNutrient(product, n) != null) nutrFilled++;
+  const statutoryNutrients = [
+    { key: 'calories', val: extractNutrient(product, 'calories') },
+    { key: 'protein', val: extractNutrient(product, 'protein') },
+    { key: 'carbohydrates', val: extractNutrient(product, 'carbohydrates') },
+    { key: 'sugar', val: extractNutrient(product, 'sugar') },
+    { key: 'addedSugars', val: extractNutrient(product, 'addedSugars') },
+    { key: 'fat', val: extractNutrient(product, 'fat') },
+    { key: 'saturatedFat', val: extractNutrient(product, 'saturatedFat') },
+    { key: 'transFat', val: extractNutrient(product, 'transFat') },
+    { key: 'sodium', val: extractNutrient(product, 'sodium') }
+  ];
+
+  let filledCount = 0;
+  const missingFields = [];
+  statutoryNutrients.forEach(n => {
+    if (typeof n.val === 'number' && !isNaN(n.val) && isFinite(n.val)) {
+      filledCount++;
+    } else {
+      missingFields.push(`nutrition.${n.key}`);
+    }
   });
 
-  const basis = product.nutrition?.basis || product.nutrition_info?.basis || 'PER_100G';
-  const basisFactor = (basis === 'PER_100G' || basis === 'PER_100ML') ? 1.0 : (basis === 'PER_SERVING' ? 0.70 : 0.85);
-  const nr = Math.round((nutrFilled / 8.0) * basisFactor * 100);
+  const basis = product?.nutrition?.basis || product?.nutrition_info?.basis || 'PER_100G';
+  const basisFactor = (basis === 'PER_100G' || basis === 'PER_100ML') ? 1.0 : (basis === 'PER_SERVING' ? 0.75 : 0.85);
+  let baseNr = (filledCount / statutoryNutrients.length) * basisFactor * 100;
 
-  const hasRawText = !!product.nutrition_info?.ingredients_text || !!product.ingredients?.rawText;
-  const hasTokens = (product.ingredients?.ingredients && product.ingredients.ingredients.length > 0);
-  const isVerified = product.ingredients?.verificationStatus === 'VERIFIED' ||
-                     product.nutrition_info?.verification_status === 'VERIFIED' ||
-                     product.dietary_classification?.verificationStatus === 'VERIFIED' ||
-                     product.dietaryClassification?.verificationStatus === 'VERIFIED';
+  // Penalize for physical contradictions in declared data
+  const prot = extractNutrient(product, 'protein');
+  const carbs = extractNutrient(product, 'carbohydrates');
+  const fat = extractNutrient(product, 'fat');
+  const sugar = extractNutrient(product, 'sugar');
+  const addedSug = extractNutrient(product, 'addedSugars');
+  const satF = extractNutrient(product, 'saturatedFat');
 
-  const ir = (hasTokens || (hasRawText && isVerified)) ? 100 : (hasRawText ? 70 : 0);
+  if (sugar != null && carbs != null && sugar > carbs + 0.5) baseNr -= 20;
+  if (addedSug != null && sugar != null && addedSug > sugar + 0.2) baseNr -= 20;
+  if (satF != null && fat != null && satF > fat + 0.2) baseNr -= 25;
+  if (prot != null && carbs != null && fat != null && (prot + carbs + fat) > 105) baseNr -= 25;
 
-  const hasNova = product.processing?.novaGroup != null || product.nutrition_info?.nova_group != null;
-  const pr = (hasNova && isVerified) ? 100 : (hasNova ? 75 : 0);
+  const nr = Math.max(0, Math.min(100, Math.round(baseNr)));
 
+  // B. Ingredient Reliability Ir (35% weight)
+  const rawText = String(
+    product?.nutrition_info?.ingredients_text ||
+    product?.ingredients?.rawText ||
+    product?.ingredients?.rawIngredientsText ||
+    ''
+  ).trim();
+  const tokens = Array.isArray(product?.ingredients?.ingredients) ? product.ingredients.ingredients : [];
+  const allergens = product?.nutrition_info?.allergens || product?.ingredients?.allergens || [];
+  const mayContain = product?.nutrition_info?.may_contain || [];
+  const allergenDecl = product?.ingredients?.allergenDeclarations;
+  const hasExplicitAllergens = (Array.isArray(allergens) && allergens.length > 0) ||
+                               (Array.isArray(mayContain) && mayContain.length > 0) ||
+                               (allergenDecl && (allergenDecl.contains?.length > 0 || allergenDecl.mayContain?.length > 0)) ||
+                               allergenDecl?.status === 'NO_ALLERGENS_DETECTED';
+
+  let ir = 0;
+  if (rawText.length > 10 && !rawText.toLowerCase().includes('unknown')) {
+    ir += 40; // Substantive ingredient text present
+    if (tokens.length >= 2) ir += 30; // Structured parsed tokens
+    else if (tokens.length === 1) ir += 15;
+
+    // Allergen declaration presence
+    if (hasExplicitAllergens) ir += 20;
+    else if (rawText.toLowerCase().includes('contains') || rawText.toLowerCase().includes('allergen')) ir += 10;
+
+    // Packaging verification
+    const isVerifiedPack = product?.nutrition_info?.source_type === 'OFFICIAL_MANUFACTURER_PACKAGING' ||
+                           product?.nutrition_info?.verification_status === 'VERIFIED' ||
+                           product?.ingredients?.verificationStatus === 'VERIFIED';
+    if (isVerifiedPack) ir += 10;
+  } else if (rawText.length > 0) {
+    ir = 30;
+  } else {
+    ir = 0;
+    missingFields.push('ingredients');
+  }
+  ir = Math.max(0, Math.min(100, ir));
+
+  // C. Processing Reliability Pr (20% weight)
+  const novaGroup = product?.processing?.novaGroup ?? product?.nutrition_info?.nova_group ?? product?.analysis?.processingAnalysis?.novaGroup;
+  const sourceCertainty = product?.analysis?.processingAnalysis?.sourceCertainty || product?.processing?.sourceCertainty;
+  const dataSource = product?.nutrition_info?.data_source;
+
+  let pr = 0;
+  if (novaGroup != null && [1, 2, 3, 4].includes(Number(novaGroup))) {
+    if (sourceCertainty === 'SOURCE_REPORTED' || dataSource === 'OFFICIAL_MANUFACTURER_PACKAGING') {
+      pr = 100;
+    } else if (dataSource === 'openfoodfacts') {
+      pr = 85;
+    } else if (dataSource === 'gemini_fssai_estimated' || sourceCertainty === 'INTERNALLY_ESTIMATED') {
+      pr = 70;
+    } else {
+      pr = 80;
+    }
+  } else {
+    pr = 0;
+    missingFields.push('processing.novaGroup');
+  }
+  pr = Math.max(0, Math.min(100, pr));
+
+  // Authoritative Formula: Confidence = 0.45Nr + 0.35Ir + 0.20Pr
   const score = Math.max(0, Math.min(100, Math.round(0.45 * nr + 0.35 * ir + 0.20 * pr)));
   const level = score >= 80 ? 'high' : (score >= 60 ? 'medium' : 'low');
   const label = score >= 80 ? 'High Confidence' : (score >= 60 ? 'Moderate Confidence' : 'Low Confidence');
@@ -284,6 +380,7 @@ export function calculateProductConfidence(product) {
       ingredients: 0.35,
       processing: 0.20
     },
+    missingFields,
     explanation: 'Evidence reliability based on Nutrition (45% wt), Ingredients (35% wt), and Processing (20% wt).'
   };
 }

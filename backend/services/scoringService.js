@@ -20,7 +20,9 @@ const getNormalizedNutrition = (product) => {
   return {
     calories: typeof nut.calories === 'number' ? nut.calories : (typeof nut.energyKcal === 'number' ? nut.energyKcal : (typeof p100.energy_kcal === 'number' ? p100.energy_kcal : null)),
     sugar: typeof nut.sugar === 'number' ? nut.sugar : (typeof nut.sugars === 'number' ? nut.sugars : (typeof p100.total_sugars_g === 'number' ? p100.total_sugars_g : null)),
+    addedSugars: typeof nut.addedSugars === 'number' ? nut.addedSugars : (typeof p100.added_sugars_g === 'number' ? p100.added_sugars_g : null),
     saturatedFat: typeof nut.saturatedFat === 'number' ? nut.saturatedFat : (typeof p100.saturated_fat_g === 'number' ? p100.saturated_fat_g : null),
+    transFat: typeof nut.transFat === 'number' ? nut.transFat : (typeof p100.trans_fat_g === 'number' ? p100.trans_fat_g : null),
     sodium: typeof nut.sodium === 'number' ? nut.sodium : (typeof p100.sodium_mg === 'number' ? p100.sodium_mg : null),
     protein: typeof nut.protein === 'number' ? nut.protein : (typeof p100.protein_g === 'number' ? p100.protein_g : null),
     fiber: typeof nut.fiber === 'number' ? nut.fiber : (typeof nut.dietaryFiber === 'number' ? nut.dietaryFiber : (typeof p100.dietary_fiber_g === 'number' ? p100.dietary_fiber_g : null)),
@@ -40,54 +42,107 @@ const calculateScoreConfidence = (product) => {
   const rawNutr = getNormalizedNutrition(product);
 
   // A. Nutrition Reliability Nr (0-100 scale, 45% weight)
-  const evaluatedNutrients = ['calories', 'protein', 'carbohydrates', 'sugar', 'fat', 'saturatedFat', 'sodium', 'fiber'];
-  let nutrFilled = 0;
-  evaluatedNutrients.forEach(n => {
-    if (rawNutr[n] != null) nutrFilled++;
-    else missingFields.push(`nutrition.${n}`);
+  // Evaluates statutory mandatory FSSAI nutrients
+  const statutoryNutrients = [
+    { key: 'calories', val: rawNutr.calories },
+    { key: 'protein', val: rawNutr.protein },
+    { key: 'carbohydrates', val: rawNutr.carbohydrates },
+    { key: 'sugar', val: rawNutr.sugar },
+    { key: 'addedSugars', val: rawNutr.addedSugars },
+    { key: 'fat', val: rawNutr.fat },
+    { key: 'saturatedFat', val: rawNutr.saturatedFat },
+    { key: 'transFat', val: rawNutr.transFat },
+    { key: 'sodium', val: rawNutr.sodium }
+  ];
+
+  let filledCount = 0;
+  statutoryNutrients.forEach(n => {
+    if (typeof n.val === 'number' && !isNaN(n.val) && isFinite(n.val)) {
+      filledCount++;
+    } else {
+      missingFields.push(`nutrition.${n.key}`);
+    }
   });
 
   const basis = product.nutrition?.basis || product.nutrition_info?.basis || 'PER_100G';
-  const basisFactor = (basis === 'PER_100G' || basis === 'PER_100ML') ? 1.0 : (basis === 'PER_SERVING' ? 0.70 : 0.85);
-  const nutritionReliability = Math.round((nutrFilled / 8.0) * basisFactor * 100);
+  const basisFactor = (basis === 'PER_100G' || basis === 'PER_100ML') ? 1.0 : (basis === 'PER_SERVING' ? 0.75 : 0.85);
+  let baseNr = (filledCount / statutoryNutrients.length) * basisFactor * 100;
+
+  // Penalize for physical/biological contradictions in declared data
+  const prot = rawNutr.protein;
+  const carbs = rawNutr.carbohydrates;
+  const fat = rawNutr.fat;
+  const sugar = rawNutr.sugar;
+  const addedSug = rawNutr.addedSugars;
+  const satF = rawNutr.saturatedFat;
+
+  if (sugar != null && carbs != null && sugar > carbs + 0.5) baseNr -= 20;
+  if (addedSug != null && sugar != null && addedSug > sugar + 0.2) baseNr -= 20;
+  if (satF != null && fat != null && satF > fat + 0.2) baseNr -= 25;
+  if (prot != null && carbs != null && fat != null && (prot + carbs + fat) > 105) baseNr -= 25;
+
+  const nutritionReliability = clamp(Math.round(baseNr), 0, 100);
 
   // B. Ingredient Reliability Ir (0-100 scale, 35% weight)
-  const hasRawText = !!product.ingredients?.rawText || !!product.nutrition_info?.ingredients_text;
-  const hasTokens = (product.ingredients?.ingredients && product.ingredients.ingredients.length > 0);
-  const isVerifiedSource = product.ingredients?.verificationStatus === 'VERIFIED' ||
-                           product.nutrition_info?.verification_status === 'VERIFIED' ||
-                           product.dietary_classification?.verificationStatus === 'VERIFIED' ||
-                           product.dietaryClassification?.verificationStatus === 'VERIFIED';
+  const rawText = String(
+    product.nutrition_info?.ingredients_text ||
+    product.ingredients?.rawText ||
+    product.ingredients?.rawIngredientsText ||
+    ''
+  ).trim();
+  const tokens = Array.isArray(product.ingredients?.ingredients) ? product.ingredients.ingredients : [];
+  const allergens = product.nutrition_info?.allergens || product.ingredients?.allergens || [];
+  const mayContain = product.nutrition_info?.may_contain || [];
+  const allergenDecl = product.ingredients?.allergenDeclarations;
+  const hasExplicitAllergens = (Array.isArray(allergens) && allergens.length > 0) ||
+                               (Array.isArray(mayContain) && mayContain.length > 0) ||
+                               (allergenDecl && (allergenDecl.contains?.length > 0 || allergenDecl.mayContain?.length > 0)) ||
+                               allergenDecl?.status === 'NO_ALLERGENS_DETECTED';
 
   let ingredientReliability = 0;
-  if (hasTokens || (hasRawText && isVerifiedSource)) {
-    ingredientReliability = 100;
-  } else if (hasRawText) {
-    ingredientReliability = 70;
+  if (rawText.length > 10 && !rawText.toLowerCase().includes('unknown')) {
+    ingredientReliability += 40; // Substantive ingredient text present
+    if (tokens.length >= 2) ingredientReliability += 30; // Structured parsed tokens
+    else if (tokens.length === 1) ingredientReliability += 15;
+
+    // Allergen declaration presence
+    if (hasExplicitAllergens) ingredientReliability += 20;
+    else if (rawText.toLowerCase().includes('contains') || rawText.toLowerCase().includes('allergen')) ingredientReliability += 10;
+
+    // Packaging verification
+    const isVerifiedPack = product.nutrition_info?.source_type === 'OFFICIAL_MANUFACTURER_PACKAGING' ||
+                           product.nutrition_info?.verification_status === 'VERIFIED' ||
+                           product.ingredients?.verificationStatus === 'VERIFIED';
+    if (isVerifiedPack) ingredientReliability += 10;
+  } else if (rawText.length > 0) {
+    ingredientReliability = 30;
   } else {
     ingredientReliability = 0;
     missingFields.push('ingredients');
   }
+  ingredientReliability = clamp(ingredientReliability, 0, 100);
 
   // C. Processing Reliability Pr (0-100 scale, 20% weight)
-  const hasNova = product.processing?.novaGroup != null ||
-                  product.analysis?.processingAnalysis?.novaGroup != null ||
-                  product.nutrition_info?.nova_group != null;
-  const sourceCertainty = product.analysis?.processingAnalysis?.sourceCertainty ||
-                          product.processing?.sourceCertainty ||
-                          (hasNova ? 'SOURCE_REPORTED' : 'UNKNOWN');
+  const novaGroup = product.processing?.novaGroup ?? product.nutrition_info?.nova_group ?? product.analysis?.processingAnalysis?.novaGroup;
+  const sourceCertainty = product.analysis?.processingAnalysis?.sourceCertainty || product.processing?.sourceCertainty;
+  const dataSource = product.nutrition_info?.data_source;
 
   let processingReliability = 0;
-  if (sourceCertainty === 'SOURCE_REPORTED' || (hasNova && isVerifiedSource)) {
-    processingReliability = 100;
-  } else if (sourceCertainty === 'INTERNALLY_ESTIMATED') {
-    processingReliability = 75;
-  } else if (hasNova) {
-    processingReliability = 60;
+  if (novaGroup != null && [1, 2, 3, 4].includes(Number(novaGroup))) {
+    if (sourceCertainty === 'SOURCE_REPORTED' || dataSource === 'OFFICIAL_MANUFACTURER_PACKAGING') {
+      processingReliability = 100;
+    } else if (dataSource === 'openfoodfacts') {
+      processingReliability = 85;
+    } else if (dataSource === 'gemini_fssai_estimated' || sourceCertainty === 'INTERNALLY_ESTIMATED') {
+      processingReliability = 70;
+    } else {
+      processingReliability = 80;
+    }
   } else {
     processingReliability = 0;
     missingFields.push('processing.novaGroup');
   }
+  processingReliability = clamp(processingReliability, 0, 100);
 
   // Authoritative Formula: Confidence = 0.45Nr + 0.35Ir + 0.20Pr
   const confidenceScore = clamp(
@@ -745,6 +800,7 @@ const SCORING_WEIGHTS = {
 
 module.exports = {
   SCORING_WEIGHTS,
+  getNormalizedNutrition,
   calculateSmartChoiceScore,
   calculateScoreConfidence,
   calculateConfidence: calculateScoreConfidence,

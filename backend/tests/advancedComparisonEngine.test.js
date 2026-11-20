@@ -131,6 +131,112 @@ describe('SMARTCHOICE ADVANCED COMPARISON ENGINE TEST SUITE', () => {
         assert.ok(pw.explanation.length > 20);
       }
     });
+
+    it('correctly compares Godrej Sausage (PKG_PRD_0497) and McCain Fries (PKG_PRD_0482) with complete data and realistic similarity', async () => {
+      const res = await comparisonService.compareProducts(['PKG_PRD_0497', 'PKG_PRD_0482']);
+      assert.equal(res.products.length, 2);
+
+      const sausage = res.products.find(p => p.productId === 'PKG_PRD_0497');
+      const fries = res.products.find(p => p.productId === 'PKG_PRD_0482');
+
+      // 1. Nutritional values must be populated (NOT N/A)
+      assert.ok(sausage.nutrients.calories > 150, 'Sausage calories should be populated');
+      assert.ok(sausage.nutrients.protein > 15, 'Sausage protein should be > 15g');
+      assert.ok(fries.nutrients.calories > 150, 'Fries calories should be populated');
+      assert.ok(fries.nutrients.carbohydrates > 20, 'Fries carbohydrates should be > 20g');
+
+      // 2. Ingredients must NOT be empty or unknown
+      assert.ok(sausage.ingredientTokens.length >= 5, 'Sausage must have parsed ingredient tokens');
+      assert.ok(fries.ingredientTokens.length >= 4, 'Fries must have parsed ingredient tokens');
+
+      // 3. Allergens must be accurately identified
+      assert.equal(sausage.allergens.soy, 'CONTAINS', 'Sausage contains soy protein');
+
+      // 4. Quality Scores must reflect genuine nutritional analysis (NOT 46 baseline)
+      assert.ok(sausage.qualityScore >= 60, `Sausage quality score should be >= 60, got ${sausage.qualityScore}`);
+      assert.ok(fries.qualityScore >= 60, `Fries quality score should be >= 60, got ${fries.qualityScore}`);
+
+      // 5. Confidence Score must be high (NOT 0)
+      assert.ok(sausage.confidence.score >= 80, `Sausage confidence should be >= 80, got ${sausage.confidence.score}`);
+      assert.ok(fries.confidence.score >= 80, `Fries confidence should be >= 80, got ${fries.confidence.score}`);
+
+      // 6. Pairwise similarity must appropriately distinguish meat sausage from fried potato
+      const sim = res.pairwiseSimilarity[0];
+      assert.ok(sim.overallSimilarity < 60, `Pairwise similarity should reflect food type distinction (<60%), got ${sim.overallSimilarity}%`);
+      assert.ok(sim.differingTraits.some(t => t.includes('Different food types') || t.includes('Non-Vegetarian')), 'Must flag distinct food types');
+
+      // 7. Decisive verdict with evidence
+      assert.equal(res.verdict.status, 'DECISIVE');
+      assert.ok(res.verdict.reason.includes('Godrej Yummiez Chicken Sausage'));
+    });
+
+    it('returns INSUFFICIENT_DATA and NO winner when products have missing data or low confidence', async () => {
+      // Use catalogLoader to simulate a comparison where data is missing
+      const catalogLoader = require('../utils/catalogLoader');
+      const origGet = catalogLoader.getProductById;
+      try {
+        catalogLoader.getProductById = (id) => {
+          if (id === 'STUB_01') {
+            return {
+              product_id: 'STUB_01',
+              product_name: 'Incomplete Stub Product 1',
+              category_id: 1,
+              category_name: 'Snacks',
+              nutrition: { calories: null, protein: null, fat: null, sugar: null, sodium: null },
+              nutrition_info: { per_100g: {} },
+              ingredients: { ingredients: [], rawText: '' },
+              dataQuality: { completeness: 20 }
+            };
+          }
+          if (id === 'STUB_02') {
+            return {
+              product_id: 'STUB_02',
+              product_name: 'Incomplete Stub Product 2',
+              category_id: 1,
+              category_name: 'Snacks',
+              nutrition: { calories: null, protein: null, fat: null, sugar: null, sodium: null },
+              nutrition_info: { per_100g: {} },
+              ingredients: { ingredients: [], rawText: '' },
+              dataQuality: { completeness: 20 }
+            };
+          }
+          return origGet(id);
+        };
+
+        const res = await comparisonService.compareProducts(['STUB_01', 'STUB_02']);
+        assert.equal(res.verdict.status, 'INSUFFICIENT_DATA', 'Must return INSUFFICIENT_DATA status');
+        assert.equal(res.verdict.bestProductId, null, 'Must NOT declare a winner when data is insufficient');
+        assert.ok(res.verdict.reason.includes('Insufficient verified data'));
+        assert.ok(res.verdict.uncertaintyExplanation.includes('lack sufficient verified data'));
+      } finally {
+        catalogLoader.getProductById = origGet;
+      }
+    });
+
+    it('returns TIED verdict and NO arbitrary winner when products have identical quality scores', async () => {
+      const catalogLoader = require('../utils/catalogLoader');
+      const origGet = catalogLoader.getProductById;
+      try {
+        // Two complete products with identical scores
+        const sample = origGet('PKG_PRD_0001');
+        catalogLoader.getProductById = (id) => {
+          if (id === 'TIED_01') {
+            return { ...sample, product_id: 'TIED_01', product_name: 'Tied Biscuit Alpha' };
+          }
+          if (id === 'TIED_02') {
+            return { ...sample, product_id: 'TIED_02', product_name: 'Tied Biscuit Beta' };
+          }
+          return origGet(id);
+        };
+
+        const res = await comparisonService.compareProducts(['TIED_01', 'TIED_02']);
+        assert.equal(res.verdict.status, 'TIED', 'Must return TIED status when scores are equal');
+        assert.equal(res.verdict.bestProductId, null, 'Must NOT declare an arbitrary winner on ties');
+        assert.ok(res.verdict.reason.includes('equally rated overall'));
+      } finally {
+        catalogLoader.getProductById = origGet;
+      }
+    });
   });
 
   describe('Part 8: Product Verification Status Engine', () => {

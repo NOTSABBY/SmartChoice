@@ -3,6 +3,7 @@ import { Check, Info, ShieldCheck, Scale, Ban } from 'lucide-react';
 import { generatePackshotSvgClient } from '../utils/packshotFallback';
 import { calculateProductQualityScore, calculateProductConfidence } from '../utils/productScoring';
 import { calculateProductVerification } from '../utils/productVerification';
+import { DietaryEmblem } from './DietaryEmblem';
 
 export const ProductCard = ({
   product,
@@ -155,10 +156,13 @@ export const ProductCard = ({
       {/* Product Information */}
       <div className="flex-1 flex flex-col justify-between">
         <div>
-          {/* Brand */}
-          <span className="text-[10px] font-black uppercase text-slate-400 tracking-wider block truncate">
-            {brand}
-          </span>
+          {/* Brand & Statutory Dietary Classification Symbol */}
+          <div className="flex items-center justify-between gap-1 mb-0.5">
+            <span className="text-[10px] font-black uppercase text-slate-400 tracking-wider block truncate">
+              {brand}
+            </span>
+            <DietaryEmblem product={product} />
+          </div>
 
           {/* Product Name */}
           <h3

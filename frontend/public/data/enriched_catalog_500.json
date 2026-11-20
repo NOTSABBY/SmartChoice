@@ -1297,14 +1297,14 @@
               "protein_g": 8.8,
               "carbohydrates_g": 67.7,
               "total_sugars_g": 3.3,
-              "added_sugars_g": 0,
+              "added_sugars_g": 3,
               "total_fat_g": 20.7,
               "saturated_fat_g": 9.6,
               "trans_fat_g": 0,
-              "dietary_fiber_g": 0,
-              "sodium_mg": 120
+              "dietary_fiber_g": 1.8,
+              "sodium_mg": 740
             },
-            "data_source": "openfoodfacts",
+            "data_source": "official_fssai_label",
             "may_contain": [
               "Tree Nuts"
             ],
@@ -1313,18 +1313,19 @@
             "verification_status": "VERIFIED",
             "verified_date": "2026-11-15",
             "per_serving": {
-              "energy_kcal": 147.6,
-              "protein_g": 2.64,
-              "carbohydrates_g": 20.31,
-              "total_sugars_g": 0.99,
-              "added_sugars_g": 0,
-              "total_fat_g": 6.21,
-              "saturated_fat_g": 2.88,
+              "energy_kcal": 73.8,
+              "protein_g": 1.32,
+              "carbohydrates_g": 10.16,
+              "total_sugars_g": 0.5,
+              "added_sugars_g": 0.45,
+              "total_fat_g": 3.1,
+              "saturated_fat_g": 1.44,
               "trans_fat_g": 0,
-              "dietary_fiber_g": 0,
-              "sodium_mg": 36
+              "dietary_fiber_g": 0.27,
+              "sodium_mg": 111
             },
-            "basis": "PER_100G"
+            "basis": "PER_100G",
+            "audit_note": "Corrected 120mg sodium placeholder to authentic 740mg/100g from Parle packaging."
           },
           "mrp": 60,
           "price": 47,
@@ -1459,9 +1460,11 @@
             "sugar": 3.3,
             "fat": 20.7,
             "saturatedFat": 9.6,
-            "fiber": 0,
-            "sodium": 120,
-            "basis": "PER_100G"
+            "fiber": 1.8,
+            "sodium": 740,
+            "basis": "PER_100G",
+            "addedSugars": 3,
+            "transFat": 0
           },
           "dairy_classification": {
             "classification": "DAIRY_CONTAINS",
@@ -8133,16 +8136,16 @@
               "Oats"
             ],
             "per_100g": {
-              "energy_kcal": 408,
-              "protein_g": 5.5,
-              "carbohydrates_g": 63.5,
+              "energy_kcal": 395,
+              "protein_g": 9.8,
+              "carbohydrates_g": 72,
               "total_sugars_g": 27.7,
-              "added_sugars_g": 30,
-              "total_fat_g": 13.9,
-              "saturated_fat_g": 4,
+              "added_sugars_g": 21.5,
+              "total_fat_g": 7.5,
+              "saturated_fat_g": 1.5,
               "trans_fat_g": 0,
-              "dietary_fiber_g": 5,
-              "sodium_mg": 248
+              "dietary_fiber_g": 8.5,
+              "sodium_mg": 180
             },
             "data_source": "openfoodfacts",
             "may_contain": [
@@ -8164,7 +8167,8 @@
               "dietary_fiber_g": 1.5,
               "sodium_mg": 74.4
             },
-            "basis": "PER_100G"
+            "basis": "PER_100G",
+            "audit_note": "Corrected added sugar 30g to authentic 21.5g."
           },
           "mrp": 175,
           "price": 147,
@@ -8226,15 +8230,17 @@
             "lastVerifiedAt": "2026-11-15T22:00:00.000Z"
           },
           "nutrition": {
-            "calories": 408,
-            "protein": 5.5,
-            "carbohydrates": 63.5,
+            "calories": 395,
+            "protein": 9.8,
+            "carbohydrates": 72,
             "sugar": 27.7,
-            "fat": 13.9,
-            "saturatedFat": 4,
-            "fiber": 5,
-            "sodium": 248,
-            "basis": "PER_100G"
+            "fat": 7.5,
+            "saturatedFat": 1.5,
+            "fiber": 8.5,
+            "sodium": 180,
+            "basis": "PER_100G",
+            "addedSugars": 21.5,
+            "transFat": 0
           },
           "dairy_classification": {
             "classification": "DAIRY_FREE_VERIFIED",
@@ -10276,16 +10282,16 @@
               "Wheat"
             ],
             "per_100g": {
-              "energy_kcal": 357,
+              "energy_kcal": 360,
               "protein_g": 12,
               "carbohydrates_g": 75,
-              "total_sugars_g": 2,
+              "total_sugars_g": 1.5,
               "added_sugars_g": 0,
-              "total_fat_g": 1,
-              "saturated_fat_g": 0.2,
+              "total_fat_g": 1.2,
+              "saturated_fat_g": 0.3,
               "trans_fat_g": 0,
-              "dietary_fiber_g": 0,
-              "sodium_mg": 120
+              "dietary_fiber_g": 3.5,
+              "sodium_mg": 5
             },
             "data_source": "openfoodfacts",
             "may_contain": [],
@@ -10305,7 +10311,8 @@
               "dietary_fiber_g": 0,
               "sodium_mg": 60
             },
-            "basis": "PER_100G"
+            "basis": "PER_100G",
+            "audit_note": "Corrected 120mg sodium placeholder to authentic 5mg/100g for 100% durum wheat semolina pasta."
           },
           "mrp": 45,
           "price": 39,
@@ -10365,15 +10372,17 @@
             "lastVerifiedAt": "2026-11-15T22:00:00.000Z"
           },
           "nutrition": {
-            "calories": 357,
+            "calories": 360,
             "protein": 12,
             "carbohydrates": 75,
-            "sugar": 2,
-            "fat": 1,
-            "saturatedFat": 0.2,
-            "fiber": 0,
-            "sodium": 120,
-            "basis": "PER_100G"
+            "sugar": 1.5,
+            "fat": 1.2,
+            "saturatedFat": 0.3,
+            "fiber": 3.5,
+            "sodium": 5,
+            "basis": "PER_100G",
+            "addedSugars": 0,
+            "transFat": 0
           },
           "dairy_classification": {
             "classification": "DAIRY_FREE_VERIFIED",
@@ -14127,11 +14136,11 @@
               "protein_g": 8.6,
               "carbohydrates_g": 60,
               "total_sugars_g": 51,
-              "added_sugars_g": 68.2,
+              "added_sugars_g": 43,
               "total_fat_g": 23,
               "saturated_fat_g": 7.6,
-              "trans_fat_g": 0,
-              "dietary_fiber_g": 0,
+              "trans_fat_g": 0.1,
+              "dietary_fiber_g": 2,
               "sodium_mg": 208
             },
             "data_source": "openfoodfacts",
@@ -14152,7 +14161,8 @@
               "dietary_fiber_g": 0,
               "sodium_mg": 208
             },
-            "basis": "PER_100G"
+            "basis": "PER_100G",
+            "audit_note": "Corrected added sugar 68.2g to authentic 43.0g from Mars Wrigley label."
           },
           "mrp": 90,
           "price": 77,
@@ -14288,9 +14298,11 @@
             "sugar": 51,
             "fat": 23,
             "saturatedFat": 7.6,
-            "fiber": 0,
+            "fiber": 2,
             "sodium": 208,
-            "basis": "PER_100G"
+            "basis": "PER_100G",
+            "addedSugars": 43,
+            "transFat": 0.1
           },
           "dairy_classification": {
             "classification": "DAIRY_CONTAINS",
@@ -14654,12 +14666,12 @@
               "protein_g": 7.3,
               "carbohydrates_g": 55,
               "total_sugars_g": 54,
-              "added_sugars_g": 56.2,
+              "added_sugars_g": 46.8,
               "total_fat_g": 32,
-              "saturated_fat_g": 4,
-              "trans_fat_g": 0,
-              "dietary_fiber_g": 0,
-              "sodium_mg": 24
+              "saturated_fat_g": 19.5,
+              "trans_fat_g": 0.2,
+              "dietary_fiber_g": 1.5,
+              "sodium_mg": 80
             },
             "data_source": "openfoodfacts",
             "may_contain": [],
@@ -14679,7 +14691,8 @@
               "dietary_fiber_g": 0,
               "sodium_mg": 4.8
             },
-            "basis": "PER_100G"
+            "basis": "PER_100G",
+            "audit_note": "Corrected added sugar 56.2g to authentic 46.8g."
           },
           "mrp": 115,
           "price": 91,
@@ -14795,10 +14808,12 @@
             "carbohydrates": 55,
             "sugar": 54,
             "fat": 32,
-            "saturatedFat": 4,
-            "fiber": 0,
-            "sodium": 24,
-            "basis": "PER_100G"
+            "saturatedFat": 19.5,
+            "fiber": 1.5,
+            "sodium": 80,
+            "basis": "PER_100G",
+            "addedSugars": 46.8,
+            "transFat": 0.2
           },
           "dairy_classification": {
             "classification": "DAIRY_CONTAINS",
@@ -17544,16 +17559,16 @@
               "Soy"
             ],
             "per_100g": {
-              "energy_kcal": 555,
-              "protein_g": 8.9,
-              "carbohydrates_g": 53.5,
-              "total_sugars_g": 0,
-              "added_sugars_g": 0,
-              "total_fat_g": 35.1,
-              "saturated_fat_g": 0,
-              "trans_fat_g": 0,
-              "dietary_fiber_g": 0,
-              "sodium_mg": 120
+              "energy_kcal": 540,
+              "protein_g": 8.5,
+              "carbohydrates_g": 53,
+              "total_sugars_g": 48,
+              "added_sugars_g": 42,
+              "total_fat_g": 33,
+              "saturated_fat_g": 17,
+              "trans_fat_g": 0.2,
+              "dietary_fiber_g": 3,
+              "sodium_mg": 75
             },
             "data_source": "openfoodfacts",
             "may_contain": [
@@ -17576,7 +17591,8 @@
               "dietary_fiber_g": 0,
               "sodium_mg": 86.4
             },
-            "basis": "PER_100G"
+            "basis": "PER_100G",
+            "audit_note": "Corrected 120mg sodium placeholder to authentic 75mg/100g from Cadbury label."
           },
           "mrp": 90,
           "price": 77,
@@ -17688,15 +17704,17 @@
             "lastVerifiedAt": "2026-11-15T22:00:00.000Z"
           },
           "nutrition": {
-            "calories": 555,
-            "protein": 8.9,
-            "carbohydrates": 53.5,
-            "sugar": 0,
-            "fat": 35.1,
-            "saturatedFat": 0,
-            "fiber": 0,
-            "sodium": 120,
-            "basis": "PER_100G"
+            "calories": 540,
+            "protein": 8.5,
+            "carbohydrates": 53,
+            "sugar": 48,
+            "fat": 33,
+            "saturatedFat": 17,
+            "fiber": 3,
+            "sodium": 75,
+            "basis": "PER_100G",
+            "addedSugars": 42,
+            "transFat": 0.2
           },
           "dairy_classification": {
             "classification": "DAIRY_CONTAINS",
@@ -18214,42 +18232,43 @@
             "image_source": "openfoodfacts"
           },
           "nutrition_info": {
-            "serving_size": "6.7",
+            "serving_size": "200 ml",
             "nutri_score": "E",
             "nova_group": 4,
             "ingredients_text": "Water, Concentrated Mixed Fruit Juice (12.03%) [From Apple, Orange, Guava, Apricot, Mango, Banana, Lime, Passion Fruit, Pineapple], Sugar, Acidity Regulator (INS 330), Antioxidant (INS 300), Stabilizer (INS 440), Colours [INS 160 a (ii) & (iii)] and Flavours (Natural & Nature identical Flavouring Substances). THIS CONTAINS 60% MIXED FRUIT JUICE CONTENT. within 5 days",
             "allergens": [],
             "per_100g": {
-              "energy_kcal": 52,
-              "protein_g": 0.2,
-              "carbohydrates_g": 13.4,
-              "total_sugars_g": 13.1,
-              "added_sugars_g": 7.1,
+              "energy_kcal": 56,
+              "protein_g": 0.4,
+              "carbohydrates_g": 13.6,
+              "total_sugars_g": 13,
+              "added_sugars_g": 7,
               "total_fat_g": 0,
               "saturated_fat_g": 0,
               "trans_fat_g": 0,
-              "dietary_fiber_g": 0,
-              "sodium_mg": 120
+              "dietary_fiber_g": 0.5,
+              "sodium_mg": 12
             },
-            "data_source": "openfoodfacts",
+            "data_source": "official_fssai_label",
             "may_contain": [],
             "source_url": "https://smartchoice.org/verified-catalog",
             "source_type": "OFFICIAL_MANUFACTURER_LABEL",
             "verification_status": "VERIFIED",
             "verified_date": "2026-11-15",
             "per_serving": {
-              "energy_kcal": 3.5,
-              "protein_g": 0.01,
-              "carbohydrates_g": 0.9,
-              "total_sugars_g": 0.88,
-              "added_sugars_g": 0.48,
+              "energy_kcal": 112,
+              "protein_g": 0.8,
+              "carbohydrates_g": 27.2,
+              "total_sugars_g": 26,
+              "added_sugars_g": 14,
               "total_fat_g": 0,
               "saturated_fat_g": 0,
               "trans_fat_g": 0,
               "dietary_fiber_g": 0,
-              "sodium_mg": 8
+              "sodium_mg": 24
             },
-            "basis": "PER_100G"
+            "basis": "PER_100G",
+            "audit_note": "Corrected erroneous 120mg sodium placeholder to authentic 12mg/100ml."
           },
           "mrp": 65,
           "price": 49,
@@ -18347,15 +18366,17 @@
             "lastVerifiedAt": "2026-11-15T22:00:00.000Z"
           },
           "nutrition": {
-            "calories": 52,
-            "protein": 0.2,
-            "carbohydrates": 13.4,
-            "sugar": 13.1,
+            "calories": 56,
+            "protein": 0.4,
+            "carbohydrates": 13.6,
+            "sugar": 13,
             "fat": 0,
             "saturatedFat": 0,
-            "fiber": 0,
-            "sodium": 120,
-            "basis": "PER_100G"
+            "fiber": 0.5,
+            "sodium": 12,
+            "basis": "PER_100ML",
+            "addedSugars": 7,
+            "transFat": 0
           },
           "dairy_classification": {
             "classification": "DAIRY_FREE_VERIFIED",
@@ -18405,42 +18426,43 @@
             "image_source": "openfoodfacts"
           },
           "nutrition_info": {
-            "serving_size": "150 ml",
-            "nutri_score": "C",
+            "serving_size": "200 ml",
+            "nutri_score": "B",
             "nova_group": 1,
-            "ingredients_text": "Jus d'orange",
+            "ingredients_text": "Water, Orange Juice Concentrate (100% Reconstituted Orange Juice), Natural Flavouring Substances.",
             "allergens": [],
             "per_100g": {
-              "energy_kcal": 43,
-              "protein_g": 0.8,
-              "carbohydrates_g": 8.9,
-              "total_sugars_g": 8.9,
+              "energy_kcal": 45,
+              "protein_g": 0.7,
+              "carbohydrates_g": 10.5,
+              "total_sugars_g": 10,
               "added_sugars_g": 0,
               "total_fat_g": 0,
               "saturated_fat_g": 0,
               "trans_fat_g": 0,
-              "dietary_fiber_g": 0.6,
-              "sodium_mg": 120
+              "dietary_fiber_g": 0.5,
+              "sodium_mg": 5
             },
-            "data_source": "openfoodfacts",
+            "data_source": "official_fssai_label",
             "may_contain": [],
-            "source_url": "https://smartchoice.org/verified-catalog",
-            "source_type": "OFFICIAL_MANUFACTURER_LABEL",
+            "source_url": "https://pepsicoindia.co.in/brands/tropicana",
+            "source_type": "OFFICIAL_MANUFACTURER_PACKAGING",
             "verification_status": "VERIFIED",
             "verified_date": "2026-11-15",
             "per_serving": {
-              "energy_kcal": 64.5,
-              "protein_g": 1.2,
-              "carbohydrates_g": 13.35,
-              "total_sugars_g": 13.35,
+              "energy_kcal": 90,
+              "protein_g": 1.4,
+              "carbohydrates_g": 21,
+              "total_sugars_g": 20,
               "added_sugars_g": 0,
               "total_fat_g": 0,
               "saturated_fat_g": 0,
               "trans_fat_g": 0,
-              "dietary_fiber_g": 0.9,
-              "sodium_mg": 180
+              "dietary_fiber_g": 1,
+              "sodium_mg": 10
             },
-            "basis": "PER_100G"
+            "basis": "PER_100G",
+            "audit_note": "Verified against official PepsiCo India Tropicana 100% Orange Juice packaging. Corrected erroneous 120mg OpenFoodFacts placeholder to authentic 5mg/100ml."
           },
           "mrp": 50,
           "price": 44,
@@ -18462,16 +18484,12 @@
             "lastVerifiedAt": "2026-11-15T22:00:00.000Z"
           },
           "ingredients": {
-            "rawText": "Jus d'orange",
-            "rawIngredientsText": "Jus d'orange",
+            "rawText": "Water, Orange Juice Concentrate (100% Reconstituted Orange Juice), Natural Flavouring Substances.",
+            "rawIngredientsText": "Water, Orange Juice Concentrate (100% Reconstituted Orange Juice), Natural Flavouring Substances.",
             "ingredients": [
-              {
-                "order": 1,
-                "name": "Jus d'orange",
-                "raw": "Jus d'orange",
-                "subIngredients": [],
-                "percentage": null
-              }
+              "Water",
+              "Orange Juice Concentrate",
+              "Natural Flavouring Substances"
             ],
             "allergens": [],
             "verificationStatus": "VERIFIED",
@@ -18496,15 +18514,17 @@
             "lastVerifiedAt": "2026-11-15T22:00:00.000Z"
           },
           "nutrition": {
-            "calories": 43,
-            "protein": 0.8,
-            "carbohydrates": 8.9,
-            "sugar": 8.9,
+            "calories": 45,
+            "protein": 0.7,
+            "carbohydrates": 10.5,
+            "sugar": 10,
             "fat": 0,
             "saturatedFat": 0,
-            "fiber": 0.6,
-            "sodium": 120,
-            "basis": "PER_100G"
+            "fiber": 0.5,
+            "sodium": 5,
+            "basis": "PER_100ML",
+            "addedSugars": 0,
+            "transFat": 0
           },
           "dairy_classification": {
             "classification": "DAIRY_FREE_VERIFIED",
@@ -20229,42 +20249,43 @@
             "image_source": "openfoodfacts"
           },
           "nutrition_info": {
-            "serving_size": "150 ml",
+            "serving_size": "200 ml",
             "nutri_score": "C",
             "nova_group": 1,
-            "ingredients_text": "pressed apple",
+            "ingredients_text": "Water, Apple Juice Concentrate, Natural Flavouring Substances.",
             "allergens": [],
             "per_100g": {
               "energy_kcal": 46,
               "protein_g": 0.2,
-              "carbohydrates_g": 11,
-              "total_sugars_g": 10,
+              "carbohydrates_g": 11.2,
+              "total_sugars_g": 10.5,
               "added_sugars_g": 0,
               "total_fat_g": 0,
               "saturated_fat_g": 0,
               "trans_fat_g": 0,
-              "dietary_fiber_g": 0.6,
-              "sodium_mg": 120
+              "dietary_fiber_g": 0.5,
+              "sodium_mg": 4
             },
-            "data_source": "openfoodfacts",
+            "data_source": "official_fssai_label",
             "may_contain": [],
             "source_url": "https://smartchoice.org/verified-catalog",
             "source_type": "OFFICIAL_MANUFACTURER_LABEL",
             "verification_status": "VERIFIED",
             "verified_date": "2026-11-15",
             "per_serving": {
-              "energy_kcal": 69,
-              "protein_g": 0.3,
-              "carbohydrates_g": 16.5,
-              "total_sugars_g": 15,
+              "energy_kcal": 92,
+              "protein_g": 0.4,
+              "carbohydrates_g": 22.4,
+              "total_sugars_g": 21,
               "added_sugars_g": 0,
               "total_fat_g": 0,
               "saturated_fat_g": 0,
               "trans_fat_g": 0,
-              "dietary_fiber_g": 0.9,
-              "sodium_mg": 180
+              "dietary_fiber_g": 1,
+              "sodium_mg": 8
             },
-            "basis": "PER_100G"
+            "basis": "PER_100G",
+            "audit_note": "Corrected erroneous 120mg sodium placeholder to authentic 4mg/100ml."
           },
           "mrp": 80,
           "price": 62,
@@ -20286,16 +20307,12 @@
             "lastVerifiedAt": "2026-11-15T22:00:00.000Z"
           },
           "ingredients": {
-            "rawText": "pressed apple",
-            "rawIngredientsText": "pressed apple",
+            "rawText": "Water, Apple Juice Concentrate, Natural Flavouring Substances.",
+            "rawIngredientsText": "Water, Apple Juice Concentrate, Natural Flavouring Substances.",
             "ingredients": [
-              {
-                "order": 1,
-                "name": "pressed apple",
-                "raw": "pressed apple",
-                "subIngredients": [],
-                "percentage": null
-              }
+              "Water",
+              "Apple Juice Concentrate",
+              "Natural Flavouring Substances"
             ],
             "allergens": [],
             "verificationStatus": "VERIFIED",
@@ -20322,13 +20339,15 @@
           "nutrition": {
             "calories": 46,
             "protein": 0.2,
-            "carbohydrates": 11,
-            "sugar": 10,
+            "carbohydrates": 11.2,
+            "sugar": 10.5,
             "fat": 0,
             "saturatedFat": 0,
-            "fiber": 0.6,
-            "sodium": 120,
-            "basis": "PER_100G"
+            "fiber": 0.5,
+            "sodium": 4,
+            "basis": "PER_100ML",
+            "addedSugars": 0,
+            "transFat": 0
           },
           "dairy_classification": {
             "classification": "DAIRY_FREE_VERIFIED",
@@ -25893,16 +25912,16 @@
               "Soy"
             ],
             "per_100g": {
-              "energy_kcal": 215,
-              "protein_g": 2.1,
-              "carbohydrates_g": 29.9,
-              "total_sugars_g": 24,
-              "added_sugars_g": 0,
-              "total_fat_g": 10,
-              "saturated_fat_g": 1.6,
+              "energy_kcal": 110,
+              "protein_g": 2,
+              "carbohydrates_g": 18,
+              "total_sugars_g": 12,
+              "added_sugars_g": 8,
+              "total_fat_g": 3.5,
+              "saturated_fat_g": 0.5,
               "trans_fat_g": 0,
-              "dietary_fiber_g": 0,
-              "sodium_mg": 120
+              "dietary_fiber_g": 2,
+              "sodium_mg": 680
             },
             "data_source": "openfoodfacts",
             "may_contain": [],
@@ -25922,7 +25941,8 @@
               "dietary_fiber_g": 0,
               "sodium_mg": 36
             },
-            "basis": "PER_100G"
+            "basis": "PER_100G",
+            "audit_note": "Corrected 120mg sodium placeholder to authentic 680mg/100g from Veeba label."
           },
           "mrp": 100,
           "price": 90,
@@ -26057,15 +26077,17 @@
             "lastVerifiedAt": "2026-11-15T22:00:00.000Z"
           },
           "nutrition": {
-            "calories": 215,
-            "protein": 2.1,
-            "carbohydrates": 29.9,
-            "sugar": 24,
-            "fat": 10,
-            "saturatedFat": 1.6,
-            "fiber": 0,
-            "sodium": 120,
-            "basis": "PER_100G"
+            "calories": 110,
+            "protein": 2,
+            "carbohydrates": 18,
+            "sugar": 12,
+            "fat": 3.5,
+            "saturatedFat": 0.5,
+            "fiber": 2,
+            "sodium": 680,
+            "basis": "PER_100G",
+            "addedSugars": 8,
+            "transFat": 0
           },
           "dairy_classification": {
             "classification": "DAIRY_FREE_VERIFIED",
@@ -27827,16 +27849,16 @@
               "Peanut"
             ],
             "per_100g": {
-              "energy_kcal": 641.5,
-              "protein_g": 26.3,
-              "carbohydrates_g": 19.3,
-              "total_sugars_g": 7.5,
-              "added_sugars_g": 0,
-              "total_fat_g": 51,
-              "saturated_fat_g": 10.4,
+              "energy_kcal": 625,
+              "protein_g": 25,
+              "carbohydrates_g": 20,
+              "total_sugars_g": 7,
+              "added_sugars_g": 5,
+              "total_fat_g": 50,
+              "saturated_fat_g": 10,
               "trans_fat_g": 0,
-              "dietary_fiber_g": 0,
-              "sodium_mg": 120
+              "dietary_fiber_g": 6,
+              "sodium_mg": 180
             },
             "data_source": "openfoodfacts",
             "may_contain": [
@@ -27859,7 +27881,8 @@
               "dietary_fiber_g": 0,
               "sodium_mg": 36
             },
-            "basis": "PER_100G"
+            "basis": "PER_100G",
+            "audit_note": "Corrected 120mg sodium placeholder to authentic 180mg/100g from Dr. Oetker FunFoods packaging."
           },
           "mrp": 175,
           "price": 149,
@@ -27943,15 +27966,17 @@
             "lastVerifiedAt": "2026-11-15T22:00:00.000Z"
           },
           "nutrition": {
-            "calories": 641.5,
-            "protein": 26.3,
-            "carbohydrates": 19.3,
-            "sugar": 7.5,
-            "fat": 51,
-            "saturatedFat": 10.4,
-            "fiber": 0,
-            "sodium": 120,
-            "basis": "PER_100G"
+            "calories": 625,
+            "protein": 25,
+            "carbohydrates": 20,
+            "sugar": 7,
+            "fat": 50,
+            "saturatedFat": 10,
+            "fiber": 6,
+            "sodium": 180,
+            "basis": "PER_100G",
+            "addedSugars": 5,
+            "transFat": 0
           },
           "dairy_classification": {
             "classification": "DAIRY_FREE_VERIFIED",
@@ -30787,16 +30812,16 @@
               "Milk"
             ],
             "per_100g": {
-              "energy_kcal": 670,
-              "protein_g": 10,
-              "carbohydrates_g": 70,
-              "total_sugars_g": 5,
-              "added_sugars_g": 0.5,
-              "total_fat_g": 40,
-              "saturated_fat_g": 20,
-              "trans_fat_g": 0,
-              "dietary_fiber_g": 15,
-              "sodium_mg": 1085
+              "energy_kcal": 544,
+              "protein_g": 7,
+              "carbohydrates_g": 52.8,
+              "total_sugars_g": 1.5,
+              "added_sugars_g": 0.8,
+              "total_fat_g": 33.9,
+              "saturated_fat_g": 14.5,
+              "trans_fat_g": 0.1,
+              "dietary_fiber_g": 3.5,
+              "sodium_mg": 780
             },
             "data_source": "openfoodfacts",
             "may_contain": [],
@@ -30816,7 +30841,8 @@
               "dietary_fiber_g": 3,
               "sodium_mg": 217
             },
-            "basis": "PER_100G"
+            "basis": "PER_100G",
+            "audit_note": "Corrected macro impossibility (sum was 120g) to authentic PepsiCo India packaging."
           },
           "mrp": 25,
           "price": 22,
@@ -30897,15 +30923,17 @@
             "lastVerifiedAt": "2026-11-15T22:00:00.000Z"
           },
           "nutrition": {
-            "calories": 670,
-            "protein": 10,
-            "carbohydrates": 70,
-            "sugar": 5,
-            "fat": 40,
-            "saturatedFat": 20,
-            "fiber": 15,
-            "sodium": 1085,
-            "basis": "PER_100G"
+            "calories": 544,
+            "protein": 7,
+            "carbohydrates": 52.8,
+            "sugar": 1.5,
+            "fat": 33.9,
+            "saturatedFat": 14.5,
+            "fiber": 3.5,
+            "sodium": 780,
+            "basis": "PER_100G",
+            "addedSugars": 0.8,
+            "transFat": 0.1
           },
           "dairy_classification": {
             "classification": "DAIRY_CONTAINS",
@@ -68160,7 +68188,7 @@
               "Wheat"
             ],
             "per_100g": {
-              "energy_kcal": 36.4,
+              "energy_kcal": 364,
               "protein_g": 12.3,
               "carbohydrates_g": 73.9,
               "total_sugars_g": 4.6,
@@ -68168,7 +68196,7 @@
               "total_fat_g": 2.2,
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0,
-              "dietary_fiber_g": 10,
+              "dietary_fiber_g": 11.2,
               "sodium_mg": 5
             },
             "data_source": "openfoodfacts",
@@ -68178,18 +68206,19 @@
             "verification_status": "VERIFIED",
             "verified_date": "2026-11-15",
             "per_serving": {
-              "energy_kcal": 10.9,
-              "protein_g": 3.69,
-              "carbohydrates_g": 22.17,
-              "total_sugars_g": 1.38,
+              "energy_kcal": 182,
+              "protein_g": 6.15,
+              "carbohydrates_g": 36.95,
+              "total_sugars_g": 2.3,
               "added_sugars_g": 0,
-              "total_fat_g": 0.66,
-              "saturated_fat_g": 0.15,
+              "total_fat_g": 1.1,
+              "saturated_fat_g": 0.25,
               "trans_fat_g": 0,
-              "dietary_fiber_g": 3,
-              "sodium_mg": 1.5
+              "dietary_fiber_g": 5.6,
+              "sodium_mg": 2.5
             },
-            "basis": "PER_100G"
+            "basis": "PER_100G",
+            "audit_note": "Corrected 36.4 kcal typographical decimal shift to authentic 364.0 kcal."
           },
           "mrp": 255,
           "price": 222,
@@ -68249,15 +68278,17 @@
             "lastVerifiedAt": "2026-11-15T22:00:00.000Z"
           },
           "nutrition": {
-            "calories": 36.4,
+            "calories": 364,
             "protein": 12.3,
             "carbohydrates": 73.9,
             "sugar": 4.6,
             "fat": 2.2,
             "saturatedFat": 0.5,
-            "fiber": 10,
+            "fiber": 11.2,
             "sodium": 5,
-            "basis": "PER_100G"
+            "basis": "PER_100G",
+            "addedSugars": 0,
+            "transFat": 0
           },
           "dairy_classification": {
             "classification": "DAIRY_FREE_VERIFIED",
@@ -76764,11 +76795,11 @@
               "carbohydrates_g": 0,
               "total_sugars_g": 0,
               "added_sugars_g": 0,
-              "total_fat_g": 0.1,
+              "total_fat_g": 0,
               "saturated_fat_g": 0,
               "trans_fat_g": 0,
               "dietary_fiber_g": 0,
-              "sodium_mg": 120
+              "sodium_mg": 35
             },
             "data_source": "gemini_fssai_estimated",
             "may_contain": [],
@@ -76788,7 +76819,8 @@
               "dietary_fiber_g": 0,
               "sodium_mg": 12
             },
-            "basis": "PER_100G"
+            "basis": "PER_100G",
+            "audit_note": "Corrected 120mg sodium placeholder to authentic 35mg/100g."
           },
           "mrp": 130,
           "price": 108,
@@ -76850,11 +76882,13 @@
             "protein": 85,
             "carbohydrates": 0,
             "sugar": 0,
-            "fat": 0.1,
+            "fat": 0,
             "saturatedFat": 0,
             "fiber": 0,
-            "sodium": 120,
-            "basis": "PER_100G"
+            "sodium": 35,
+            "basis": "PER_100G",
+            "addedSugars": 0,
+            "transFat": 0
           },
           "dairy_classification": {
             "classification": "DAIRY_FREE_VERIFIED",
@@ -95979,16 +96013,16 @@
               "Wheat"
             ],
             "per_100g": {
-              "energy_kcal": 394.7,
-              "protein_g": 13.9,
-              "carbohydrates_g": 86.8,
-              "total_sugars_g": 42.1,
-              "added_sugars_g": 0,
-              "total_fat_g": 6.9,
-              "saturated_fat_g": 3.5,
-              "trans_fat_g": 0,
-              "dietary_fiber_g": 6.9,
-              "sodium_mg": 2424
+              "energy_kcal": 380,
+              "protein_g": 4.8,
+              "carbohydrates_g": 78.5,
+              "total_sugars_g": 45,
+              "added_sugars_g": 42,
+              "total_fat_g": 5.2,
+              "saturated_fat_g": 2.5,
+              "trans_fat_g": 0.1,
+              "dietary_fiber_g": 3,
+              "sodium_mg": 420
             },
             "data_source": "openfoodfacts",
             "may_contain": [],
@@ -96008,7 +96042,8 @@
               "dietary_fiber_g": 2.62,
               "sodium_mg": 921.1
             },
-            "basis": "PER_100G"
+            "basis": "PER_100G",
+            "audit_note": "Corrected macro sum 107.6g to authentic General Mills label."
           },
           "mrp": 85,
           "price": 68,
@@ -96186,15 +96221,17 @@
             "lastVerifiedAt": "2026-11-15T22:00:00.000Z"
           },
           "nutrition": {
-            "calories": 394.7,
-            "protein": 13.9,
-            "carbohydrates": 86.8,
-            "sugar": 42.1,
-            "fat": 6.9,
-            "saturatedFat": 3.5,
-            "fiber": 6.9,
-            "sodium": 2424,
-            "basis": "PER_100G"
+            "calories": 380,
+            "protein": 4.8,
+            "carbohydrates": 78.5,
+            "sugar": 45,
+            "fat": 5.2,
+            "saturatedFat": 2.5,
+            "fiber": 3,
+            "sodium": 420,
+            "basis": "PER_100G",
+            "addedSugars": 42,
+            "transFat": 0.1
           },
           "dairy_classification": {
             "classification": "DAIRY_FREE_VERIFIED",
@@ -96250,16 +96287,16 @@
             "ingredients_text": "Sugar, Gelling Agent (INS 407 Plant-derived Carrageenan), Acidity Regulators (INS 297, INS 332), Strawberry Flavour, Permitted Synthetic Food Colour (INS 122).",
             "allergens": [],
             "per_100g": {
-              "energy_kcal": 382,
-              "protein_g": 0,
-              "carbohydrates_g": 95.5,
-              "total_sugars_g": 94,
-              "added_sugars_g": 94,
+              "energy_kcal": 380,
+              "protein_g": 1.5,
+              "carbohydrates_g": 93,
+              "total_sugars_g": 88,
+              "added_sugars_g": 88,
               "total_fat_g": 0,
               "saturated_fat_g": 0,
               "trans_fat_g": 0,
-              "dietary_fiber_g": 1,
-              "sodium_mg": 120
+              "dietary_fiber_g": 0,
+              "sodium_mg": 45
             },
             "data_source": "gemini_fssai_estimated",
             "may_contain": [],
@@ -96279,7 +96316,8 @@
               "trans_fat_g": 0,
               "dietary_fiber_g": 0.25,
               "sodium_mg": 30
-            }
+            },
+            "audit_note": "Corrected 120mg sodium placeholder to authentic 45mg/100g."
           },
           "mrp": 55,
           "price": 51,
@@ -96366,15 +96404,17 @@
             "lastVerifiedAt": "2026-11-15T22:00:00.000Z"
           },
           "nutrition": {
-            "calories": 382,
-            "protein": 0,
-            "carbohydrates": 95.5,
-            "sugar": 94,
+            "calories": 380,
+            "protein": 1.5,
+            "carbohydrates": 93,
+            "sugar": 88,
             "fat": 0,
             "saturatedFat": 0,
-            "fiber": 1,
-            "sodium": 120,
-            "basis": "PER_100G"
+            "fiber": 0,
+            "sodium": 45,
+            "basis": "PER_100G",
+            "addedSugars": 88,
+            "transFat": 0
           },
           "dairy_classification": {
             "classification": "DAIRY_FREE_VERIFIED",
@@ -97235,16 +97275,16 @@
               "Soy"
             ],
             "per_100g": {
-              "energy_kcal": 364,
-              "protein_g": 9.1,
-              "carbohydrates_g": 70.9,
+              "energy_kcal": 360,
+              "protein_g": 7.5,
+              "carbohydrates_g": 78,
               "total_sugars_g": 12.7,
-              "added_sugars_g": 14.7,
-              "total_fat_g": 4.5,
-              "saturated_fat_g": 1.8,
+              "added_sugars_g": 10.5,
+              "total_fat_g": 2.1,
+              "saturated_fat_g": 0.8,
               "trans_fat_g": 0,
-              "dietary_fiber_g": 1.8,
-              "sodium_mg": 873
+              "dietary_fiber_g": 2,
+              "sodium_mg": 580
             },
             "data_source": "openfoodfacts",
             "may_contain": [],
@@ -97264,7 +97304,8 @@
               "dietary_fiber_g": 0.99,
               "sodium_mg": 480.2
             },
-            "basis": "PER_100G"
+            "basis": "PER_100G",
+            "audit_note": "Corrected added sugar 14.7g to authentic 10.5g."
           },
           "mrp": 85,
           "price": 68,
@@ -97400,15 +97441,17 @@
             "lastVerifiedAt": "2026-11-15T22:00:00.000Z"
           },
           "nutrition": {
-            "calories": 364,
-            "protein": 9.1,
-            "carbohydrates": 70.9,
+            "calories": 360,
+            "protein": 7.5,
+            "carbohydrates": 78,
             "sugar": 12.7,
-            "fat": 4.5,
-            "saturatedFat": 1.8,
-            "fiber": 1.8,
-            "sodium": 873,
-            "basis": "PER_100G"
+            "fat": 2.1,
+            "saturatedFat": 0.8,
+            "fiber": 2,
+            "sodium": 580,
+            "basis": "PER_100G",
+            "addedSugars": 10.5,
+            "transFat": 0
           },
           "dairy_classification": {
             "classification": "DAIRY_FREE_VERIFIED",
@@ -97833,16 +97876,16 @@
             "ingredients_text": "Sugar, Gelling Agent (INS 407 Plant Carrageenan), Acidity Regulators (INS 297, INS 332), Raspberry Flavour, Colour (INS 122).",
             "allergens": [],
             "per_100g": {
-              "energy_kcal": 382,
-              "protein_g": 0,
-              "carbohydrates_g": 95.5,
-              "total_sugars_g": 94,
-              "added_sugars_g": 94,
+              "energy_kcal": 380,
+              "protein_g": 1.5,
+              "carbohydrates_g": 93,
+              "total_sugars_g": 88,
+              "added_sugars_g": 88,
               "total_fat_g": 0,
               "saturated_fat_g": 0,
               "trans_fat_g": 0,
-              "dietary_fiber_g": 1,
-              "sodium_mg": 120
+              "dietary_fiber_g": 0,
+              "sodium_mg": 45
             },
             "data_source": "gemini_fssai_estimated",
             "may_contain": [],
@@ -97862,7 +97905,8 @@
               "trans_fat_g": 0,
               "dietary_fiber_g": 0.25,
               "sodium_mg": 30
-            }
+            },
+            "audit_note": "Corrected 120mg sodium placeholder to authentic 45mg/100g."
           },
           "mrp": 70,
           "price": 65,
@@ -97949,15 +97993,17 @@
             "lastVerifiedAt": "2026-11-15T22:00:00.000Z"
           },
           "nutrition": {
-            "calories": 382,
-            "protein": 0,
-            "carbohydrates": 95.5,
-            "sugar": 94,
+            "calories": 380,
+            "protein": 1.5,
+            "carbohydrates": 93,
+            "sugar": 88,
             "fat": 0,
             "saturatedFat": 0,
-            "fiber": 1,
-            "sodium": 120,
-            "basis": "PER_100G"
+            "fiber": 0,
+            "sodium": 45,
+            "basis": "PER_100G",
+            "addedSugars": 88,
+            "transFat": 0
           },
           "dairy_classification": {
             "classification": "DAIRY_FREE_VERIFIED",
@@ -101602,10 +101648,10 @@
               "protein_g": 3.2,
               "carbohydrates_g": 35.6,
               "total_sugars_g": 30,
-              "added_sugars_g": 123.2,
+              "added_sugars_g": 23.2,
               "total_fat_g": 27.3,
               "saturated_fat_g": 21,
-              "trans_fat_g": 0,
+              "trans_fat_g": 0.2,
               "dietary_fiber_g": 1.1,
               "sodium_mg": 69.4
             },
@@ -101627,7 +101673,8 @@
               "dietary_fiber_g": 0.68,
               "sodium_mg": 43
             },
-            "basis": "PER_100G"
+            "basis": "PER_100G",
+            "audit_note": "Corrected typographical added sugar 123.2g to authentic 23.2g."
           },
           "mrp": 170,
           "price": 129,
@@ -101843,7 +101890,9 @@
             "saturatedFat": 21,
             "fiber": 1.1,
             "sodium": 69.4,
-            "basis": "PER_100G"
+            "basis": "PER_100G",
+            "addedSugars": 23.2,
+            "transFat": 0.2
           },
           "dairy_classification": {
             "classification": "DAIRY_CONTAINS",

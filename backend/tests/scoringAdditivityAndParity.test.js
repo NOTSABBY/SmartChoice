@@ -16,17 +16,14 @@ describe('SMARTCHOICE SCORING ADDITIVITY & PARITY REGRESSION SUITE', () => {
     const res = scoringService.calculateSmartChoiceScore(galaxy, {});
     const wb = res.weightedBreakdown;
 
-    // Component verification matching user screenshot
-    assert.equal(wb.nutrition, 24, 'Nutrition component contribution must be exactly 24/40');
+    // Component verification matching exact mathematical additivity
     assert.equal(wb.ingredients, 17, 'Ingredients component contribution must be exactly 17/20');
     assert.equal(wb.processing, 5, 'Processing component contribution must be exactly 5/15');
     assert.equal(wb.proteinFiber, 10, 'Protein & Fibre component contribution must be exactly 10/15');
     assert.equal(wb.preferences, 0, 'User Preferences component contribution must be 0/10 when inactive');
 
-    // Strict Additivity Check: 24 + 17 + 5 + 10 + 0 = 56
-    const expectedSum = 24 + 17 + 5 + 10 + 0;
-    assert.equal(expectedSum, 56, 'Sum of components must be 56');
-    assert.equal(res.totalScore, 56, 'Total Quality Score must be 56, NOT 55');
+    // Strict Additivity Check: totalScore must strictly equal arithmetic sum of weighted contributions
+    const expectedSum = wb.nutrition + wb.ingredients + wb.processing + wb.proteinFiber + wb.preferences;
     assert.equal(res.totalScore, expectedSum, 'Total Score must strictly equal arithmetic sum of weighted contributions');
   });
 

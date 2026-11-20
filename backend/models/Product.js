@@ -12,6 +12,14 @@ const productSchema = new mongoose.Schema({
     openFoodFactsQueryTerm: { type: String }
   },
 
+  product_id: { type: String, index: true },
+  product_name: { type: String, index: true },
+  brand: { type: String, index: true },
+  category_id: { type: Number, index: true },
+  category_name: { type: String },
+  images: { type: mongoose.Schema.Types.Mixed },
+  nutrition_info: { type: mongoose.Schema.Types.Mixed },
+
   // Core Identity (Backward compatible with legacy SmartChoice records)
   identity: {
     barcode: { type: String },
@@ -71,7 +79,7 @@ const productSchema = new mongoose.Schema({
 
   // Ingredients and composition (FSSAI Predominance Order & Verified Provenance)
   ingredients: {
-    ingredients: { type: [String], default: [] },
+    ingredients: { type: [mongoose.Schema.Types.Mixed], default: [] },
     allergens: { type: [String], default: [] },
     additives: { type: [String], default: [] },
     rawIngredientsText: { type: String, default: null },

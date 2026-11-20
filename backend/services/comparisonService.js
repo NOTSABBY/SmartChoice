@@ -36,14 +36,13 @@ const cleanStr = (s) => (s || '').toLowerCase().trim();
 
 // Jaccard similarity between two arrays of tokens
 const calculateJaccardSimilarity = (arr1, arr2) => {
-  if (!arr1 || !arr2 || (arr1.length === 0 && arr2.length === 0)) return 0;
+  if (!arr1 || !arr2 || arr1.length === 0 || arr2.length === 0) return 0.0;
   const set1 = new Set(arr1.map(cleanStr).filter(Boolean));
   const set2 = new Set(arr2.map(cleanStr).filter(Boolean));
-  if (set1.size === 0 && set2.size === 0) return 1.0;
   if (set1.size === 0 || set2.size === 0) return 0.0;
   const intersection = new Set([...set1].filter(x => set2.has(x)));
   const union = new Set([...set1, ...set2]);
-  return intersection.size / union.size;
+  return union.size > 0 ? (intersection.size / union.size) : 0.0;
 };
 
 // Compare numeric fields
@@ -86,6 +85,46 @@ const parseAdditivesFromText = (text) => {
 };
 
 /**
+ * Helper to safely merge MongoDB product records with verified Catalog-500 disk data.
+ * Ensures complete nutritional values, authentic ingredient texts, and accurate metadata.
+ */
+const mergeProductData = (mongoProd, catalogProd) => {
+  if (!mongoProd && !catalogProd) return null;
+  if (!mongoProd) return catalogProd;
+  if (!catalogProd) return mongoProd;
+
+  const mongoNut = mongoProd.nutrition || {};
+  const mongoHasNut = mongoNut.calories != null || mongoNut.energyKcal != null || (mongoProd.nutrition_info?.per_100g?.energy_kcal != null);
+  const mongoIng = mongoProd.ingredients || {};
+  const mongoHasIng = (mongoIng.ingredients && mongoIng.ingredients.length > 0) || !!mongoIng.rawText || !!mongoIng.rawIngredientsText;
+
+  return {
+    ...catalogProd,
+    ...mongoProd,
+    _id: mongoProd._id || catalogProd._id,
+    product_id: catalogProd.product_id || mongoProd.product_id || mongoProd.catalog?.productId,
+    product_name: catalogProd.product_name || mongoProd.product_name || mongoProd.catalog?.productName || mongoProd.identity?.name,
+    brand: catalogProd.brand || mongoProd.brand || mongoProd.catalog?.brand || mongoProd.identity?.brand,
+    category_id: catalogProd.category_id || mongoProd.category_id || mongoProd.catalog?.categoryId,
+    category_name: catalogProd.category_name || mongoProd.category_name || mongoProd.catalog?.categoryName,
+    packaging_size: catalogProd.packaging_size || mongoProd.packaging_size || mongoProd.catalog?.packagingSize,
+    images: { ...(catalogProd.images || {}), ...(mongoProd.images || {}) },
+    media: { ...(catalogProd.media || {}), ...(mongoProd.media || {}) },
+    serving: { ...(catalogProd.serving || {}), ...(mongoProd.serving || {}) },
+    processing: { ...(catalogProd.processing || {}), ...(mongoProd.processing || {}) },
+    nutrition: mongoHasNut ? mongoProd.nutrition : (catalogProd.nutrition || mongoProd.nutrition),
+    nutrition_info: (mongoProd.nutrition_info && Object.keys(mongoProd.nutrition_info).length > 0)
+      ? mongoProd.nutrition_info
+      : (catalogProd.nutrition_info || {}),
+    ingredients: mongoHasIng ? mongoProd.ingredients : (catalogProd.ingredients || mongoProd.ingredients),
+    dietary_classification: mongoProd.dietary_classification || mongoProd.dietaryClassification || catalogProd.dietary_classification || catalogProd.dietaryClassification,
+    dietaryClassification: mongoProd.dietaryClassification || mongoProd.dietary_classification || catalogProd.dietaryClassification || catalogProd.dietary_classification,
+    dairy_classification: mongoProd.dairy_classification || mongoProd.dairyClassification || catalogProd.dairy_classification || catalogProd.dairyClassification,
+    dairyClassification: mongoProd.dairyClassification || mongoProd.dairy_classification || catalogProd.dairyClassification || catalogProd.dairy_classification
+  };
+};
+
+/**
  * Advanced Product Comparison Engine
  */
 const compareProducts = async (productIds, userPreferences = {}) => {
@@ -119,8 +158,9 @@ const compareProducts = async (productIds, userPreferences = {}) => {
   });
 
   const orderedProducts = uniqueIds.map(id => {
-    if (foundMap.has(id)) return foundMap.get(id);
-    return catalogLoader.getProductById(id);
+    const mongoProd = foundMap.get(id);
+    const catalogProd = catalogLoader.getProductById(id);
+    return mergeProductData(mongoProd, catalogProd);
   }).filter(Boolean);
 
   if (orderedProducts.length < 2) {
@@ -425,28 +465,61 @@ const compareProducts = async (productIds, userPreferences = {}) => {
     }))
   };
 
-  // 5. Product Pairwise Similarity (SIM = 0.40C + 0.20T + 0.15S + 0.15I + 0.10N)
+  // 5. Product Pairwise Similarity (SIM = 0.20C + 0.25T + 0.25I + 0.20N + 0.10S)
+  const extractSubtypeKeywords = (productName) => {
+    const lower = (productName || '').toLowerCase();
+    const types = [
+      'sausage', 'salami', 'frankfurter', 'nugget', 'patty', 'kebab', 'meat', 'chicken', 'fish', 'prawn', 'mutton',
+      'fries', 'french fries', 'potato', 'wedges', 'hash brown', 'aloo',
+      'biscuit', 'cookie', 'cracker', 'rusk', 'wafer',
+      'noodle', 'pasta', 'vermicelli', 'macaroni',
+      'chocolate', 'candy', 'toffee', 'confectionery',
+      'juice', 'nectar', 'drink', 'beverage', 'squash', 'syrup',
+      'tea', 'coffee', 'chai',
+      'milk', 'cheese', 'paneer', 'butter', 'ghee', 'curd', 'yogurt', 'dahi',
+      'cereal', 'oats', 'muesli', 'corn flakes', 'granola',
+      'oil', 'refined oil', 'mustard oil', 'olive oil',
+      'chips', 'crisps', 'namkeen', 'bhujia', 'snack', 'popcorn',
+      'sauce', 'ketchup', 'mayonnaise', 'dip', 'chutney',
+      'bread', 'bun', 'pav', 'tortilla', 'paratha', 'roti'
+    ];
+    return types.filter(t => lower.includes(t));
+  };
+
   const pairwiseSimilarity = [];
   for (let i = 0; i < normalizedProducts.length; i++) {
     for (let j = i + 1; j < normalizedProducts.length; j++) {
       const p1 = normalizedProducts[i];
       const p2 = normalizedProducts[j];
 
-      // C = Category (40%)
+      // C = Broad Category (20%)
       const catSim = (p1.categoryId === p2.categoryId) ? 1.0 : (p1.format === p2.format ? 0.3 : 0.0);
 
-      // T = Product Type (20%)
-      const typeSim = (p1.categoryName === p2.categoryName) ? 1.0 : 0.5;
+      // T = Food Type & Dietary Nature (25%)
+      const isP1NonVeg = p1.dietaryStatus === 'NON_VEGETARIAN' || p1.dietaryType === 'NON_VEG';
+      const isP2NonVeg = p2.dietaryStatus === 'NON_VEGETARIAN' || p2.dietaryType === 'NON_VEG';
+      const dietaryMatch = (isP1NonVeg === isP2NonVeg) ? 1.0 : 0.0;
 
-      // S = Serving Size (15%)
-      const s1 = parseFloat(p1.packagingSize) || 50;
-      const s2 = parseFloat(p2.packagingSize) || 50;
-      const servSim = compareNumericSim(s1, s2, Math.max(s1, s2, 100));
+      const sub1 = extractSubtypeKeywords(p1.name);
+      const sub2 = extractSubtypeKeywords(p2.name);
+      const commonSub = sub1.filter(s => sub2.includes(s));
+      let subtypeMatch = 0.0;
+      if (commonSub.length > 0) {
+        subtypeMatch = 1.0;
+      } else if (p1.categoryId === p2.categoryId && dietaryMatch === 1.0) {
+        subtypeMatch = 0.5;
+      } else if (p1.categoryId === p2.categoryId) {
+        subtypeMatch = 0.15; // same broad retail aisle (e.g. Frozen) but completely different food types (meat vs potato)
+      } else {
+        subtypeMatch = 0.0;
+      }
 
-      // I = Ingredients (15%)
+      const typeSim = (0.50 * dietaryMatch) + (0.50 * subtypeMatch);
+
+      // I = Ingredients Composition (25%)
       const ingSim = calculateJaccardSimilarity(p1.ingredientTokens, p2.ingredientTokens);
 
-      // N = Nutrition (10%)
+      // N = Nutritional Profile (20%)
       let nutSimSum = 0;
       let nutFieldsCount = 0;
       ['calories', 'protein', 'carbohydrates', 'sugar', 'fat', 'saturatedFat', 'sodium'].forEach(k => {
@@ -454,25 +527,40 @@ const compareProducts = async (productIds, userPreferences = {}) => {
         const v2 = p2.nutrients[k];
         if (v1 != null && v2 != null) {
           nutFieldsCount++;
-          const maxDiff = Math.max(v1, v2, 10) * 0.5;
+          const maxDiff = Math.max(Math.abs(v1), Math.abs(v2), 10) * 0.75;
           nutSimSum += compareNumericSim(v1, v2, maxDiff);
         }
       });
-      const nutSim = nutFieldsCount > 0 ? (nutSimSum / nutFieldsCount) : 0.5;
+      const nutSim = nutFieldsCount > 0 ? (nutSimSum / nutFieldsCount) : 0.0;
 
-      const totalSim = Math.round((0.40 * catSim + 0.20 * typeSim + 0.15 * servSim + 0.15 * ingSim + 0.10 * nutSim) * 100);
+      // S = Serving Size / Packaging (10%)
+      const s1 = parseFloat(p1.packagingSize) || 50;
+      const s2 = parseFloat(p2.packagingSize) || 50;
+      const servSim = compareNumericSim(s1, s2, Math.max(s1, s2, 100));
+
+      const totalSim = Math.round((0.20 * catSim + 0.25 * typeSim + 0.25 * ingSim + 0.20 * nutSim + 0.10 * servSim) * 100);
 
       const sharedTraits = [];
       const differingTraits = [];
 
-      if (catSim >= 0.9) sharedTraits.push('Same food category');
+      if (catSim >= 0.9) sharedTraits.push('Same broad food category');
       else differingTraits.push('Different categories');
 
-      if (ingSim >= 0.4) sharedTraits.push(`Share ${Math.round(ingSim * 100)}% common ingredients`);
+      if (dietaryMatch === 1.0) {
+        sharedTraits.push(`Both ${p1.dietaryStatus === 'NON_VEGETARIAN' ? 'Non-Vegetarian' : 'Vegetarian'}`);
+      } else {
+        differingTraits.push(`Different food types (${p1.dietaryStatus === 'NON_VEGETARIAN' ? 'Non-Vegetarian meat' : 'Vegetarian'} vs ${p2.dietaryStatus === 'NON_VEGETARIAN' ? 'Non-Vegetarian meat' : 'Vegetarian'})`);
+      }
+
+      if (ingSim >= 0.35) sharedTraits.push(`Share ${Math.round(ingSim * 100)}% common ingredients`);
       else differingTraits.push('Substantially different ingredient formulations');
 
       if (p1.novaGroup === p2.novaGroup) sharedTraits.push(`Identical NOVA Group ${p1.novaGroup} processing level`);
       else differingTraits.push(`Different processing levels (NOVA ${p1.novaGroup} vs NOVA ${p2.novaGroup})`);
+
+      if (p1.nutrients.protein != null && p2.nutrients.protein != null && Math.abs(p1.nutrients.protein - p2.nutrients.protein) >= 5) {
+        differingTraits.push(`Distinct protein density (${p1.nutrients.protein}g vs ${p2.nutrients.protein}g per 100g)`);
+      }
 
       pairwiseSimilarity.push({
         productAId: p1.productId,
@@ -483,9 +571,9 @@ const compareProducts = async (productIds, userPreferences = {}) => {
         breakdown: {
           category: Math.round(catSim * 100),
           productType: Math.round(typeSim * 100),
-          servingSize: Math.round(servSim * 100),
           ingredients: Math.round(ingSim * 100),
-          nutrition: Math.round(nutSim * 100)
+          nutrition: Math.round(nutSim * 100),
+          servingSize: Math.round(servSim * 100)
         },
         sharedTraits,
         differingTraits
@@ -500,90 +588,129 @@ const compareProducts = async (productIds, userPreferences = {}) => {
   let pairwiseExplanations = [];
   let uncertaintyExplanation = null;
 
-  // Filter out any products violating hard allergen constraints
-  const eligibleProducts = normalizedProducts.filter(p => !p.preferenceMatch?.hardExclusionViolated);
+  // 6A. Step 1: Pre-flight Evidentiary Data Sufficiency Audit
+  const productDataSufficiency = normalizedProducts.map(p => {
+    const missingCore = [];
+    if (p.nutrients.calories == null) missingCore.push('Energy/Calories');
+    if (p.nutrients.protein == null) missingCore.push('Protein');
+    if (p.nutrients.fat == null) missingCore.push('Total Fat');
+    if (p.nutrients.sugar == null) missingCore.push('Total Sugars');
+    if (p.nutrients.sodium == null) missingCore.push('Sodium');
+    if (!p.ingredientTokens || p.ingredientTokens.length === 0) missingCore.push('Ingredient Statement');
 
-  if (eligibleProducts.length === 0) {
-    verdictStatus = 'ALL_EXCLUDED';
-    verdictReason = 'All selected products violate active user allergen safety constraints.';
-  } else if (eligibleProducts.length === 1 && normalizedProducts.length > 1) {
-    winner = eligibleProducts[0];
-    verdictStatus = 'DECISIVE';
-    verdictReason = `${winner.name} is selected as the only safe choice because the alternative products violate your active allergen safety preferences.`;
+    const isInsufficient = missingCore.length >= 3 || p.confidence.score < 50 || p.completeness < 50;
+    return {
+      productId: p.productId,
+      name: p.name,
+      isInsufficient,
+      confidenceScore: p.confidence.score,
+      completeness: p.completeness,
+      missingCore
+    };
+  });
+
+  const insufficientProducts = productDataSufficiency.filter(d => d.isInsufficient);
+
+  if (insufficientProducts.length > 0) {
+    verdictStatus = 'INSUFFICIENT_DATA';
+    verdictReason = 'Insufficient verified data to determine a reliable winner. One or more products lack required nutritional declarations or ingredient statements.';
+    uncertaintyExplanation = `The following products lack sufficient verified data for a conclusive comparison: ${insufficientProducts.map(d => `${d.name} (Missing: ${d.missingCore.join(', ') || 'Low evidentiary confidence'})`).join('; ')}.`;
+    winner = null;
   } else {
-    // Sort eligible products by Quality Score
-    const sortedByScore = [...eligibleProducts].sort((a, b) => b.qualityScore - a.qualityScore);
-    const topProd = sortedByScore[0];
-    const secondProd = sortedByScore[1];
+    // 6B. Step 2: Filter out any products violating hard allergen constraints
+    const eligibleProducts = normalizedProducts.filter(p => !p.preferenceMatch?.hardExclusionViolated);
 
-    const scoreDiff = topProd.qualityScore - secondProd.qualityScore;
-    const topHasLowConfidence = topProd.confidence.score < 50;
-    const secondHasHighConfidence = secondProd.confidence.score >= 80;
-
-    if (scoreDiff <= 2 && (topProd.verification.status === 'Needs Review' || secondProd.verification.status === 'Needs Review')) {
-      verdictStatus = 'INCONCLUSIVE';
-      uncertaintyExplanation = 'Insufficient evidence to determine a clear winner due to unresolved data inconsistencies or conflicting nutritional declarations.';
-    } else if (scoreDiff <= 1 && topHasLowConfidence && secondHasHighConfidence) {
-      // Confidence limitation override: second product has verified evidence while top has unverified data
-      winner = secondProd;
+    if (eligibleProducts.length === 0) {
+      verdictStatus = 'ALL_EXCLUDED';
+      verdictReason = 'All selected products violate active user allergen safety constraints.';
+      winner = null;
+    } else if (eligibleProducts.length === 1 && normalizedProducts.length > 1) {
+      winner = eligibleProducts[0];
       verdictStatus = 'DECISIVE';
-      verdictReason = `${secondProd.name} is selected over ${topProd.name} due to substantially higher evidentiary verification (${secondProd.confidence.score}/100 vs ${topProd.confidence.score}/100), despite nearly identical quality scores.`;
+      verdictReason = `${winner.name} is selected as the only safe choice because the alternative products violate your active allergen safety preferences.`;
     } else {
-      winner = topProd;
-      verdictStatus = 'DECISIVE';
+      // 6C. Step 3: Sort eligible products by Quality Score
+      const sortedByScore = [...eligibleProducts].sort((a, b) => b.qualityScore - a.qualityScore);
+      const topProd = sortedByScore[0];
+      const secondProd = sortedByScore[1];
 
-      // Build comparative explanations against each alternative
-      const alternatives = normalizedProducts.filter(p => p.productId !== winner.productId);
-      pairwiseExplanations = alternatives.map(alt => {
-        const advNutrients = [];
-        if ((winner.nutrients.protein || 0) > (alt.nutrients.protein || 0) + 1.0) {
-          advNutrients.push(`${(winner.nutrients.protein - alt.nutrients.protein).toFixed(1)}g more protein`);
-        }
-        if ((winner.nutrients.fiber || 0) > (alt.nutrients.fiber || 0) + 1.0) {
-          advNutrients.push(`${(winner.nutrients.fiber - alt.nutrients.fiber).toFixed(1)}g more dietary fibre`);
-        }
-        if ((winner.nutrients.sugar != null) && (alt.nutrients.sugar != null) && (alt.nutrients.sugar > winner.nutrients.sugar + 2.0)) {
-          advNutrients.push(`${(alt.nutrients.sugar - winner.nutrients.sugar).toFixed(1)}g less sugar`);
-        }
-        if ((winner.nutrients.saturatedFat != null) && (alt.nutrients.saturatedFat != null) && (alt.nutrients.saturatedFat > winner.nutrients.saturatedFat + 1.0)) {
-          advNutrients.push(`${(alt.nutrients.saturatedFat - winner.nutrients.saturatedFat).toFixed(1)}g less saturated fat`);
-        }
-        if ((winner.nutrients.sodium != null) && (alt.nutrients.sodium != null) && (alt.nutrients.sodium > winner.nutrients.sodium + 50)) {
-          advNutrients.push(`${Math.round(alt.nutrients.sodium - winner.nutrients.sodium)}mg less sodium`);
-        }
+      const scoreDiff = topProd.qualityScore - secondProd.qualityScore;
+      const confDiff = secondProd.confidence.score - topProd.confidence.score;
 
-        const ingAdv = [];
-        if (winner.additiveInfo.insCodes.length < alt.additiveInfo.insCodes.length) {
-          ingAdv.push(`${alt.additiveInfo.insCodes.length - winner.additiveInfo.insCodes.length} fewer identified additives`);
+      // Handle Ties and Margins of Error
+      if (scoreDiff === 0) {
+        if (confDiff >= 20) {
+          // Significant confidence gap: prefer the verified product
+          winner = secondProd;
+          verdictStatus = 'DECISIVE';
+          verdictReason = `${secondProd.name} is selected over ${topProd.name} due to substantially higher evidentiary verification (${secondProd.confidence.score}/100 vs ${topProd.confidence.score}/100), despite identical quality scores.`;
+        } else {
+          // Genuine tie: do not pick an arbitrary winner
+          winner = null;
+          verdictStatus = 'TIED';
+          verdictReason = `Both ${topProd.name} (${topProd.qualityScore}/100) and ${secondProd.name} (${secondProd.qualityScore}/100) are equally rated overall. Neither product demonstrates a decisive composite nutritional advantage.`;
+          uncertaintyExplanation = `Both products achieved identical SmartChoice Quality Scores of ${topProd.qualityScore}/100 with comparable evidentiary confidence (${topProd.confidence.score}/100 vs ${secondProd.confidence.score}/100). Review the individual nutrient breakdown to choose based on your personal priorities.`;
         }
-        if (!winner.additiveInfo.hasArtificialColors && alt.additiveInfo.hasArtificialColors) {
-          ingAdv.push('no artificial colours');
-        }
-        if (!winner.additiveInfo.hasPreservatives && alt.additiveInfo.hasPreservatives) {
-          ingAdv.push('no chemical preservatives');
-        }
+      } else if (scoreDiff === 1 && confDiff >= 25) {
+        // Top product is only 1 point higher but second product has drastically higher verification
+        winner = secondProd;
+        verdictStatus = 'DECISIVE';
+        verdictReason = `${secondProd.name} is selected over ${topProd.name} due to substantially higher evidentiary verification (${secondProd.confidence.score}/100 vs ${topProd.confidence.score}/100), despite a 1-point difference in raw quality score.`;
+      } else {
+        winner = topProd;
+        verdictStatus = 'DECISIVE';
 
-        const procAdv = (winner.novaGroup < alt.novaGroup)
-          ? `lower food processing level (NOVA Group ${winner.novaGroup} vs NOVA Group ${alt.novaGroup})`
-          : null;
+        // Build comparative explanations against each alternative
+        const alternatives = normalizedProducts.filter(p => p.productId !== winner.productId);
+        pairwiseExplanations = alternatives.map(alt => {
+          const advNutrients = [];
+          if ((winner.nutrients.protein || 0) > (alt.nutrients.protein || 0) + 1.0) {
+            advNutrients.push(`${(winner.nutrients.protein - alt.nutrients.protein).toFixed(1)}g more protein`);
+          }
+          if ((winner.nutrients.fiber || 0) > (alt.nutrients.fiber || 0) + 1.0) {
+            advNutrients.push(`${(winner.nutrients.fiber - alt.nutrients.fiber).toFixed(1)}g more dietary fibre`);
+          }
+          if ((winner.nutrients.sugar != null) && (alt.nutrients.sugar != null) && (alt.nutrients.sugar > winner.nutrients.sugar + 2.0)) {
+            advNutrients.push(`${(alt.nutrients.sugar - winner.nutrients.sugar).toFixed(1)}g less sugar`);
+          }
+          if ((winner.nutrients.saturatedFat != null) && (alt.nutrients.saturatedFat != null) && (alt.nutrients.saturatedFat > winner.nutrients.saturatedFat + 1.0)) {
+            advNutrients.push(`${(alt.nutrients.saturatedFat - winner.nutrients.saturatedFat).toFixed(1)}g less saturated fat`);
+          }
+          if ((winner.nutrients.sodium != null) && (alt.nutrients.sodium != null) && (alt.nutrients.sodium > winner.nutrients.sodium + 50)) {
+            advNutrients.push(`${Math.round(alt.nutrients.sodium - winner.nutrients.sodium)}mg less sodium`);
+          }
 
-        const parts = [];
-        if (advNutrients.length > 0) parts.push(advNutrients.join(', '));
-        if (ingAdv.length > 0) parts.push(ingAdv.join(', '));
-        if (procAdv) parts.push(procAdv);
+          const ingAdv = [];
+          if (winner.additiveInfo.insCodes.length < alt.additiveInfo.insCodes.length) {
+            ingAdv.push(`${alt.additiveInfo.insCodes.length - winner.additiveInfo.insCodes.length} fewer identified additives`);
+          }
+          if (!winner.additiveInfo.hasArtificialColors && alt.additiveInfo.hasArtificialColors) {
+            ingAdv.push('no artificial colours');
+          }
+          if (!winner.additiveInfo.hasPreservatives && alt.additiveInfo.hasPreservatives) {
+            ingAdv.push('no chemical preservatives');
+          }
 
-        const reasonsStr = parts.length > 0 ? parts.join(' and ') : 'higher composite nutritional quality';
-        return {
-          alternativeId: alt.productId,
-          alternativeName: alt.name,
-          explanation: `${winner.name} outperforms ${alt.name} with ${reasonsStr}, resulting in a SmartChoice Quality Score of ${winner.qualityScore}/100 vs ${alt.qualityScore}/100.`
-        };
-      });
+          const procAdv = (winner.novaGroup < alt.novaGroup)
+            ? `lower food processing level (NOVA Group ${winner.novaGroup} vs NOVA Group ${alt.novaGroup})`
+            : null;
 
-      // Overall synthesis reason
-      const primaryAlt = alternatives[0];
-      const winAdv = advantagesByProduct[winner.productId].betterNutrients.slice(0, 3).join(', ');
-      verdictReason = `${winner.name} is the superior overall choice with a SmartChoice Quality Score of ${winner.qualityScore}/100 (surpassing alternatives by up to ${scoreDiff} points). It demonstrates superior performance in ${winAdv || 'key macro-nutritional balance'} and carries a ${winner.verification.status} FSSAI evidentiary profile.`;
+          const parts = [];
+          if (advNutrients.length > 0) parts.push(advNutrients.join(', '));
+          if (ingAdv.length > 0) parts.push(ingAdv.join(', '));
+          if (procAdv) parts.push(procAdv);
+
+          const reasonsStr = parts.length > 0 ? parts.join(' and ') : 'higher composite nutritional quality';
+          return {
+            alternativeId: alt.productId,
+            alternativeName: alt.name,
+            explanation: `${winner.name} outperforms ${alt.name} with ${reasonsStr}, resulting in a SmartChoice Quality Score of ${winner.qualityScore}/100 vs ${alt.qualityScore}/100.`
+          };
+        });
+
+        const winAdv = advantagesByProduct[winner.productId].betterNutrients.slice(0, 3).join(', ');
+        verdictReason = `${winner.name} is the superior overall choice with a SmartChoice Quality Score of ${winner.qualityScore}/100 (surpassing alternatives by up to ${scoreDiff} points). It demonstrates superior performance in ${winAdv || 'key macro-nutritional balance'} and carries a ${winner.verification.status} FSSAI evidentiary profile.`;
+      }
     }
   }
 
